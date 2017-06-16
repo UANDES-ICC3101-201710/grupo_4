@@ -62,6 +62,7 @@
     <Compile Include="Hechizo.cs" />
     <Compile Include="Heroe.cs" />
     <Compile Include="Hunter.cs" />
+    <Compile Include="Jugar.cs" />
     <Compile Include="Mago.cs" />
     <Compile Include="Mazo.cs" />
     <Compile Include="Minions.cs" />

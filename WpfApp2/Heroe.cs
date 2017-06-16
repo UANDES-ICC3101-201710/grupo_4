@@ -98,6 +98,9 @@ namespace WpfApp2
             Vida -= M.Daño;
         }
 
-
+        internal void Robar(Mazo mJugador1, List<Minions> mano)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
