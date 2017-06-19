@@ -159,6 +159,10 @@ namespace WpfApp2
 
         int eligioheroe = 0;
         int jugando = 0;
+        int r1 = 0;
+        int r2 = 0;
+        int r11 = 0;
+        int r22 = 0;
 
 
         private void Paladin_Click(object sender, RoutedEventArgs e)
@@ -172,6 +176,8 @@ namespace WpfApp2
                 Paladin.Visibility = Visibility.Hidden;
                 JugadorUno.Visibility = Visibility.Hidden;
                 JugadorDos.Visibility = Visibility.Visible;
+                r1 = 1;
+                r11 = 1;
             }
             else
             {
@@ -192,6 +198,7 @@ namespace WpfApp2
                 Mago.Visibility = Visibility.Hidden;
                 Tablero.Visibility = Visibility.Visible;
                 JugadorUno.Visibility = Visibility.Visible;
+                JugadorDos.Visibility = Visibility.Hidden;
                 Manaj1.Visibility = Visibility.Visible;
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
@@ -199,6 +206,8 @@ namespace WpfApp2
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
                 Tableroj2.Visibility = Visibility.Visible;
+                r2 = 1;
+                r22 = 1;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
             }
         }
@@ -212,6 +221,8 @@ namespace WpfApp2
                 Druid.Visibility = Visibility.Hidden;
                 JugadorUno.Visibility = Visibility.Hidden;
                 JugadorDos.Visibility = Visibility.Visible;
+                r1 = 2;
+                r11 = 2;
             }
             else
             {
@@ -230,6 +241,7 @@ namespace WpfApp2
                 Mago.Visibility = Visibility.Hidden;
                 Tablero.Visibility = Visibility.Visible;
                 JugadorUno.Visibility = Visibility.Visible;
+                JugadorDos.Visibility = Visibility.Hidden;
                 Manaj1.Visibility = Visibility.Visible;
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
@@ -237,6 +249,8 @@ namespace WpfApp2
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
                 Tableroj2.Visibility = Visibility.Visible;
+                r2 = 2;
+                r22 = 2;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
             }
         }
@@ -250,6 +264,8 @@ namespace WpfApp2
                 Cazador.Visibility = Visibility.Hidden;
                 JugadorUno.Visibility = Visibility.Hidden;
                 JugadorDos.Visibility = Visibility.Visible;
+                r1 = 3;
+                r11 = 3;
             }
             else
             {
@@ -268,6 +284,7 @@ namespace WpfApp2
                 Mago.Visibility = Visibility.Hidden;
                 Tablero.Visibility = Visibility.Visible;
                 JugadorUno.Visibility = Visibility.Visible;
+                JugadorDos.Visibility = Visibility.Hidden;
                 Manaj1.Visibility = Visibility.Visible;
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
@@ -275,6 +292,8 @@ namespace WpfApp2
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
                 Tableroj2.Visibility = Visibility.Visible;
+                r2 = 3;
+                r22 = 3;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
             }
         }
@@ -288,6 +307,8 @@ namespace WpfApp2
                 Priest.Visibility = Visibility.Hidden;
                 JugadorUno.Visibility = Visibility.Hidden;
                 JugadorDos.Visibility = Visibility.Visible;
+                r1 = 4;
+                r11 = 4;
             }
             else
             {
@@ -306,6 +327,7 @@ namespace WpfApp2
                 Mago.Visibility = Visibility.Hidden;
                 Tablero.Visibility = Visibility.Visible;
                 JugadorUno.Visibility = Visibility.Visible;
+                JugadorDos.Visibility = Visibility.Hidden;
                 Manaj1.Visibility = Visibility.Visible;
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
@@ -313,6 +335,8 @@ namespace WpfApp2
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
                 Tableroj2.Visibility = Visibility.Visible;
+                r2 = 4;
+                r22 = 4;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
             }
         }
@@ -326,6 +350,8 @@ namespace WpfApp2
                 Picaro.Visibility = Visibility.Hidden;
                 JugadorUno.Visibility = Visibility.Hidden;
                 JugadorDos.Visibility = Visibility.Visible;
+                r1 = 5;
+                r11 = 5;
             }
             else
             {
@@ -344,6 +370,7 @@ namespace WpfApp2
                 Mago.Visibility = Visibility.Hidden;
                 Tablero.Visibility = Visibility.Visible;
                 JugadorUno.Visibility = Visibility.Visible;
+                JugadorDos.Visibility = Visibility.Hidden;
                 Manaj1.Visibility = Visibility.Visible;
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
@@ -351,6 +378,8 @@ namespace WpfApp2
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
                 Tableroj2.Visibility = Visibility.Visible;
+                r2 = 5;
+                r22 = 5;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
             }
 
@@ -365,6 +394,8 @@ namespace WpfApp2
                 Brujo.Visibility = Visibility.Hidden;
                 JugadorUno.Visibility = Visibility.Hidden;
                 JugadorDos.Visibility = Visibility.Visible;
+                r1 = 6;
+                r11 = 6;
             }
             else
             {
@@ -383,6 +414,7 @@ namespace WpfApp2
                 Mago.Visibility = Visibility.Hidden;
                 Tablero.Visibility = Visibility.Visible;
                 JugadorUno.Visibility = Visibility.Visible;
+                JugadorDos.Visibility = Visibility.Hidden;
                 Manaj1.Visibility = Visibility.Visible;
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
@@ -390,6 +422,8 @@ namespace WpfApp2
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
                 Tableroj2.Visibility = Visibility.Visible;
+                r2 = 6;
+                r22 = 6;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
             }
 
@@ -405,6 +439,8 @@ namespace WpfApp2
                 Mago.Visibility = Visibility.Hidden;
                 JugadorUno.Visibility = Visibility.Hidden;
                 JugadorDos.Visibility = Visibility.Visible;
+                r1 = 7;
+                r11 = 7;
             }
             else
             {
@@ -423,6 +459,7 @@ namespace WpfApp2
                 Mago.Visibility = Visibility.Hidden;
                 Tablero.Visibility = Visibility.Visible;
                 JugadorUno.Visibility = Visibility.Visible;
+                JugadorDos.Visibility = Visibility.Hidden;
                 Manaj1.Visibility = Visibility.Visible;
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
@@ -430,6 +467,8 @@ namespace WpfApp2
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
                 Tableroj2.Visibility = Visibility.Visible;
+                r2 = 7;
+                r22 = 7;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
 
             }
@@ -455,6 +494,8 @@ namespace WpfApp2
                 JugadorUno.Visibility = Visibility.Hidden;
                 JugadorDos.Visibility = Visibility.Visible;
                 Manaj1.Visibility = Visibility.Visible;
+                r1 = 8;
+                r11 = 8;
             }
             else
             {
@@ -481,6 +522,7 @@ namespace WpfApp2
                 Mago.Visibility = Visibility.Hidden;
                 Tablero.Visibility = Visibility.Visible;
                 JugadorUno.Visibility = Visibility.Visible;
+                JugadorDos.Visibility = Visibility.Hidden;
                 Manaj1.Visibility = Visibility.Visible;
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
@@ -488,6 +530,8 @@ namespace WpfApp2
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
                 Tableroj2.Visibility = Visibility.Visible;
+                r2 = 8;
+                r22 = 8;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
             }
 
@@ -503,6 +547,8 @@ namespace WpfApp2
                 Guerrero.Visibility = Visibility.Hidden;
                 JugadorUno.Visibility = Visibility.Hidden;
                 JugadorDos.Visibility = Visibility.Visible;
+                r1 = 9;
+                r11 = 9;
             }
             else
             {
@@ -521,9 +567,12 @@ namespace WpfApp2
                 Mago.Visibility = Visibility.Hidden;
                 Tablero.Visibility = Visibility.Visible;
                 JugadorUno.Visibility = Visibility.Visible;
+                JugadorDos.Visibility = Visibility.Hidden;
                 Manaj1.Visibility = Visibility.Visible;
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
+                r2 = 9;
+                r22 = 9;
 
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
             }
@@ -539,6 +588,8 @@ namespace WpfApp2
 
                 nombrej1.Text = "Nombre Jugador 2: ";
                 nombre2.Visibility = Visibility.Visible;
+                JugadorUno.Visibility = Visibility.Hidden;
+                JugadorDos.Visibility = Visibility.Hidden;
             }
         }
 
@@ -557,6 +608,7 @@ namespace WpfApp2
                 JugadorUno.Text = nombre1.Text;
                 JugadorDos.Text = nombre2.Text;
                 JugadorUno.Visibility = Visibility.Visible;
+                JugadorDos.Visibility = Visibility.Hidden;
                 EligeHeroes.Visibility = Visibility.Visible;
             }
         }
@@ -576,12 +628,32 @@ namespace WpfApp2
         private void FinTurno1_Click(object sender, RoutedEventArgs e)
         {
             jugs.Pasar(Heroes[0]);
+            JugadorDos.Visibility = Visibility.Hidden;
+            JugadorUno.Visibility = Visibility.Hidden;
             Mano.Visibility = Visibility.Hidden;
             BarraMano.Visibility = Visibility.Hidden;
             FinTurno1.Visibility = Visibility.Hidden;
             FinTurno2.Visibility = Visibility.Visible;
             EmpiezaT2.Visibility = Visibility.Visible;
             EmpiezaT1.Visibility = Visibility.Hidden;
+            if (r1 == 1) { paladinjugador.Visibility = Visibility.Hidden; }
+            else if (r1 == 2) { druidajugador.Visibility = Visibility.Hidden; }
+            else if (r1 == 3) { cazadorjugador.Visibility = Visibility.Hidden; }
+            else if (r1 == 4) { sacerdotejugador.Visibility = Visibility.Hidden; }
+            else if (r1 == 5) { picarojugador.Visibility = Visibility.Hidden; }
+            else if (r1 == 6) { brujojugador.Visibility = Visibility.Hidden; }
+            else if (r1 == 7) { magojugador.Visibility = Visibility.Hidden; }
+            else if (r1 == 8) { chamanjugador.Visibility = Visibility.Hidden; }
+            else { guerrerojugador.Visibility = Visibility.Hidden; }
+            if (r22 == 1) { otropaladin.Visibility = Visibility.Hidden; }
+            else if (r22 == 2) { otrodruida.Visibility = Visibility.Hidden; }
+            else if (r22 == 3) { otrocazador.Visibility = Visibility.Hidden; }
+            else if (r22 == 4) { otrosacerdote.Visibility = Visibility.Hidden; }
+            else if (r22 == 5) { otropicaro.Visibility = Visibility.Hidden; }
+            else if (r22 == 6) { otrobrujo.Visibility = Visibility.Hidden; }
+            else if (r22 == 7) { otromago.Visibility = Visibility.Hidden; }
+            else if (r22 == 8) { otrochaman.Visibility = Visibility.Hidden; }
+            else { otroguerrero.Visibility = Visibility.Hidden; }
             foreach (Minions i in Heroes[0].mano)
             {
                 if (i.NombreCarta == "Wisp1")
@@ -719,11 +791,31 @@ namespace WpfApp2
 
         private void EmpiezaT1_Click(object sender, RoutedEventArgs e)
         { 
-            jugando=0; 
+            jugando=0;
+            JugadorUno.Visibility = Visibility.Visible;
+            JugadorDos.Visibility = Visibility.Hidden;
             jugs.Jugars(Heroes[0], MJugador1);
             Mano.Visibility = Visibility.Visible;
             BarraMano.Visibility = Visibility.Visible;
-            
+            if (r1 == 1) { paladinjugador.Visibility = Visibility.Visible; }
+            else if (r1 == 2) { druidajugador.Visibility = Visibility.Visible; }
+            else if (r1 == 3) { cazadorjugador.Visibility = Visibility.Visible; }
+            else if (r1 == 4) { sacerdotejugador.Visibility = Visibility.Visible; }
+            else if (r1 == 5) { picarojugador.Visibility = Visibility.Visible; }
+            else if (r1 == 6) { brujojugador.Visibility = Visibility.Visible; }
+            else if (r1 == 7) { magojugador.Visibility = Visibility.Visible; }
+            else if (r1 == 8) { chamanjugador.Visibility = Visibility.Visible; }
+            else { guerrerojugador.Visibility = Visibility.Visible; }
+            if (r22 == 1) { otropaladin.Visibility = Visibility.Visible; }
+            else if (r22 == 2) { otrodruida.Visibility = Visibility.Visible; }
+            else if (r22 == 3) { otrocazador.Visibility = Visibility.Visible; }
+            else if (r22 == 4) { otrosacerdote.Visibility = Visibility.Visible; }
+            else if (r22 == 5) { otropicaro.Visibility = Visibility.Visible; }
+            else if (r22 == 6) { otrobrujo.Visibility = Visibility.Visible; }
+            else if (r22 == 7) { otromago.Visibility = Visibility.Visible; }
+            else if (r22 == 8) { otrochaman.Visibility = Visibility.Visible; }
+            else { otroguerrero.Visibility = Visibility.Visible; }
+
             foreach (Minions i in Heroes[0].mano)
             {
                 if (i.NombreCarta == "Wisp1")
@@ -930,9 +1022,29 @@ namespace WpfApp2
         private void EmpiezaT2_Click(object sender, RoutedEventArgs e)
         {
             jugando = 1;
+            JugadorDos.Visibility = Visibility.Visible;
+            JugadorUno.Visibility = Visibility.Hidden;
             Mano.Visibility = Visibility.Visible;
             BarraMano.Visibility = Visibility.Visible;
             jugs.Jugars(Heroes[1], MJugador2);
+            if (r2 == 1) { paladinjugador.Visibility = Visibility.Visible; }
+            else if (r2 == 2) { druidajugador.Visibility = Visibility.Visible; }
+            else if (r2 == 3) { cazadorjugador.Visibility = Visibility.Visible; }
+            else if (r2 == 4) { sacerdotejugador.Visibility = Visibility.Visible; }
+            else if (r2 == 5) { picarojugador.Visibility = Visibility.Visible; }
+            else if (r2 == 6) { brujojugador.Visibility = Visibility.Visible; }
+            else if (r2 == 7) { magojugador.Visibility = Visibility.Visible; }
+            else if (r2 == 8) { chamanjugador.Visibility = Visibility.Visible; }
+            else { guerrerojugador.Visibility = Visibility.Visible; }
+            if (r11 == 1) { otropaladin.Visibility = Visibility.Visible; }
+            else if (r11 == 2) { otrodruida.Visibility = Visibility.Visible; }
+            else if (r11 == 3) { otrocazador.Visibility = Visibility.Visible; }
+            else if (r11 == 4) { otrosacerdote.Visibility = Visibility.Visible; }
+            else if (r11 == 5) { otropicaro.Visibility = Visibility.Visible; }
+            else if (r11 == 6) { otrobrujo.Visibility = Visibility.Visible; }
+            else if (r11 == 7) { otromago.Visibility = Visibility.Visible; }
+            else if (r11 == 8) { otrochaman.Visibility = Visibility.Visible; }
+            else { otroguerrero.Visibility = Visibility.Visible; }
             foreach (Minions i in Heroes[1].mano)
             {
                 if (i.NombreCarta == "Wisp1")
@@ -1140,12 +1252,32 @@ namespace WpfApp2
         private void FinTurno2_Click(object sender, RoutedEventArgs e)
         {
             jugs.Pasar(Heroes[1]);
+            JugadorUno.Visibility = Visibility.Hidden;
+            JugadorDos.Visibility = Visibility.Hidden;
             Mano.Visibility = Visibility.Hidden;
             BarraMano.Visibility = Visibility.Hidden;
             FinTurno2.Visibility = Visibility.Hidden;
             FinTurno1.Visibility = Visibility.Visible;
             EmpiezaT1.Visibility = Visibility.Visible;
             EmpiezaT2.Visibility = Visibility.Hidden;
+            if (r2 == 1) { paladinjugador.Visibility = Visibility.Hidden; }
+            else if (r2 == 2) { druidajugador.Visibility = Visibility.Hidden; }
+            else if (r2 == 3) { cazadorjugador.Visibility = Visibility.Hidden; }
+            else if (r2 == 4) { sacerdotejugador.Visibility = Visibility.Hidden; }
+            else if (r2 == 5) { picarojugador.Visibility = Visibility.Hidden; }
+            else if (r2 == 6) { brujojugador.Visibility = Visibility.Hidden; }
+            else if (r2 == 7) { magojugador.Visibility = Visibility.Hidden; }
+            else if (r2 == 8) { chamanjugador.Visibility = Visibility.Hidden; }
+            else { guerrerojugador.Visibility = Visibility.Hidden; }
+            if (r11 == 1) { otropaladin.Visibility = Visibility.Hidden; }
+            else if (r11 == 2) { otrodruida.Visibility = Visibility.Hidden; }
+            else if (r11 == 3) { otrocazador.Visibility = Visibility.Hidden; }
+            else if (r11 == 4) { otrosacerdote.Visibility = Visibility.Hidden; }
+            else if (r11 == 5) { otropicaro.Visibility = Visibility.Hidden; }
+            else if (r11 == 6) { otrobrujo.Visibility = Visibility.Hidden; }
+            else if (r11 == 7) { otromago.Visibility = Visibility.Hidden; }
+            else if (r11 == 8) { otrochaman.Visibility = Visibility.Hidden; }
+            else { otroguerrero.Visibility = Visibility.Hidden; }
             foreach (Minions i in Heroes[1].mano)
             {
                 if (i.NombreCarta == "Wisp1")

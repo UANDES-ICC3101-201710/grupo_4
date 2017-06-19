@@ -18,8 +18,6 @@
         <Button x:Name="Cazador" Content="" HorizontalAlignment="Left" Height="126" Margin="471,29,0,0" VerticalAlignment="Top" Width="146" Background="{x:Null}" Click="Cazador_Click"/>
         <Button x:Name="Brujo" Content="" HorizontalAlignment="Left" Height="116" Margin="471,155,0,0" VerticalAlignment="Top" Width="146" Background="{x:Null}" Click="Brujo_Click"/>
         <Button x:Name="Guerrero" Content="" HorizontalAlignment="Left" Height="120" Margin="471,273,0,0" VerticalAlignment="Top" Width="146" Background="{x:Null}" Click="Guerrero_Click"/>
-        <TextBox x:Name="JugadorUno" HorizontalAlignment="Left" Height="39" Margin="614,0,0,0" TextWrapping="Wrap" Text="Jugador 1" VerticalAlignment="Top" Width="93" RenderTransformOrigin="-0.097,0.077" FontSize="22" FontFamily="Bernard MT Condensed" Background="{x:Null}" Foreground="Gold" FontWeight="Bold" Visibility="Hidden"/>
-        <TextBox x:Name="JugadorDos" HorizontalAlignment="Left" Height="39" Margin="614,0,0,0" TextWrapping="Wrap" Text="Jugador 2" VerticalAlignment="Top" Width="93" RenderTransformOrigin="0.097,0.077" FontSize="22" FontFamily="Bernard MT Condensed" Background="{x:Null}" Foreground="Gold" FontWeight="Bold" Visibility="Hidden"/>
         <TextBlock x:Name="nombrej1" Visibility="Visible" HorizontalAlignment="Left" Margin="244,165,0,0" TextWrapping="Wrap" Text="Nombre Jugador 1:" VerticalAlignment="Top" Height="63" Width="339" FontSize="24" FontWeight="Bold" Foreground="White"/>
         <TextBox x:Name="nombre1" HorizontalAlignment="Left" Height="36" Margin="267,211,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="191" KeyDown="nombre1_KeyPressed" />
         <TextBox x:Name="nombre2" HorizontalAlignment="Left" Height="36" Margin="267,211,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="191" KeyDown="nombre2_KeyPressed" Visibility="Hidden" />
@@ -191,7 +189,7 @@
 
             </StackPanel>
         </ScrollViewer>
-        
+
         <ScrollViewer x:Name="BarraTableroj1" Visibility="Hidden" Margin="129,195,172,137" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
             <StackPanel x:Name="Tableroj1" Orientation="Horizontal" HorizontalAlignment="Left" Height="77" VerticalAlignment="Top" Width="3105" Visibility="Hidden" RenderTransformOrigin="0.5,0.5" >
                 <Button x:Name="Wisp3j1" Visibility="Hidden" HorizontalAlignment="Left"  Margin="0,0,0,0" VerticalAlignment="Top" Width="50" Height="73" BorderBrush="{x:Null}" >
@@ -508,6 +506,28 @@
 
             </StackPanel>
         </ScrollViewer>
+
+
+        <TextBox x:Name="JugadorUno" HorizontalAlignment="Left" Height="39" Margin="614,0,0,0" TextWrapping="Wrap" Text="Jugador 1" VerticalAlignment="Top" Width="93" RenderTransformOrigin="-0.097,0.077" FontSize="22" FontFamily="Bernard MT Condensed" Background="{x:Null}" Foreground="Gold" FontWeight="Bold" Visibility="Hidden"/>
+        <TextBox x:Name="JugadorDos" HorizontalAlignment="Left" Height="39" Margin="614,0,0,0" TextWrapping="Wrap" Text="Jugador 2" VerticalAlignment="Top" Width="93" RenderTransformOrigin="0.097,0.077" FontSize="22" FontFamily="Bernard MT Condensed" Background="{x:Null}" Foreground="Gold" FontWeight="Bold" Visibility="Hidden"/>
+        <Image x:Name="brujojugador" Margin="301,276,320,39" Source="brujoshico.png" Stretch="Fill" Visibility="Hidden"/>
+        <Image x:Name="cazadorjugador" Margin="301,276,320,39" Source="cazadorshico.png" Stretch="Fill" Visibility="Hidden"/>
+        <Image x:Name="chamanjugador" Margin="301,276,320,39" Source="chamanshico.png" Stretch="Fill" Visibility="Hidden"/>
+        <Image x:Name="druidajugador" Margin="301,276,320,39" Source="druidashico.png" Stretch="Fill" Visibility="Hidden"/>
+        <Image x:Name="guerrerojugador" Margin="301,276,320,39" Source="guerreroshico.png" Stretch="Fill" Visibility="Hidden"/>
+        <Image x:Name="magojugador" Margin="301,276,320,39" Source="magoshico.png" Stretch="Fill" Visibility="Hidden"/>
+        <Image x:Name="paladinjugador" Margin="301,276,320,39" Source="paladinschico.png" Stretch="Fill" Visibility="Hidden"/>
+        <Image x:Name="picarojugador" Margin="301,276,320,39" Source="picaroshico.png" Stretch="Fill" Visibility="Hidden"/>
+        <Image x:Name="sacerdotejugador" Margin="301,276,320,39" Source="sacerdoteshico.png" Stretch="Fill" Visibility="Hidden"/>
+        <Image x:Name="otrobrujo" Margin="301,46,320,264" Source="brujoshico.png" Stretch="Fill" RenderTransformOrigin="0.572,0.506" Visibility="Hidden"/>
+        <Image x:Name="otrocazador" Margin="301,46,320,264" Source="cazadorshico.png" Stretch="Fill" RenderTransformOrigin="0.572,0.506" Visibility="Hidden"/>
+        <Image x:Name="otrochaman" Margin="301,46,320,264" Source="chamanshico.png" Stretch="Fill" RenderTransformOrigin="0.572,0.506" Visibility="Hidden"/>
+        <Image x:Name="otrodruida" Margin="301,46,320,264" Source="druidashico.png" Stretch="Fill" RenderTransformOrigin="0.572,0.506" Visibility="Hidden"/>
+        <Image x:Name="otroguerrero" Margin="301,46,320,264" Source="guerreroshico.png" Stretch="Fill" RenderTransformOrigin="0.572,0.506" Visibility="Hidden"/>
+        <Image x:Name="otromago" Margin="301,46,320,264" Source="magoshico.png" Stretch="Fill" RenderTransformOrigin="0.572,0.506" Visibility="Hidden"/>
+        <Image x:Name="otropaladin" Margin="301,46,320,264" Source="paladinschico.png" Stretch="Fill" RenderTransformOrigin="0.572,0.506" Visibility="Hidden"/>
+        <Image x:Name="otropicaro" Margin="301,46,320,264" Source="picaroshico.png" Stretch="Fill" RenderTransformOrigin="0.572,0.506" Visibility="Hidden"/>
+        <Image x:Name="otrosacerdote" Margin="301,46,320,264" Source="sacerdoteshico.png" Stretch="Fill" RenderTransformOrigin="0.572,0.506" Visibility="Hidden"/>
 
 
 

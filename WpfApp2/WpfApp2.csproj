@@ -147,5 +147,32 @@
   <ItemGroup>
     <Resource Include="Cartas\wisp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="brujoshico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cazadorshico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="chamanshico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="druidashico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="guerreroshico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="magoshico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="paladinschico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="picaroshico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sacerdoteshico.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
