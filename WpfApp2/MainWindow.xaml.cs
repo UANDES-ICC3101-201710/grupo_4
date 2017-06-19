@@ -569,6 +569,11 @@ namespace WpfApp2
                 Tablero.Visibility = Visibility.Visible;
                 JugadorUno.Visibility = Visibility.Visible;
                 JugadorDos.Visibility = Visibility.Hidden;
+                BarraTableroj1.Visibility = Visibility.Visible;
+                BarraTableroj2.Visibility = Visibility.Visible;
+                Tableroj1.Visibility = Visibility.Visible;
+                Tableroj2.Visibility = Visibility.Visible;
+
 
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
@@ -591,6 +596,7 @@ namespace WpfApp2
                 nombre2.Visibility = Visibility.Visible;
                 JugadorUno.Visibility = Visibility.Hidden;
                 JugadorDos.Visibility = Visibility.Hidden;
+                HabilidadHeroe.Visibility = Visibility.Hidden;
             }
         }
 
@@ -629,6 +635,7 @@ namespace WpfApp2
             EmpiezaT1.Visibility = Visibility.Hidden;
             Manaj1.Visibility = Visibility.Hidden;
             Atacar.Visibility = Visibility.Hidden;
+            HabilidadHeroe.Visibility = Visibility.Hidden;
             if (r1 == 1) { paladinjugador.Visibility = Visibility.Hidden; }
             else if (r1 == 2) { druidajugador.Visibility = Visibility.Hidden; }
             else if (r1 == 3) { cazadorjugador.Visibility = Visibility.Hidden; }
@@ -794,6 +801,7 @@ namespace WpfApp2
             Manaj1.Visibility = Visibility.Visible;
             Atacar.Visibility = Visibility.Visible;
             Manaj1.Value = Heroes[0].Mana;
+            HabilidadHeroe.Visibility = Visibility.Visible;
             
             if (r1 == 1) { paladinjugador.Visibility = Visibility.Visible; }
             else if (r1 == 2) { druidajugador.Visibility = Visibility.Visible; }
@@ -1028,6 +1036,7 @@ namespace WpfApp2
             jugs.Jugars(Heroes[1], MJugador2);
             Manaj2.Visibility = Visibility.Visible;
             Manaj2.Value = Heroes[1].Mana;
+            HabilidadHeroe.Visibility = Visibility.Visible;
             Atacar.Visibility = Visibility.Visible;
             if (r2 == 1) { paladinjugador.Visibility = Visibility.Visible; }
             else if (r2 == 2) { druidajugador.Visibility = Visibility.Visible; }
@@ -1264,6 +1273,7 @@ namespace WpfApp2
             EmpiezaT2.Visibility = Visibility.Hidden;
             Manaj2.Visibility = Visibility.Hidden;
             Atacar.Visibility = Visibility.Hidden;
+            HabilidadHeroe.Visibility = Visibility.Hidden;
             if (r2 == 1) { paladinjugador.Visibility = Visibility.Hidden; }
             else if (r2 == 2) { druidajugador.Visibility = Visibility.Hidden; }
             else if (r2 == 3) { cazadorjugador.Visibility = Visibility.Hidden; }
@@ -3159,6 +3169,38 @@ namespace WpfApp2
                     Boulderfist3j1.Visibility = Visibility.Visible;
                 }
             }
+        }
+
+        private void HabilidadHeroe_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                if (Heroes[0].Nombre == "Paladin") { Heroes[0].Habilidad(Heroes[0]); }
+                else if (Heroes[0].Nombre == "Druida") { Heroes[0].Habilidad(Heroes[0]); }
+                else if (Heroes[0].Nombre == "Cazador") { Heroes[0].Habilidad(Heroes[0]); }
+                else if (Heroes[0].Nombre == "Hunter") { Heroes[0].Habilidad(Heroes[0]); }
+                else if (Heroes[0].Nombre == "Sacerdote") { Heroes[0].Habilidad(Heroes[0]); }
+                else if (Heroes[0].Nombre == "Picaro") { Heroes[0].Habilidad(Heroes[0]); }
+                else if (Heroes[0].Nombre == "Brujo") { Heroes[0].Habilidad(Heroes[0]); }
+                else if (Heroes[0].Nombre == "Mago") { Heroes[0].Habilidad(Heroes[0]); }
+                else if (Heroes[0].Nombre == "Chaman") { Heroes[0].Habilidad(Heroes[0]); }
+                else { Heroes[0].Habilidad(Heroes[0]); }
+
+            }
+            else
+            {
+                if (Heroes[0].Nombre == "Paladin") { Heroes[0].Habilidad(Heroes[0]); }
+                else if (Heroes[0].Nombre == "Druida") { Heroes[0].Habilidad(Heroes[0]); }
+                else if (Heroes[0].Nombre == "Cazador") { Heroes[0].Habilidad(Heroes[0]); }
+                else if (Heroes[0].Nombre == "Hunter") { Heroes[0].Habilidad(Heroes[0]); }
+                else if (Heroes[0].Nombre == "Sacerdote") { Heroes[0].Habilidad(Heroes[0]); }
+                else if (Heroes[0].Nombre == "Picaro") { Heroes[0].Habilidad(Heroes[0]); }
+                else if (Heroes[0].Nombre == "Brujo") { Heroes[0].Habilidad(Heroes[0]); }
+                else if (Heroes[0].Nombre == "Mago") { Heroes[0].Habilidad(Heroes[0]); }
+                else if (Heroes[0].Nombre == "Chaman") { Heroes[0].Habilidad(Heroes[0]); }
+                else { Heroes[0].Habilidad(Heroes[0]); }
+            }
+           
         }
     }
 }

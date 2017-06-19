@@ -533,7 +533,8 @@
         <Image x:Name="otropaladin" Margin="301,46,320,264" Source="paladinschico.png" Stretch="Fill" RenderTransformOrigin="0.572,0.506" Visibility="Hidden"/>
         <Image x:Name="otropicaro" Margin="301,46,320,264" Source="picaroshico.png" Stretch="Fill" RenderTransformOrigin="0.572,0.506" Visibility="Hidden"/>
         <Image x:Name="otrosacerdote" Margin="301,46,320,264" Source="sacerdoteshico.png" Stretch="Fill" RenderTransformOrigin="0.572,0.506" Visibility="Hidden"/>
-        
+        <Button x:Name="HabilidadHeroe" Content="Habilidad" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="4,293,0,0" Click="HabilidadHeroe_Click"/>
+
 
 
     </Grid>
