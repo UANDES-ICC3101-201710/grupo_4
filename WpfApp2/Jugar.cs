@@ -27,14 +27,19 @@ namespace WpfApp2
         }
 
 
+        
 
-
-        public void jugarcartar(Heroe warrior, Minions C)
+        public int jugarcartar(Heroe warrior, Minions C)
         {
-            if (warrior.Tablero1.Count < 10)
+            if (warrior.Tablero1.Count < 8)
             {
-                warrior.PonerenTablero(C);
+                if (warrior.PonerenTablero(C) == 1)
+                {
+
+                    return 1;
+                }
             }
+            return 0;
 
         }
         public void AtacarMinions(Heroe warrior, Heroe hunter, Minions C, Minions C2)

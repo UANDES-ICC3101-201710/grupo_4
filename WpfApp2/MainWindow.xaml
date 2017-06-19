@@ -22,10 +22,13 @@
         <TextBox x:Name="nombre1" HorizontalAlignment="Left" Height="36" Margin="267,211,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="191" KeyDown="nombre1_KeyPressed" />
         <TextBox x:Name="nombre2" HorizontalAlignment="Left" Height="36" Margin="267,211,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="191" KeyDown="nombre2_KeyPressed" Visibility="Hidden" />
         <Image x:Name="Tablero" Margin="-15,0,0,0" Source="tablero.jpg" Stretch="Fill" Visibility="Hidden" Grid.RowSpan="2"/>
-        <ProgressBar x:Name="Manaj1" Visibility="Hidden" HorizontalAlignment="Left" Height="15" Margin="447,376,0,0" VerticalAlignment="Top" Width="154" Foreground="#FF44CCEA"  Background="#FF91745F" />
+        <ProgressBar x:Name="Manaj1"  Maximum="10"  Visibility="Hidden" HorizontalAlignment="Left" Height="15" Margin="447,366,0,0" VerticalAlignment="Top" Width="154" Foreground="#FF44CCEA"  Background="#FF91745F" />
 
 
-        <ProgressBar x:Name="Manaj2" Visibility="Hidden" HorizontalAlignment="Left" Height="15" Margin="447,376,0,0" VerticalAlignment="Top" Width="154" Background="#FF91745F" BorderBrush="{x:Null}" Foreground="#FF2FDCDC" ValueChanged="Manaj2_ValueChanged"/>
+        
+        <ProgressBar x:Name="Manaj2" Maximum="10" Visibility="Visible" HorizontalAlignment="Left" Height="15" Margin="447,366,0,0" VerticalAlignment="Top" Width="154" Background="#FF91745F" BorderBrush="{x:Null}" Foreground="#FF2FDCDC"   />
+        <TextBlock x:Name="cantmana" HorizontalAlignment="Left" Margin="447,365,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="16" Width="154"/>
+
         <Button x:Name="FinTurno1" Visibility="Hidden" HorizontalAlignment="Left" Margin="545,181,0,0" VerticalAlignment="Top" Width="56" Background="{x:Null}" Height="24" Click="FinTurno1_Click"/>
         <Button x:Name="EmpiezaT1" Visibility="Hidden" Content="Comenzar" HorizontalAlignment="Left" Height="22" Margin="25,336,0,0" VerticalAlignment="Top" Width="61" Click="EmpiezaT1_Click"/>
         <Button x:Name="FinTurno2"  Visibility="Hidden" HorizontalAlignment="Left" Margin="545,181,0,0" VerticalAlignment="Top" Width="56" Background="{x:Null}" Height="20" Click="FinTurno2_Click"/>
@@ -33,7 +36,7 @@
 
         <ScrollViewer x:Name="BarraMano"  Visibility="Hidden" Margin="84,282,116,10" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
             <StackPanel x:Name="Mano" Orientation="Horizontal" HorizontalAlignment="Left" Height="135" VerticalAlignment="Top" Width="3115" Visibility="Visible" RenderTransformOrigin="0.5,0.5" >
-                <Button x:Name="Wisp3" Visibility="Hidden" HorizontalAlignment="Left"  Margin="0,0,0,0" VerticalAlignment="Top" Width="85" Height="115" BorderBrush="{x:Null}" >
+                <Button x:Name="Wisp3" Visibility="Hidden" HorizontalAlignment="Left"  Margin="0,0,0,0" VerticalAlignment="Top" Width="85" Height="115" BorderBrush="{x:Null}" Click="Wisp3_Click" >
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/wisp.png"/>
                     </Button.Background>
@@ -189,6 +192,7 @@
 
             </StackPanel>
         </ScrollViewer>
+
 
         <ScrollViewer x:Name="BarraTableroj1" Visibility="Hidden" Margin="129,195,172,137" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
             <StackPanel x:Name="Tableroj1" Orientation="Horizontal" HorizontalAlignment="Left" Height="77" VerticalAlignment="Top" Width="3105" Visibility="Hidden" RenderTransformOrigin="0.5,0.5" >
@@ -348,6 +352,7 @@
 
             </StackPanel>
         </ScrollViewer>
+        <Button x:Name="Atacar"  Visibility="Hidden" Content="Atacar" HorizontalAlignment="Left" Margin="0,195,0,0" VerticalAlignment="Top" Width="75" Click="Atacar_Click" Height="33"/>
         <ScrollViewer x:Name="BarraTableroj2" Visibility="Hidden" Margin="129,99,172,224" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
             <StackPanel x:Name="Tableroj2" Orientation="Horizontal" HorizontalAlignment="Left" Height="135" VerticalAlignment="Top" Width="3115" Visibility="Hidden" RenderTransformOrigin="0.5,0.5" >
                 <Button x:Name="Wisp3j2" Visibility="Hidden" HorizontalAlignment="Left"  Margin="0,0,0,0" VerticalAlignment="Top" Width="50" Height="73" BorderBrush="{x:Null}" >
@@ -528,7 +533,7 @@
         <Image x:Name="otropaladin" Margin="301,46,320,264" Source="paladinschico.png" Stretch="Fill" RenderTransformOrigin="0.572,0.506" Visibility="Hidden"/>
         <Image x:Name="otropicaro" Margin="301,46,320,264" Source="picaroshico.png" Stretch="Fill" RenderTransformOrigin="0.572,0.506" Visibility="Hidden"/>
         <Image x:Name="otrosacerdote" Margin="301,46,320,264" Source="sacerdoteshico.png" Stretch="Fill" RenderTransformOrigin="0.572,0.506" Visibility="Hidden"/>
-
+        
 
 
     </Grid>

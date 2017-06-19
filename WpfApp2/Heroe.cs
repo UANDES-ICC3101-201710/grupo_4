@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfApp2
 {
-    public class Heroe 
+    public class Heroe
     {
         public int Vida;
         public int Mana;
@@ -35,17 +35,19 @@ namespace WpfApp2
             this.HabilidadFindeTurno = HabilidadFindeTurno;
         }
 
-        public void PonerenTablero(Minions Carta)
+        public int  PonerenTablero(Minions Carta)
         {
             if (Mana >= Carta.Coste)
             {
                 Tablero1.Add(Carta);
                 mano.Remove(Carta);
                 Mana -= Carta.Coste;
+                return 1;
             }
+            else { return 0; }
             //else
             //{
-              //  Console.WriteLine("No tienes Suficiente Mana");
+            //  Console.WriteLine("No tienes Suficiente Mana");
             //}
         }
         public virtual void Habilidad(Heroe H)

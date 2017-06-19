@@ -13,10 +13,12 @@ namespace WpfApp2
         public int Daño;
         public int TurnoP;
         public int NDT;
+        public int Seleccionada;
 
-        public Minions(string Clase, int Coste, string NombreCarta, string Raza, int Vida, int Daño, int TurnoP, int NDT)
+        public Minions(string Clase, int Coste, string NombreCarta, string Raza, int Vida, int Daño, int TurnoP, int NDT, int Seleccionada)
             : base(Clase, Coste, NombreCarta)
         {
+            this.Seleccionada = Seleccionada;
             this.Raza = Raza;
             this.Vida = Vida;
             this.Daño = Daño;
