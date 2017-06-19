@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Resources;
 
 namespace WpfApp2
 {
@@ -20,111 +21,125 @@ namespace WpfApp2
     /// </summary>
     public partial class MainWindow : Window
     {
+        Hechizo moneda = new Hechizo(null, 0, "Moneda");
+        
+        Minions wisp1 = new Minions("Classic", 0, "Wisp1", null, 1, 1, 1, 0);
+        Minions wisp2 = new Minions("Classic", 0, "Wisp2", null, 1, 1, 1, 0);
+        Minions wisp3 = new Minions("Classic", 0, "Wisp3", null, 1, 1, 1, 0);
+        Minions murloc1 = new Minions("Basic", 1, "Murloc1", "Murloc", 1, 2, 1, 0);
+        Minions murloc2 = new Minions("Basic", 1, "Murloc2", "Murloc", 1, 2, 1, 0);
+        Minions murloc3 = new Minions("Basic", 1, "Murloc3", "Murloc", 1, 2, 1, 0);
+        Minions bloodfen1 = new Minions("Basic", 2, "Bloodfen1", "Beast", 2, 3, 1, 0);
+        Minions bloodfen2 = new Minions("Basic", 2, "Bloodfen2", "Beast", 2, 3, 1, 0);
+        Minions bloodfen3 = new Minions("Basic", 2, "Bloodfen3", "Beast", 2, 3, 1, 0);
+        Minions river1 = new Minions("Basic", 2, "River1", " Beast", 3, 2, 1, 0);
+        Minions river2 = new Minions("Basic", 2, "River2", " Beast", 3, 2, 1, 0);
+        Minions river3 = new Minions("Basic", 2, "River3", " Beast", 3, 2, 1, 0);
+        Minions magma1 = new Minions("Basic", 3, "Magma1", "Elemental", 1, 5, 1, 0);
+        Minions magma2 = new Minions("Basic", 3, "Magma2", "Elemental", 1, 5, 1, 0);
+        Minions magma3 = new Minions("Basic", 3, "Magma3", "Elemental", 1, 5, 1, 0);
+        Minions chillwind1 = new Minions("Basic", 4, "Chillwind1", null, 5, 4, 1, 0);
+        Minions chillwind2 = new Minions("Basic", 4, "Chillwind2", null, 5, 4, 1, 0);
+        Minions chillwind3 = new Minions("Basic", 4, "Chillwind3", null, 5, 4, 1, 0);
+        Minions oasis1 = new Minions("Basic", 4, "Oasis1", "Beast", 7, 2, 1, 0);
+        Minions oasis2 = new Minions("Basic", 4, "Oasis2", "Beast", 7, 2, 1, 0);
+        Minions oasis3 = new Minions("Basic", 4, "Oasis3", "Beast", 7, 2, 1, 0);
+        Minions boulderfist1 = new Minions("Basic", 6, "Boulderfist1", null, 7, 6, 1, 0);
+        Minions boulderfist2 = new Minions("Basic", 6, "Boulderfist2", null, 7, 6, 1, 0);
+        Minions boulderfist3 = new Minions("Basic", 6, "Boulderfist3", null, 7, 6, 1, 0);
+        Minions war1 = new Minions("Basic", 7, "War1", null, 7, 7, 1, 0);
+        Minions war2 = new Minions("Basic", 7, "War2", null, 7, 7, 1, 0);
+        Minions war3 = new Minions("Basic", 7, "War3", null, 7, 7, 1, 0);
+        Minions core1 = new Minions("Basic", 7, "Corehound1", "Beast", 5, 9, 1, 0);
+        Minions core2 = new Minions("Basic", 7, "Corehound2", "Beast", 5, 9, 1, 0);
+        Minions core3 = new Minions("Basic", 7, "Corehound3", "Beast", 5, 9, 1, 0);
 
         public MainWindow()
         {
-            Hechizo moneda = new Hechizo(null, 0, "Moneda");
             Minions Paladin = new Minions("Classic", 0, "Paladin", null, 1, 1, 1, 0);
-            Minions wisp1 = new Minions("Classic", 0, "Wisp1", null, 1, 1, 1, 0);
             MJugador1.mazo1.Add(wisp1);
             MJugador2.mazo1.Add(wisp1);
-
-            Minions wisp2 = new Minions("Classic", 0, "Wisp2", null, 1, 1, 1, 0);
             MJugador1.mazo1.Add(wisp2);
             MJugador2.mazo1.Add(wisp2);
-            Minions wisp3 = new Minions("Classic", 0, "Wisp3", null, 1, 1, 1, 0);
             MJugador1.mazo1.Add(wisp3);
             MJugador2.mazo1.Add(wisp3);
-
-            Minions murloc1 = new Minions("Basic", 1, "Murloc1", "Murloc", 1, 2, 1, 0);
             MJugador1.mazo1.Add(murloc1);
             MJugador2.mazo1.Add(murloc1);
-            Minions murloc2 = new Minions("Basic", 1, "Murloc2", "Murloc", 1, 2, 1, 0);
             MJugador1.mazo1.Add(murloc2);
             MJugador2.mazo1.Add(murloc2);
-            Minions murloc3 = new Minions("Basic", 1, "Murloc3", "Murloc", 1, 2, 1, 0);
             MJugador1.mazo1.Add(murloc3);
             MJugador2.mazo1.Add(murloc3);
-
-
-            Minions bloodfen1 = new Minions("Basic", 2, "Bloodfen1", "Beast", 2, 3, 1, 0);
             MJugador1.mazo1.Add(bloodfen1);
             MJugador2.mazo1.Add(bloodfen1);
-            Minions bloodfen2 = new Minions("Basic", 2, "Bloodfen2", "Beast", 2, 3, 1, 0);
             MJugador1.mazo1.Add(bloodfen2);
             MJugador2.mazo1.Add(bloodfen2);
-            Minions bloodfen3 = new Minions("Basic", 2, "Bloodfen3", "Beast", 2, 3, 1, 0);
             MJugador1.mazo1.Add(bloodfen3);
             MJugador2.mazo1.Add(bloodfen3);
-
-            Minions river1 = new Minions("Basic", 2, "River1", " Beast", 3, 2, 1, 0);
             MJugador1.mazo1.Add(river1);
             MJugador2.mazo1.Add(river1);
-            Minions river2 = new Minions("Basic", 2, "River2", " Beast", 3, 2, 1, 0);
             MJugador1.mazo1.Add(river2);
             MJugador2.mazo1.Add(river2);
-            Minions river3 = new Minions("Basic", 2, "River3", " Beast", 3, 2, 1, 0);
+            
             MJugador1.mazo1.Add(river3);
             MJugador2.mazo1.Add(river3);
 
-            Minions magma1 = new Minions("Basic", 3, "Magma1", "Elemental", 1, 5, 1, 0);
+            
             MJugador1.mazo1.Add(magma1);
             MJugador2.mazo1.Add(magma1);
-            Minions magma2 = new Minions("Basic", 3, "Magma2", "Elemental", 1, 5, 1, 0);
+           
             MJugador1.mazo1.Add(magma2);
             MJugador2.mazo1.Add(magma2);
-            Minions magma3 = new Minions("Basic", 3, "Magma3", "Elemental", 1, 5, 1, 0);
+            
             MJugador1.mazo1.Add(magma3);
             MJugador2.mazo1.Add(magma3);
 
-            Minions chillwind1 = new Minions("Basic", 4, "Chillwind1", null, 5, 4, 1, 0);
+           
             MJugador1.mazo1.Add(chillwind1);
             MJugador2.mazo1.Add(chillwind1);
-            Minions chillwind2 = new Minions("Basic", 4, "Chillwind2", null, 5, 4, 1, 0);
+            
             MJugador1.mazo1.Add(chillwind2);
             MJugador2.mazo1.Add(chillwind2);
-            Minions chillwind3 = new Minions("Basic", 4, "Chillwind3", null, 5, 4, 1, 0);
+            
             MJugador1.mazo1.Add(chillwind3);
             MJugador2.mazo1.Add(chillwind3);
 
-            Minions oasis1 = new Minions("Basic", 4, "Oasis1", "Beast", 7, 2, 1, 0);
+           
             MJugador1.mazo1.Add(oasis1);
             MJugador2.mazo1.Add(oasis1);
-            Minions oasis2 = new Minions("Basic", 4, "Oasis2", "Beast", 7, 2, 1, 0);
+           
             MJugador1.mazo1.Add(oasis2);
             MJugador2.mazo1.Add(oasis2);
-            Minions oasis3 = new Minions("Basic", 4, "Oasis3", "Beast", 7, 2, 1, 0);
+            
             MJugador1.mazo1.Add(oasis3);
             MJugador2.mazo1.Add(oasis3);
 
-            Minions boulderfist1 = new Minions("Basic", 6, "Boulderfist1", null, 7, 6, 1, 0);
+           
             MJugador1.mazo1.Add(boulderfist1);
             MJugador2.mazo1.Add(boulderfist1);
-            Minions boulderfist2 = new Minions("Basic", 6, "Boulderfist2", null, 7, 6, 1, 0);
             MJugador1.mazo1.Add(boulderfist2);
             MJugador2.mazo1.Add(boulderfist2);
-            Minions boulderfist3 = new Minions("Basic", 6, "Boulderfist3", null, 7, 6, 1, 0);
+            
             MJugador1.mazo1.Add(boulderfist3);
             MJugador2.mazo1.Add(boulderfist3);
 
 
-            Minions war1 = new Minions("Basic", 7, "War1", null, 7, 7, 1, 0);
+            
             MJugador1.mazo1.Add(war1);
             MJugador2.mazo1.Add(war1);
-            Minions war2 = new Minions("Basic", 7, "War2", null, 7, 7, 1, 0);
+            
             MJugador1.mazo1.Add(war2);
             MJugador2.mazo1.Add(war2);
-            Minions war3 = new Minions("Basic", 7, "War3", null, 7, 7, 1, 0);
+            
             MJugador1.mazo1.Add(war3);
             MJugador2.mazo1.Add(war3);
 
-            Minions core1 = new Minions("Basic", 7, "Corehound1", "Beast", 5, 9, 1, 0);
+            
             MJugador1.mazo1.Add(core1);
             MJugador2.mazo1.Add(core1);
-            Minions core2 = new Minions("Basic", 7, "Corehound2", "Beast", 5, 9, 1, 0);
+            
             MJugador1.mazo1.Add(core2);
             MJugador2.mazo1.Add(core2);
-            Minions core3 = new Minions("Basic", 7, "Corehound3", "Beast", 5, 9, 1, 0);
+            
             MJugador1.mazo1.Add(core3);
             MJugador2.mazo1.Add(core3);
             MJugador1.shuffle();
@@ -143,6 +158,7 @@ namespace WpfApp2
         Jugar jugs = new Jugar();
 
         int eligioheroe = 0;
+        int jugando = 0;
 
 
         private void Paladin_Click(object sender, RoutedEventArgs e)
@@ -179,6 +195,10 @@ namespace WpfApp2
                 Manaj1.Visibility = Visibility.Visible;
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
+                BarraTableroj1.Visibility = Visibility.Visible;
+                BarraTableroj2.Visibility = Visibility.Visible;
+                Tableroj1.Visibility = Visibility.Visible;
+                Tableroj2.Visibility = Visibility.Visible;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
             }
         }
@@ -213,6 +233,10 @@ namespace WpfApp2
                 Manaj1.Visibility = Visibility.Visible;
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
+                BarraTableroj1.Visibility = Visibility.Visible;
+                BarraTableroj2.Visibility = Visibility.Visible;
+                Tableroj1.Visibility = Visibility.Visible;
+                Tableroj2.Visibility = Visibility.Visible;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
             }
         }
@@ -247,6 +271,10 @@ namespace WpfApp2
                 Manaj1.Visibility = Visibility.Visible;
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
+                BarraTableroj1.Visibility = Visibility.Visible;
+                BarraTableroj2.Visibility = Visibility.Visible;
+                Tableroj1.Visibility = Visibility.Visible;
+                Tableroj2.Visibility = Visibility.Visible;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
             }
         }
@@ -281,6 +309,10 @@ namespace WpfApp2
                 Manaj1.Visibility = Visibility.Visible;
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
+                BarraTableroj1.Visibility = Visibility.Visible;
+                BarraTableroj2.Visibility = Visibility.Visible;
+                Tableroj1.Visibility = Visibility.Visible;
+                Tableroj2.Visibility = Visibility.Visible;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
             }
         }
@@ -315,6 +347,10 @@ namespace WpfApp2
                 Manaj1.Visibility = Visibility.Visible;
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
+                BarraTableroj1.Visibility = Visibility.Visible;
+                BarraTableroj2.Visibility = Visibility.Visible;
+                Tableroj1.Visibility = Visibility.Visible;
+                Tableroj2.Visibility = Visibility.Visible;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
             }
 
@@ -350,6 +386,10 @@ namespace WpfApp2
                 Manaj1.Visibility = Visibility.Visible;
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
+                BarraTableroj1.Visibility = Visibility.Visible;
+                BarraTableroj2.Visibility = Visibility.Visible;
+                Tableroj1.Visibility = Visibility.Visible;
+                Tableroj2.Visibility = Visibility.Visible;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
             }
 
@@ -386,6 +426,10 @@ namespace WpfApp2
                 Manaj1.Visibility = Visibility.Visible;
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
+                BarraTableroj1.Visibility = Visibility.Visible;
+                BarraTableroj2.Visibility = Visibility.Visible;
+                Tableroj1.Visibility = Visibility.Visible;
+                Tableroj2.Visibility = Visibility.Visible;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
 
             }
@@ -440,6 +484,10 @@ namespace WpfApp2
                 Manaj1.Visibility = Visibility.Visible;
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
+                BarraTableroj1.Visibility = Visibility.Visible;
+                BarraTableroj2.Visibility = Visibility.Visible;
+                Tableroj1.Visibility = Visibility.Visible;
+                Tableroj2.Visibility = Visibility.Visible;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
             }
 
@@ -476,6 +524,7 @@ namespace WpfApp2
                 Manaj1.Visibility = Visibility.Visible;
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
+
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
             }
 
@@ -669,10 +718,12 @@ namespace WpfApp2
         }
 
         private void EmpiezaT1_Click(object sender, RoutedEventArgs e)
-        {
+        { 
+            jugando=0; 
             jugs.Jugars(Heroes[0], MJugador1);
             Mano.Visibility = Visibility.Visible;
             BarraMano.Visibility = Visibility.Visible;
+            
             foreach (Minions i in Heroes[0].mano)
             {
                 if (i.NombreCarta == "Wisp1")
@@ -878,6 +929,7 @@ namespace WpfApp2
 
         private void EmpiezaT2_Click(object sender, RoutedEventArgs e)
         {
+            jugando = 1;
             Mano.Visibility = Visibility.Visible;
             BarraMano.Visibility = Visibility.Visible;
             jugs.Jugars(Heroes[1], MJugador2);
@@ -1233,12 +1285,548 @@ namespace WpfApp2
 
         private void Wisp3_Click(object sender, RoutedEventArgs e)
         {
-
+            if (jugando == 0)
+            {
+                 Wisp3.Visibility = Visibility.Hidden;
+                 Heroes[0].Tablero1.Add(wisp3);
+                 Heroes[0].mano.Remove(wisp3);
+                 Wisp3j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Wisp3.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(wisp3);
+                Heroes[1].mano.Remove(wisp3);
+                Wisp3j2.Visibility = Visibility.Visible;
+            }
+            
+            
         }
 
         private void Bloodfen2_Click(object sender, RoutedEventArgs e)
         {
+            if (jugando == 0)
+            {
+                Bloodfen2.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(bloodfen2);
+                Heroes[0].mano.Remove(bloodfen2);
+                Bloodfen2j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Bloodfen2j1.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(bloodfen2);
+                Heroes[1].mano.Remove(bloodfen2);
+                Bloodfen2j2.Visibility = Visibility.Visible;
+            }
 
+        }
+
+        private void Wisp1_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Wisp1.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(wisp1);
+                Heroes[0].mano.Remove(wisp1);
+                Wisp3j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Wisp1.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(wisp1);
+                Heroes[1].mano.Remove(wisp1);
+                Wisp1j2.Visibility = Visibility.Visible;
+            }
+
+        }
+
+        private void Wisp2_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Wisp2.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(wisp2);
+                Heroes[0].mano.Remove(wisp2);
+                Wisp2j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Wisp2.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(wisp2);
+                Heroes[1].mano.Remove(wisp2);
+                Wisp2j2.Visibility = Visibility.Visible;
+            }
+
+        }
+
+        private void Bloodfen1_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Bloodfen1.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(bloodfen1);
+                Heroes[0].mano.Remove(bloodfen1);
+                Bloodfen1j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Bloodfen1.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(bloodfen1);
+                Heroes[1].mano.Remove(bloodfen1);
+                Bloodfen1j2.Visibility = Visibility.Visible;
+            }
+
+        }
+
+        private void Bloodfen3_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Bloodfen3.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(bloodfen3);
+                Heroes[0].mano.Remove(bloodfen3);
+                Bloodfen3j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Bloodfen3.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(bloodfen3);
+                Heroes[1].mano.Remove(bloodfen3);
+                Bloodfen3j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Boulderfist1_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Boulderfist1.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(boulderfist1);
+                Heroes[0].mano.Remove(boulderfist1);
+                Boulderfist1j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Boulderfist1.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(boulderfist1);
+                Heroes[1].mano.Remove(boulderfist1);
+                Boulderfist1j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Boulderfist2_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Boulderfist2.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(boulderfist2);
+                Heroes[0].mano.Remove(boulderfist2);
+                Boulderfist2j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Boulderfist2.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(boulderfist2);
+                Heroes[1].mano.Remove(boulderfist2);
+                Boulderfist2j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Boulderfist3_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Boulderfist3.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(boulderfist3);
+                Heroes[0].mano.Remove(boulderfist3);
+                Boulderfist3j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Boulderfist3j1.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(boulderfist3);
+                Heroes[1].mano.Remove(boulderfist3);
+                Boulderfist3j1.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Chillwind1_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+               Chillwind1.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(chillwind1);
+                Heroes[0].mano.Remove(chillwind1);
+                Chillwind1j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+               Chillwind1j1.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(chillwind1);
+                Heroes[1].mano.Remove(chillwind1);
+                Chillwind1j1.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Chillwind2_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Chillwind2.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(chillwind2);
+                Heroes[0].mano.Remove(chillwind2);
+                Chillwind2j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Chillwind2j1.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(chillwind2);
+                Heroes[1].mano.Remove(chillwind2);
+                Chillwind2j1.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Chillwind3_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Chillwind3.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(chillwind3);
+                Heroes[0].mano.Remove(chillwind3);
+                Chillwind3j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Chillwind3.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(chillwind3);
+                Heroes[1].mano.Remove(chillwind3);
+                Chillwind3j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Corehound1_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Corehound1.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(core1);
+                Heroes[0].mano.Remove(core1);
+                Corehound1j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Corehound1.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(core1);
+                Heroes[1].mano.Remove(core1);
+                Corehound1j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Corehound2_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Corehound2.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(core2);
+                Heroes[0].mano.Remove(core2);
+                Corehound2j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Corehound2.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(core2);
+                Heroes[1].mano.Remove(core2);
+                Corehound2j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Corehound3_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Corehound3.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(core3);
+                Heroes[0].mano.Remove(core3);
+                Corehound3j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Corehound1.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(core3);
+                Heroes[1].mano.Remove(core3);
+                Corehound3j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Magma1_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Magma1.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(magma1);
+                Heroes[0].mano.Remove(magma1);
+                Magma1j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Magma1.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(magma1);
+                Heroes[1].mano.Remove(magma1);
+                Magma1j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Magma2_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Magma2.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(magma2);
+                Heroes[0].mano.Remove(magma2);
+                Magma2j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Magma2.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(magma2);
+                Heroes[1].mano.Remove(magma2);
+                Magma2j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Magma3_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Magma3.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(magma3);
+                Heroes[0].mano.Remove(magma3);
+                Magma3j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Magma3.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(magma3);
+                Heroes[1].mano.Remove(magma3);
+                Magma3j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Murloc1_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Murloc1.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(murloc1);
+                Heroes[0].mano.Remove(murloc1);
+                Murloc1j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Murloc1.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(murloc1);
+                Heroes[1].mano.Remove(murloc1);
+                Murloc1j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Murloc2_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Murloc2.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(murloc2);
+                Heroes[0].mano.Remove(murloc2);
+                Murloc2j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Murloc2.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(murloc2);
+                Heroes[1].mano.Remove(murloc2);
+                Murloc2j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Murloc3_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Murloc3.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(murloc3);
+                Heroes[0].mano.Remove(murloc3);
+                Murloc3j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Murloc3.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(murloc3);
+                Heroes[1].mano.Remove(murloc3);
+                Murloc3j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Oasis1_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Oasis1.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(oasis1);
+                Heroes[0].mano.Remove(oasis1);
+                Oasis1j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Oasis1.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(oasis1);
+                Heroes[1].mano.Remove(oasis1);
+                Oasis1j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Oasis2_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Oasis2.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(oasis2);
+                Heroes[0].mano.Remove(oasis2);
+                Oasis2j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Oasis2.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(oasis2);
+                Heroes[1].mano.Remove(oasis2);
+                Oasis2j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Oasis3_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                Oasis3.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(oasis3);
+                Heroes[0].mano.Remove(oasis3);
+                Oasis3j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Oasis3.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(oasis3);
+                Heroes[1].mano.Remove(oasis3);
+                Oasis3j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void River1_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                River1.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(river1);
+                Heroes[0].mano.Remove(river1);
+                River1j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                River1.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(river1);
+                Heroes[1].mano.Remove(river1);
+                River1j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void River2_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                River2.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(river2);
+                Heroes[0].mano.Remove(river2);
+                River2j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                River2.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(river2);
+                Heroes[1].mano.Remove(river2);
+                River2j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void River3_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                River3.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(river3);
+                Heroes[0].mano.Remove(river3);
+                River3j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                River3.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(river3);
+                Heroes[1].mano.Remove(river3);
+                River3j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void War1_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                War1.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(war1);
+                Heroes[0].mano.Remove(war1);
+                War1j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                War1.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(war1);
+                Heroes[1].mano.Remove(war1);
+                War1j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void War2_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                War2.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(war2);
+                Heroes[0].mano.Remove(war2);
+                War2j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                War2.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(war2);
+                Heroes[1].mano.Remove(war2);
+                War2j2.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void War3_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                War3.Visibility = Visibility.Hidden;
+                Heroes[0].Tablero1.Add(war3);
+                Heroes[0].mano.Remove(war3);
+                War3j1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                War3.Visibility = Visibility.Hidden;
+                Heroes[1].Tablero1.Add(war3);
+                Heroes[1].mano.Remove(war3);
+                War3j2.Visibility = Visibility.Visible;
+            }
         }
     }
 }
