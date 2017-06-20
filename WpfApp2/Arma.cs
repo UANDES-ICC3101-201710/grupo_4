@@ -15,6 +15,7 @@ namespace WpfApp2
             : base(Clase, Coste, NombreCarta)
         {
             this.Duracion = Duracion;
+           
             this.Ataque = Ataque;
 
         }
