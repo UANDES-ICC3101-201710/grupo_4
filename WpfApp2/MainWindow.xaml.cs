@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Resources;
 
+
 namespace WpfApp2
 {
     /// <summary>
@@ -569,11 +570,6 @@ namespace WpfApp2
                 Tablero.Visibility = Visibility.Visible;
                 JugadorUno.Visibility = Visibility.Visible;
                 JugadorDos.Visibility = Visibility.Hidden;
-                BarraTableroj1.Visibility = Visibility.Visible;
-                BarraTableroj2.Visibility = Visibility.Visible;
-                Tableroj1.Visibility = Visibility.Visible;
-                Tableroj2.Visibility = Visibility.Visible;
-
 
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
@@ -596,7 +592,6 @@ namespace WpfApp2
                 nombre2.Visibility = Visibility.Visible;
                 JugadorUno.Visibility = Visibility.Hidden;
                 JugadorDos.Visibility = Visibility.Hidden;
-                HabilidadHeroe.Visibility = Visibility.Hidden;
             }
         }
 
@@ -621,7 +616,6 @@ namespace WpfApp2
         }
 
 
-
         private void FinTurno1_Click(object sender, RoutedEventArgs e)
         {
             jugs.Pasar(Heroes[0]);
@@ -634,8 +628,8 @@ namespace WpfApp2
             EmpiezaT2.Visibility = Visibility.Visible;
             EmpiezaT1.Visibility = Visibility.Hidden;
             Manaj1.Visibility = Visibility.Hidden;
+            cantmana.Visibility = Visibility.Hidden;
             Atacar.Visibility = Visibility.Hidden;
-            HabilidadHeroe.Visibility = Visibility.Hidden;
             if (r1 == 1) { paladinjugador.Visibility = Visibility.Hidden; }
             else if (r1 == 2) { druidajugador.Visibility = Visibility.Hidden; }
             else if (r1 == 3) { cazadorjugador.Visibility = Visibility.Hidden; }
@@ -800,8 +794,11 @@ namespace WpfApp2
             BarraMano.Visibility = Visibility.Visible;
             Manaj1.Visibility = Visibility.Visible;
             Atacar.Visibility = Visibility.Visible;
+            string va = Convert.ToString(Heroes[0].Mana);
+            cantmana.Text = va;
             Manaj1.Value = Heroes[0].Mana;
-            HabilidadHeroe.Visibility = Visibility.Visible;
+
+            cantmana.Visibility = Visibility.Visible;
             
             if (r1 == 1) { paladinjugador.Visibility = Visibility.Visible; }
             else if (r1 == 2) { druidajugador.Visibility = Visibility.Visible; }
@@ -1036,7 +1033,9 @@ namespace WpfApp2
             jugs.Jugars(Heroes[1], MJugador2);
             Manaj2.Visibility = Visibility.Visible;
             Manaj2.Value = Heroes[1].Mana;
-            HabilidadHeroe.Visibility = Visibility.Visible;
+            cantmana.Visibility = Visibility.Visible;
+            string va = Convert.ToString(Heroes[1].Mana);
+            cantmana.Text = va;
             Atacar.Visibility = Visibility.Visible;
             if (r2 == 1) { paladinjugador.Visibility = Visibility.Visible; }
             else if (r2 == 2) { druidajugador.Visibility = Visibility.Visible; }
@@ -1271,9 +1270,10 @@ namespace WpfApp2
             FinTurno1.Visibility = Visibility.Visible;
             EmpiezaT1.Visibility = Visibility.Visible;
             EmpiezaT2.Visibility = Visibility.Hidden;
+            cantmana.Visibility = Visibility.Hidden;
+
             Manaj2.Visibility = Visibility.Hidden;
             Atacar.Visibility = Visibility.Hidden;
-            HabilidadHeroe.Visibility = Visibility.Hidden;
             if (r2 == 1) { paladinjugador.Visibility = Visibility.Hidden; }
             else if (r2 == 2) { druidajugador.Visibility = Visibility.Hidden; }
             else if (r2 == 3) { cazadorjugador.Visibility = Visibility.Hidden; }
@@ -1431,6 +1431,8 @@ namespace WpfApp2
 
         private void Wisp3_Click(object sender, RoutedEventArgs e)
         {
+            Wisp3.BorderBrush = new SolidColorBrush(Colors.Gold);
+
             if (jugando == 0)
             {
                 if (Heroes[0].mano.Contains(wisp3))
@@ -1446,7 +1448,10 @@ namespace WpfApp2
                     else
                     {
                         if (wisp3.Seleccionada == 0)
-                        { wisp3.Seleccionada = 1; }
+                        { wisp3.Seleccionada = 1;
+
+                            Wisp3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        }
                         else { wisp3.Seleccionada = 0; }
                     }
 
@@ -1462,12 +1467,16 @@ namespace WpfApp2
                         Wisp3.Visibility = Visibility.Hidden;
                         Wisp3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (wisp3.Seleccionada == 0)
-                    { wisp3.Seleccionada = 1; }
+                    { wisp3.Seleccionada = 1;
+                        Wisp3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { wisp3.Seleccionada = 0; }
                 }
             }
@@ -1484,11 +1493,16 @@ namespace WpfApp2
                         Bloodfen2.Visibility = Visibility.Hidden;
                         Bloodfen2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (bloodfen2.Seleccionada == 0)
-                        { bloodfen2.Seleccionada = 1; }
+                        { bloodfen2.Seleccionada = 1;
+
+                           Bloodfen2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        }
                         else { bloodfen2.Seleccionada = 0; }
                     }
 
@@ -1504,12 +1518,16 @@ namespace WpfApp2
                         Bloodfen2.Visibility = Visibility.Hidden;
                         Bloodfen2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (bloodfen2.Seleccionada == 0)
-                    { bloodfen2.Seleccionada = 1; }
+                    { bloodfen2.Seleccionada = 1;
+                        Bloodfen2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { bloodfen2.Seleccionada = 0; }
                 }
             }
@@ -1518,6 +1536,7 @@ namespace WpfApp2
 
         private void Wisp1_Click(object sender, RoutedEventArgs e)
         {
+            
             if (jugando == 0)
             {
                 if (Heroes[0].mano.Contains(wisp1))
@@ -1527,11 +1546,17 @@ namespace WpfApp2
                         Wisp1.Visibility = Visibility.Hidden;
                         Wisp1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (wisp1.Seleccionada == 0)
-                        { wisp1.Seleccionada = 1; }
+                        {
+                            wisp1.Seleccionada = 1;
+                            Wisp1.BorderBrush = new SolidColorBrush(Colors.Gold);
+
+                        }
                         else { wisp1.Seleccionada = 0; }
                     }
 
@@ -1547,12 +1572,16 @@ namespace WpfApp2
                         Wisp1.Visibility = Visibility.Hidden;
                         Wisp1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (wisp1.Seleccionada == 0)
-                    { wisp1.Seleccionada = 1; }
+                    { wisp1.Seleccionada = 1;
+                        Wisp1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { wisp1.Seleccionada = 0; }
                 }
             }
@@ -1561,6 +1590,7 @@ namespace WpfApp2
 
         private void Wisp2_Click(object sender, RoutedEventArgs e)
         {
+            
             if (jugando == 0)
             {
                 if (Heroes[0].mano.Contains(wisp2))
@@ -1570,11 +1600,17 @@ namespace WpfApp2
                         Wisp2.Visibility = Visibility.Hidden;
                         Wisp2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (wisp2.Seleccionada == 0)
-                        { wisp2.Seleccionada = 1; }
+                        {
+                            wisp2.Seleccionada = 1;
+                            Wisp2.BorderBrush = new SolidColorBrush(Colors.Gold);
+
+                        }
                         else { wisp2.Seleccionada = 0; }
                     }
 
@@ -1591,12 +1627,16 @@ namespace WpfApp2
                         Wisp2.Visibility = Visibility.Hidden;
                         Wisp2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (wisp2.Seleccionada == 0)
-                    { wisp2.Seleccionada = 1; }
+                    { wisp2.Seleccionada = 1;
+                        Wisp2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { wisp2.Seleccionada = 0; }
                 }
             }
@@ -1614,11 +1654,16 @@ namespace WpfApp2
                         Bloodfen1.Visibility = Visibility.Hidden;
                         Bloodfen1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (bloodfen1.Seleccionada == 0)
-                        { bloodfen1.Seleccionada = 1; }
+                        { bloodfen1.Seleccionada = 1;
+
+                            Bloodfen1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        }
                         else { bloodfen1.Seleccionada = 0; }
                     }
 
@@ -1635,12 +1680,16 @@ namespace WpfApp2
                         Bloodfen1.Visibility = Visibility.Hidden;
                         Bloodfen1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (bloodfen1.Seleccionada == 0)
-                    { bloodfen1.Seleccionada = 1; }
+                    { bloodfen1.Seleccionada = 1;
+                        Bloodfen1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { bloodfen1.Seleccionada = 0; }
                 }
             }
@@ -1658,11 +1707,15 @@ namespace WpfApp2
                         Bloodfen3.Visibility = Visibility.Hidden;
                         Bloodfen3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (bloodfen3.Seleccionada == 0)
-                        { bloodfen3.Seleccionada = 1; }
+                        { bloodfen3.Seleccionada = 1;
+                            Bloodfen3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        }
                         else { bloodfen3.Seleccionada = 0; }
                     }
 
@@ -1678,12 +1731,16 @@ namespace WpfApp2
                         Bloodfen3.Visibility = Visibility.Hidden;
                         Bloodfen3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (bloodfen3.Seleccionada == 0)
-                    { bloodfen3.Seleccionada = 1; }
+                    { bloodfen3.Seleccionada = 1;
+                        Bloodfen3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { bloodfen3.Seleccionada = 0; }
                 }
             }
@@ -1700,11 +1757,14 @@ namespace WpfApp2
                         Boulderfist1.Visibility = Visibility.Hidden;
                         Boulderfist1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (boulderfist1.Seleccionada == 0)
-                        { boulderfist1.Seleccionada = 1; }
+                        { boulderfist1.Seleccionada = 1;
+                        Boulderfist1.BorderBrush = new SolidColorBrush(Colors.Gold);}
                         else { boulderfist1.Seleccionada = 0; }
                     }
 
@@ -1720,12 +1780,16 @@ namespace WpfApp2
                         Boulderfist1.Visibility = Visibility.Hidden;
                         Boulderfist1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (boulderfist1.Seleccionada == 0)
-                    { boulderfist1.Seleccionada = 1; }
+                    { boulderfist1.Seleccionada = 1;
+                        Boulderfist1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { boulderfist1.Seleccionada = 0; }
                 }
             }
@@ -1742,11 +1806,16 @@ namespace WpfApp2
                         Boulderfist2.Visibility = Visibility.Hidden;
                         Boulderfist2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (boulderfist2.Seleccionada == 0)
-                        { boulderfist2.Seleccionada = 1; }
+                        { boulderfist2.Seleccionada = 1;
+
+                            Boulderfist2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        }
                         else { boulderfist2.Seleccionada = 0; }
                     }
 
@@ -1762,12 +1831,16 @@ namespace WpfApp2
                         Boulderfist2.Visibility = Visibility.Hidden;
                         Boulderfist2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (boulderfist2.Seleccionada == 0)
-                    { boulderfist2.Seleccionada = 1; }
+                    { boulderfist2.Seleccionada = 1;
+                        Boulderfist2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { boulderfist2.Seleccionada = 0; }
                 }
             }
@@ -1784,11 +1857,15 @@ namespace WpfApp2
                         Boulderfist3.Visibility = Visibility.Hidden;
                         Boulderfist3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (boulderfist3.Seleccionada == 0)
-                        { boulderfist3.Seleccionada = 1; }
+                        { boulderfist3.Seleccionada = 1;
+                            Boulderfist3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        }
                         else { boulderfist3.Seleccionada = 0; }
                     }
 
@@ -1804,12 +1881,16 @@ namespace WpfApp2
                         Boulderfist3.Visibility = Visibility.Hidden;
                         Boulderfist3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (boulderfist3.Seleccionada == 0)
-                    { boulderfist3.Seleccionada = 1; }
+                    { boulderfist3.Seleccionada = 1;
+                        Boulderfist3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { boulderfist3.Seleccionada = 0; }
                 }
             }
@@ -1826,11 +1907,15 @@ namespace WpfApp2
                         Chillwind1.Visibility = Visibility.Hidden;
                         Chillwind1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (chillwind1.Seleccionada == 0)
-                        { chillwind1.Seleccionada = 1; }
+                        { chillwind1.Seleccionada = 1;
+                            Chillwind1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        }
                         else { chillwind1.Seleccionada = 0; }
                     }
 
@@ -1846,12 +1931,16 @@ namespace WpfApp2
                         Chillwind1.Visibility = Visibility.Hidden;
                         Chillwind1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (chillwind1.Seleccionada == 0)
-                    { chillwind1.Seleccionada = 1; }
+                    { chillwind1.Seleccionada = 1;
+                        Chillwind1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { chillwind1.Seleccionada = 0; }
                 }
             }
@@ -1868,11 +1957,15 @@ namespace WpfApp2
                         Chillwind2.Visibility = Visibility.Hidden;
                         Chillwind2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (chillwind2.Seleccionada == 0)
-                        { chillwind2.Seleccionada = 1; }
+                        { chillwind2.Seleccionada = 1;
+                            Chillwind2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        }
                         else { chillwind2.Seleccionada = 0; }
                     }
 
@@ -1888,12 +1981,16 @@ namespace WpfApp2
                         Chillwind2.Visibility = Visibility.Hidden;
                         Chillwind2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (chillwind2.Seleccionada == 0)
-                    { chillwind2.Seleccionada = 1; }
+                    { chillwind2.Seleccionada = 1;
+                        Chillwind2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { chillwind2.Seleccionada = 0; }
                 }
             }
@@ -1910,11 +2007,15 @@ namespace WpfApp2
                         Chillwind3.Visibility = Visibility.Hidden;
                         Chillwind3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (chillwind3.Seleccionada == 0)
-                        { chillwind3.Seleccionada = 1; }
+                        { chillwind3.Seleccionada = 1;
+                            Chillwind3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        }
                         else { chillwind3.Seleccionada = 0; }
                     }
 
@@ -1930,12 +2031,16 @@ namespace WpfApp2
                         Chillwind3.Visibility = Visibility.Hidden;
                         Chillwind3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (chillwind3.Seleccionada == 0)
-                    { chillwind3.Seleccionada = 1; }
+                    { chillwind3.Seleccionada = 1;
+                        Chillwind3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { chillwind3.Seleccionada = 0; }
                 }
             }
@@ -1952,11 +2057,15 @@ namespace WpfApp2
                         Corehound1.Visibility = Visibility.Hidden;
                         Corehound1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (core1.Seleccionada == 0)
-                        { core1.Seleccionada = 1; }
+                        { core1.Seleccionada = 1;
+                            Corehound1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        }
                         else { core1.Seleccionada = 0; }
                     }
 
@@ -1972,12 +2081,16 @@ namespace WpfApp2
                         Corehound1.Visibility = Visibility.Hidden;
                         Corehound1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (core1.Seleccionada == 0)
-                    { core1.Seleccionada = 1; }
+                    { core1.Seleccionada = 1;
+                        Corehound1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { core1.Seleccionada = 0; }
                 }
             }
@@ -1995,11 +2108,15 @@ namespace WpfApp2
                             Corehound2.Visibility = Visibility.Hidden;
                             Corehound2j1.Visibility = Visibility.Visible;
                             Manaj1.Value = Heroes[0].Mana;
-                        }
+                            string va = Convert.ToString(Heroes[0].Mana);
+                            cantmana.Text = va;
+                    }
                         else
                         {
                             if (core2.Seleccionada == 0)
-                            { core2.Seleccionada = 1; }
+                            { core2.Seleccionada = 1;
+                            Corehound2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                            }
                             else { core2.Seleccionada = 0; }
                         }
 
@@ -2016,12 +2133,16 @@ namespace WpfApp2
                         Corehound2.Visibility = Visibility.Hidden;
                         Corehound2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (core2.Seleccionada == 0)
-                    { core2.Seleccionada = 1; }
+                    { core2.Seleccionada = 1;
+                        Corehound2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { core2.Seleccionada = 0; }
                 }
             }
@@ -2038,11 +2159,15 @@ namespace WpfApp2
                         Corehound3.Visibility = Visibility.Hidden;
                         Corehound3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (core3.Seleccionada == 0)
-                        { core3.Seleccionada = 1; }
+                        { core3.Seleccionada = 1;
+                            Corehound3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        }
                         else { core3.Seleccionada = 0; }
                     }
 
@@ -2058,12 +2183,16 @@ namespace WpfApp2
                         Corehound3.Visibility = Visibility.Hidden;
                         Corehound3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (core3.Seleccionada == 0)
-                    { core3.Seleccionada = 1; }
+                    { core3.Seleccionada = 1;
+                        Corehound3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { core3.Seleccionada = 0; }
                 }
             }
@@ -2080,11 +2209,15 @@ namespace WpfApp2
                         Magma1.Visibility = Visibility.Hidden;
                         Magma1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (magma1.Seleccionada == 0)
-                        { magma1.Seleccionada = 1; }
+                        { magma1.Seleccionada = 1;
+                            Magma1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        }
                         else { magma1.Seleccionada = 0; }
                     }
 
@@ -2100,12 +2233,16 @@ namespace WpfApp2
                         Magma1.Visibility = Visibility.Hidden;
                         Magma1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (magma1.Seleccionada == 0)
-                    { magma1.Seleccionada = 1; }
+                    { magma1.Seleccionada = 1;
+                        Magma1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { magma1.Seleccionada = 0; }
                 }
             }
@@ -2122,11 +2259,15 @@ namespace WpfApp2
                         Magma2.Visibility = Visibility.Hidden;
                         Magma2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (magma2.Seleccionada == 0)
-                        { magma2.Seleccionada = 1; }
+                        { magma2.Seleccionada = 1;
+                            Magma2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        }
                         else { magma2.Seleccionada = 0; }
                     }
 
@@ -2142,12 +2283,16 @@ namespace WpfApp2
                         Magma2.Visibility = Visibility.Hidden;
                         Magma2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (magma2.Seleccionada == 0)
-                    { magma2.Seleccionada = 1; }
+                    { magma2.Seleccionada = 1;
+                        Magma2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { magma2.Seleccionada = 0; }
                 }
             }
@@ -2164,11 +2309,14 @@ namespace WpfApp2
                         Magma3.Visibility = Visibility.Hidden;
                         Magma3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (magma3.Seleccionada == 0)
-                        { magma3.Seleccionada = 1; }
+                        { magma3.Seleccionada = 1;
+                            Magma3.BorderBrush = new SolidColorBrush(Colors.Gold); }
                         else { magma3.Seleccionada = 0; }
                     }
 
@@ -2184,12 +2332,16 @@ namespace WpfApp2
                         Magma3.Visibility = Visibility.Hidden;
                         Magma3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (magma3.Seleccionada == 0)
-                    { magma3.Seleccionada = 1; }
+                    { magma3.Seleccionada = 1;
+                        Magma3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { magma3.Seleccionada = 0; }
                 }
             }
@@ -2206,11 +2358,15 @@ namespace WpfApp2
                         Murloc1.Visibility = Visibility.Hidden;
                         Murloc1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (murloc1.Seleccionada == 0)
-                        { murloc1.Seleccionada = 1; }
+                        { murloc1.Seleccionada = 1;
+                            Murloc1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        }
                         else { murloc1.Seleccionada = 0; }
                     }
 
@@ -2226,12 +2382,16 @@ namespace WpfApp2
                         Murloc1.Visibility = Visibility.Hidden;
                         Murloc1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (murloc1.Seleccionada == 0)
-                    { murloc1.Seleccionada = 1; }
+                    { murloc1.Seleccionada = 1;
+                        Murloc1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { murloc1.Seleccionada = 0; }
                 }
             }
@@ -2248,11 +2408,15 @@ namespace WpfApp2
                         Murloc2.Visibility = Visibility.Hidden;
                         Murloc2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (murloc2.Seleccionada == 0)
-                        { murloc2.Seleccionada = 1; }
+                        { murloc2.Seleccionada = 1;
+                            Murloc2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        }
                         else { murloc2.Seleccionada = 0; }
                     }
 
@@ -2268,12 +2432,16 @@ namespace WpfApp2
                         Murloc2.Visibility = Visibility.Hidden;
                         Murloc2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (murloc2.Seleccionada == 0)
-                    { murloc2.Seleccionada = 1; }
+                    { murloc2.Seleccionada = 1;
+                        Murloc2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { murloc2.Seleccionada = 0; }
                 }
             }
@@ -2290,11 +2458,15 @@ namespace WpfApp2
                         Murloc3.Visibility = Visibility.Hidden;
                         Murloc3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (murloc3.Seleccionada == 0)
-                        { murloc3.Seleccionada = 1; }
+                        { murloc3.Seleccionada = 1;
+                            Murloc3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        }
                         else { murloc3.Seleccionada = 0; }
                     }
 
@@ -2310,12 +2482,16 @@ namespace WpfApp2
                         Murloc3.Visibility = Visibility.Hidden;
                         Murloc3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (murloc3.Seleccionada == 0)
-                    { murloc3.Seleccionada = 1; }
+                    { murloc3.Seleccionada = 1;
+                        Murloc3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { murloc3.Seleccionada = 0; }
                 }
             }
@@ -2332,12 +2508,15 @@ namespace WpfApp2
                         Oasis1.Visibility = Visibility.Hidden;
                         Oasis1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (oasis1.Seleccionada == 0)
                         {
                             oasis1.Seleccionada = 1;
+                            Oasis1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         }
                         else { oasis1.Seleccionada = 0; }
                     }
@@ -2353,12 +2532,16 @@ namespace WpfApp2
                             Oasis1.Visibility = Visibility.Hidden;
                             Oasis1j2.Visibility = Visibility.Visible;
                             Manaj2.Value = Heroes[1].Mana;
+                            string va = Convert.ToString(Heroes[1].Mana);
+                            cantmana.Text = va;
                         }
                     }
                     else
                     {
                         if (oasis1.Seleccionada == 0)
-                        { oasis1.Seleccionada = 1; }
+                        { oasis1.Seleccionada = 1;
+                            Oasis1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        }
                         else { oasis1.Seleccionada = 0; }
                     }
                 }
@@ -2376,12 +2559,15 @@ namespace WpfApp2
                         Oasis2.Visibility = Visibility.Hidden;
                         Oasis2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (oasis2.Seleccionada == 0)
                         {
                             oasis2.Seleccionada = 1;
+                            Oasis2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         }
                         else { oasis2.Seleccionada = 0; }
                     }
@@ -2398,12 +2584,16 @@ namespace WpfApp2
                         Oasis2.Visibility = Visibility.Hidden;
                         Oasis2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (oasis2.Seleccionada == 0)
-                    { oasis2.Seleccionada = 1; }
+                    { oasis2.Seleccionada = 1;
+                        Oasis2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { oasis2.Seleccionada = 0; }
                 }
             }
@@ -2420,12 +2610,15 @@ namespace WpfApp2
                         Oasis3.Visibility = Visibility.Hidden;
                         Oasis3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (oasis3.Seleccionada == 0)
                         {
                             oasis3.Seleccionada = 1;
+                            Oasis3.BorderBrush = new SolidColorBrush(Colors.Gold);
                         }
                         else { oasis3.Seleccionada = 0; }
                     }
@@ -2442,12 +2635,16 @@ namespace WpfApp2
                         Oasis3.Visibility = Visibility.Hidden;
                         Oasis3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (oasis3.Seleccionada == 0)
-                    { oasis3.Seleccionada = 1; }
+                    { oasis3.Seleccionada = 1;
+                        Oasis3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { oasis3.Seleccionada = 0; }
                 }
             }
@@ -2464,12 +2661,15 @@ namespace WpfApp2
                         River1.Visibility = Visibility.Hidden;
                         River1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (river1.Seleccionada == 0)
                         {
                             river1.Seleccionada = 1;
+                            River1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         }
                         else { river1.Seleccionada = 0; }
                     }
@@ -2486,12 +2686,16 @@ namespace WpfApp2
                         River1.Visibility = Visibility.Hidden;
                         River1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (river1.Seleccionada == 0)
-                    { river1.Seleccionada = 1; }
+                    { river1.Seleccionada = 1;
+                        River1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { river1.Seleccionada = 0; }
                 }
             }
@@ -2508,12 +2712,15 @@ namespace WpfApp2
                         River2.Visibility = Visibility.Hidden;
                         River2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (river2.Seleccionada == 0)
                         {
                             river2.Seleccionada = 1;
+                            River2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         }
                         else { river2.Seleccionada = 0; }
                     }
@@ -2530,12 +2737,16 @@ namespace WpfApp2
                         River2.Visibility = Visibility.Hidden;
                         River2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (river2.Seleccionada == 0)
-                    { river2.Seleccionada = 1; }
+                    { river2.Seleccionada = 1;
+                        River2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { river2.Seleccionada = 0; }
                 }
             }
@@ -2552,12 +2763,15 @@ namespace WpfApp2
                         River3.Visibility = Visibility.Hidden;
                         River3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (river3.Seleccionada == 0)
                         {
                             river3.Seleccionada = 1;
+                            River3.BorderBrush = new SolidColorBrush(Colors.Gold);
                         }
                         else { river3.Seleccionada = 0; }
                     }
@@ -2574,12 +2788,16 @@ namespace WpfApp2
                         River3.Visibility = Visibility.Hidden;
                         River3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (river3.Seleccionada == 0)
-                    { river3.Seleccionada = 1; }
+                    { river3.Seleccionada = 1;
+                        River3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { river3.Seleccionada = 0; }
                 }
             }
@@ -2596,12 +2814,15 @@ namespace WpfApp2
                         War1.Visibility = Visibility.Hidden;
                         War1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (war1.Seleccionada == 0)
                         {
                             war1.Seleccionada = 1;
+                            War1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         }
                         else { war1.Seleccionada = 0; }
                     }
@@ -2618,12 +2839,16 @@ namespace WpfApp2
                         War1.Visibility = Visibility.Hidden;
                         War1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (war1.Seleccionada == 0)
-                    { war1.Seleccionada = 1; }
+                    { war1.Seleccionada = 1;
+                        War1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { war1.Seleccionada = 0; }
                 }
             }
@@ -2641,12 +2866,15 @@ namespace WpfApp2
                         War2.Visibility = Visibility.Hidden;
                         War2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (war2.Seleccionada == 0)
                         {
                             war2.Seleccionada = 1;
+                            War2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         }
                         else { war2.Seleccionada = 0; }
                     }
@@ -2663,12 +2891,16 @@ namespace WpfApp2
                         War2.Visibility = Visibility.Hidden;
                         War2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (war2.Seleccionada == 0)
-                    { war2.Seleccionada = 1; }
+                    { war2.Seleccionada = 1;
+                        War2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { war2.Seleccionada = 0; }
                 }
             }
@@ -2685,12 +2917,15 @@ namespace WpfApp2
                         War3.Visibility = Visibility.Hidden;
                         War3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                     else
                     {
                         if (war3.Seleccionada == 0)
                         {
                             war3.Seleccionada = 1;
+                            War3.BorderBrush = new SolidColorBrush(Colors.Gold);
                         }
                         else { war3.Seleccionada = 0; }
                     }
@@ -2707,12 +2942,16 @@ namespace WpfApp2
                         War3.Visibility = Visibility.Hidden;
                         War3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string va = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (war3.Seleccionada == 0)
-                    { war3.Seleccionada = 1; }
+                    { war3.Seleccionada = 1;
+                        War3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                     else { war3.Seleccionada = 0; }
                 }
             }
@@ -2728,6 +2967,7 @@ namespace WpfApp2
                     if (ad.Seleccionada == 1)
 
                     {
+                        
                         foreach (Minions af in Heroes[1].Tablero1)
                         {
                             if (af.Seleccionada == 1)
@@ -2796,14 +3036,14 @@ namespace WpfApp2
                 if (i.NombreCarta == "Murloc1")
                 {
 
-                    Murloc1.Margin = new Thickness(0, 0, 0, 0);
+                    Murloc1j1.Margin = new Thickness(0, 0, 0, 0);
                     Murloc1j1.Visibility = Visibility.Visible;
 
                 }
                 if (i.NombreCarta == "Murloc2")
                 {
 
-                    Murloc2.Margin = new Thickness(0, 0, 0, 0);
+                    Murloc2j1.Margin = new Thickness(0, 0, 0, 0);
                     Murloc2j1.Visibility = Visibility.Visible;
 
 
@@ -2811,7 +3051,7 @@ namespace WpfApp2
                 if (i.NombreCarta == "Murloc3")
                 {
 
-                    Murloc3.Margin = new Thickness(0, 0, 0, 0);
+                    Murloc3j1.Margin = new Thickness(0, 0, 0, 0);
                     Murloc3j1.Visibility = Visibility.Visible;
 
                 }
@@ -3169,38 +3409,6 @@ namespace WpfApp2
                     Boulderfist3j1.Visibility = Visibility.Visible;
                 }
             }
-        }
-
-        private void HabilidadHeroe_Click(object sender, RoutedEventArgs e)
-        {
-            if (jugando == 0)
-            {
-                if (Heroes[0].Nombre == "Paladin") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Druida") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Cazador") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Hunter") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Sacerdote") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Picaro") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Brujo") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Mago") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Chaman") { Heroes[0].Habilidad(Heroes[0]); }
-                else { Heroes[0].Habilidad(Heroes[0]); }
-
-            }
-            else
-            {
-                if (Heroes[0].Nombre == "Paladin") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Druida") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Cazador") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Hunter") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Sacerdote") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Picaro") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Brujo") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Mago") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Chaman") { Heroes[0].Habilidad(Heroes[0]); }
-                else { Heroes[0].Habilidad(Heroes[0]); }
-            }
-           
         }
     }
 }

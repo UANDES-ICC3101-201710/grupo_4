@@ -22,7 +22,9 @@ namespace WpfApp2
             {
                 warrior.Conteodemana += 1;
             }
-            warrior.Mana += warrior.Conteodemana - warrior.Mana;
+            int a = warrior.Conteodemana - warrior.Mana;
+            warrior.Mana += a;
+            
 
         }
 
