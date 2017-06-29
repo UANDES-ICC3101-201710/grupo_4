@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+
 
 namespace WpfApp2
 {
@@ -44,6 +47,12 @@ namespace WpfApp2
             cant = CartasenTablero.Count();
             if (cant > 10) { }
             
+        }
+
+        public void Guardar(Stream stream, BinaryFormatter bf,object obj)
+        {
+            bf.Serialize(stream, obj);
+
         }
 
     }

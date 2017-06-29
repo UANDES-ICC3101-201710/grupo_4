@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfApp2
 {
+    [Serializable]
     public class Mazo
     {
         public List<Minions> mazo1 = new List<Minions>();

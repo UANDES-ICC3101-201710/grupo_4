@@ -22,7 +22,7 @@
         <TextBox x:Name="nombre1" HorizontalAlignment="Left" Height="36" Margin="267,211,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="191" KeyDown="nombre1_KeyPressed" />
         <TextBox x:Name="nombre2" HorizontalAlignment="Left" Height="36" Margin="267,211,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="191" KeyDown="nombre2_KeyPressed" Visibility="Hidden" />
 
-        <Image x:Name="Tablero" Margin="-15,0,0,0" Source="tablero.jpg" Stretch="Fill" Visibility="Hidden" Grid.RowSpan="2"/>
+        <Image x:Name="Tablero" Margin="-15,0,0,0" Source="tablero.jpg" Stretch="Fill" Visibility="Visible" Grid.RowSpan="2"/>
 
         <ProgressBar x:Name="Manaj1"  Maximum="10"  Visibility="Hidden" HorizontalAlignment="Left" Height="15" Margin="447,366,0,0" VerticalAlignment="Top" Width="154" Foreground="#FF44CCEA"  Background="#FF91745F" />
         <ProgressBar x:Name="Manaj2" Maximum="10" Visibility="Hidden" HorizontalAlignment="Left" Height="15" Margin="447,366,0,0" VerticalAlignment="Top" Width="154" Background="#FF91745F" BorderBrush="{x:Null}" Foreground="#FF2FDCDC"   />
@@ -533,6 +533,7 @@
         <Image x:Name="otropicaro" Margin="301,46,320,264" Source="picaroshico.png" Stretch="Fill" RenderTransformOrigin="0.572,0.506" Visibility="Hidden"/>
         <Button x:Name="HabilidadHeroe" Content="Habilidad" HorizontalAlignment="Left" Margin="11,267,0,0" VerticalAlignment="Top" Width="75" Click="HabilidadHeroe_Click" Visibility="Hidden"/>
         <Image x:Name="otrosacerdote" Margin="301,46,320,264" Source="sacerdoteshico.png" Stretch="Fill" RenderTransformOrigin="0.572,0.506" Visibility="Hidden"/>
+        <Button x:Name="Guardar" Content="Guardar" HorizontalAlignment="Left" Margin="626,178,0,0" VerticalAlignment="Top" Width="75" Click="Guardar_Click"/>
 
 
 

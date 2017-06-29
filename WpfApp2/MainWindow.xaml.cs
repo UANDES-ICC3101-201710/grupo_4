@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Resources;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+  
 
 namespace WpfApp2
 {
@@ -157,6 +160,9 @@ namespace WpfApp2
         List<Heroe> Heroes = new List<Heroe>();
         Program MyV = new Program();
         Jugar jugs = new Jugar();
+
+        BinaryFormatter bf = new BinaryFormatter();
+        Stream stream = new FileStream("juego.txt", FileMode.Create, FileAccess.Write, FileShare.None);
 
         int eligioheroe = 0;
         int jugando = 0;
@@ -3465,6 +3471,11 @@ namespace WpfApp2
                 else { Heroes[0].Habilidad(Heroes[0]); }
             }
            
+
+        }
+
+        private void Guardar_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }

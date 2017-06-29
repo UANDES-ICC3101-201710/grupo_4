@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace WpfApp2
 {
+    [Serializable]
     public class Minions : Cartas
     {
+        
         private string Raza;
         public int Vida;
         public int Daño;
