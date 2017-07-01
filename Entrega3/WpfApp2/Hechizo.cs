@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfApp2
 {
+    [Serializable]
     public class Hechizo : Cartas
     {
         public Hechizo(string Clase, int Coste, string NombreCarta)

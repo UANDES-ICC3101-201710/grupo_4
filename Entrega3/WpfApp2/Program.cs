@@ -9,6 +9,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace WpfApp2
 {
+
     class Program
     {
         public int QuienParte(Heroe h1, Heroe h2, Mazo m1, Mazo m2)

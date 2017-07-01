@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Windows.Resources;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+
   
 
 namespace WpfApp2
@@ -162,7 +163,9 @@ namespace WpfApp2
         Jugar jugs = new Jugar();
 
         BinaryFormatter bf = new BinaryFormatter();
-        Stream stream = new FileStream("juego.txt", FileMode.Create, FileAccess.Write, FileShare.None);
+
+        
+
 
         int eligioheroe = 0;
         int jugando = 0;
@@ -1482,7 +1485,7 @@ namespace WpfApp2
                 {
                     if (wisp3.Seleccionada == 0)
                     { wisp3.Seleccionada = 1;
-                        
+                        Wisp3.BorderBrush = new SolidColorBrush(Colors.Gold);
                     }
                     else { wisp3.Seleccionada = 0; }
                 }
@@ -1505,7 +1508,7 @@ namespace WpfApp2
                 else
                 {
                     if (wisp3.Seleccionada == 0)
-                    { wisp3.Seleccionada = 1; }
+                    { wisp3.Seleccionada = 1; Wisp3.BorderBrush = new SolidColorBrush(Colors.Gold); }
                     else { wisp3.Seleccionada = 0; }
                 }
             }
@@ -1528,7 +1531,7 @@ namespace WpfApp2
                 else
                 {
                     if (bloodfen2.Seleccionada == 0)
-                    { bloodfen2.Seleccionada = 1; }
+                    { bloodfen2.Seleccionada = 1; Wisp3.BorderBrush = new SolidColorBrush(Colors.Gold); }
                     else { bloodfen2.Seleccionada = 0; }
                 }
 
@@ -1550,7 +1553,7 @@ namespace WpfApp2
                 else
                 {
                     if (bloodfen2.Seleccionada == 0)
-                    { bloodfen2.Seleccionada = 1; }
+                    { bloodfen2.Seleccionada = 1; Wisp3.BorderBrush = new SolidColorBrush(Colors.Gold); }
                     else { bloodfen2.Seleccionada = 0; }
                 }
             }
@@ -1574,7 +1577,7 @@ namespace WpfApp2
                 else
                 {
                     if (wisp1.Seleccionada == 0)
-                    { wisp1.Seleccionada = 1; }
+                    { wisp1.Seleccionada = 1; Wisp1.BorderBrush = new SolidColorBrush(Colors.Gold); }
                     else { wisp1.Seleccionada = 0; }
                 }
 
@@ -1596,7 +1599,7 @@ namespace WpfApp2
                 else
                 {
                     if (wisp1.Seleccionada == 0)
-                    { wisp1.Seleccionada = 1; }
+                    { wisp1.Seleccionada = 1; Wisp1.BorderBrush = new SolidColorBrush(Colors.Gold); }
                     else { wisp1.Seleccionada = 0; }
                 }
             }
@@ -1620,7 +1623,7 @@ namespace WpfApp2
                 else
                 {
                     if (wisp2.Seleccionada == 0)
-                    { wisp2.Seleccionada = 1; }
+                    { wisp2.Seleccionada = 1; Wisp2.BorderBrush = new SolidColorBrush(Colors.Gold); }
                     else { wisp2.Seleccionada = 0; }
                 }
 
@@ -1643,7 +1646,7 @@ namespace WpfApp2
                 else
                 {
                     if (wisp2.Seleccionada == 0)
-                    { wisp2.Seleccionada = 1; }
+                    { wisp2.Seleccionada = 1; Wisp2.BorderBrush = new SolidColorBrush(Colors.Gold); }
                     else { wisp2.Seleccionada = 0; }
                 }
             }
@@ -3476,7 +3479,41 @@ namespace WpfApp2
 
         private void Guardar_Click(object sender, RoutedEventArgs e)
         {
+            Stream He1G = new FileStream("Heroe1.txt", FileMode.Create, FileAccess.Write, FileShare.None);
+            Stream He2G = new FileStream("Heroe2.txt", FileMode.Create, FileAccess.Write, FileShare.None);
+            Stream Ma1G = new FileStream("Mazo1.txt", FileMode.Create, FileAccess.Write, FileShare.None);
+            Stream Ma2G = new FileStream("Mazo2.txt", FileMode.Create, FileAccess.Write, FileShare.None);
 
+            bf.Serialize(He1G,Heroes[0]);
+            bf.Serialize(He2G, Heroes[1]);
+            bf.Serialize(Ma1G, MJugador1);
+            bf.Serialize(Ma2G, MJugador2);
+
+            Ma1G.Close();
+            Ma2G.Close();
+            He1G.Close();
+            He2G.Close();
+        }      
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            
+          
+
+            Stream He1C = new FileStream("Heroe1.txt", FileMode.Open, FileAccess.Read, FileShare.None);
+            Stream He2C = new FileStream("Heroe2.txt", FileMode.Open, FileAccess.Read, FileShare.None);
+            Stream Ma1C = new FileStream("Mazo1.txt", FileMode.Open, FileAccess.Read, FileShare.None);
+            Stream Ma2C = new FileStream("Mazo2.txt", FileMode.Open, FileAccess.Read, FileShare.None);
+            Heroe H1 = (Heroe)bf.Deserialize(He1C);
+            Heroes.Add(H1);
+            Heroe H2 = (Heroe)bf.Deserialize(He2C);
+            Heroes.Add(H2);
+            MJugador1 = (Mazo)bf.Deserialize(Ma1C);
+            MJugador2 = (Mazo)bf.Deserialize(Ma2C);
+            Ma1C.Close();
+            Ma2C.Close();
+            He1C.Close();
+            He2C.Close();
         }
     }
 }

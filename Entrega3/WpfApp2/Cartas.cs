@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfApp2
 {
+    [Serializable]
     public class Cartas 
     {
         public string Clase;

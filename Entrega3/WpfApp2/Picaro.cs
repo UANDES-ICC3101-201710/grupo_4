@@ -6,25 +6,23 @@ using System.Threading.Tasks;
 
 namespace WpfApp2
 {
-    public class Hunter : Heroe
+    [Serializable]
+    public class Picaro : Heroe
     {
-
-        public Hunter(int Vida, int Mana, string Nombre, int Conteodemana, int Armadura, int Ataque, int Durabilidad, int HabilidadFindeTurno)
+        public Picaro(int Vida, int Mana, string Nombre, int Conteodemana, int Armadura, int Ataque, int Durabilidad, int HabilidadFindeTurno)
             : base(Vida, Mana, Nombre, Conteodemana, Armadura, Ataque, Durabilidad, HabilidadFindeTurno)
         {
 
         }
-        public override void Habilidad(Heroe Here)
+        public override void Habilidad(Heroe H)
         {
             if (Mana >= 2)
             {
-                Here.Vida -= 2;
                 Mana -= 2;
+                Ataque = 1;
+                Durabilidad = 2;
+
             }
-           // else
-            //{
-              //  Console.WriteLine("No tienes Suficiente Mana");
-            //}
         }
     }
 }
