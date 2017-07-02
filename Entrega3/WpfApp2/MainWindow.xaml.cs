@@ -216,6 +216,7 @@ namespace WpfApp2
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
                 Tableroj2.Visibility = Visibility.Visible;
+                Guardar.Visibility = Visibility.Visible;
                 r2 = 1;
                 r22 = 1;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
@@ -259,6 +260,7 @@ namespace WpfApp2
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
                 Tableroj2.Visibility = Visibility.Visible;
+                Guardar.Visibility = Visibility.Visible;
                 r2 = 2;
                 r22 = 2;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
@@ -302,6 +304,7 @@ namespace WpfApp2
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
                 Tableroj2.Visibility = Visibility.Visible;
+                Guardar.Visibility = Visibility.Visible;
                 r2 = 3;
                 r22 = 3;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
@@ -345,6 +348,7 @@ namespace WpfApp2
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
                 Tableroj2.Visibility = Visibility.Visible;
+                Guardar.Visibility = Visibility.Visible;
                 r2 = 4;
                 r22 = 4;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
@@ -388,6 +392,7 @@ namespace WpfApp2
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
                 Tableroj2.Visibility = Visibility.Visible;
+                Guardar.Visibility = Visibility.Visible;
                 r2 = 5;
                 r22 = 5;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
@@ -432,6 +437,7 @@ namespace WpfApp2
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
                 Tableroj2.Visibility = Visibility.Visible;
+                Guardar.Visibility = Visibility.Visible;
                 r2 = 6;
                 r22 = 6;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
@@ -477,6 +483,7 @@ namespace WpfApp2
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
                 Tableroj2.Visibility = Visibility.Visible;
+                Guardar.Visibility = Visibility.Visible;
                 r2 = 7;
                 r22 = 7;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
@@ -540,6 +547,7 @@ namespace WpfApp2
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
                 Tableroj2.Visibility = Visibility.Visible;
+                Guardar.Visibility = Visibility.Visible;
                 r2 = 8;
                 r22 = 8;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
@@ -586,6 +594,7 @@ namespace WpfApp2
 
                 FinTurno1.Visibility = Visibility.Visible;
                 EmpiezaT1.Visibility = Visibility.Visible;
+                Guardar.Visibility = Visibility.Visible;
                 r2 = 9;
                 r22 = 9;
 
@@ -634,6 +643,7 @@ namespace WpfApp2
 
         private void FinTurno1_Click(object sender, RoutedEventArgs e)
         {
+            info.Visibility = Visibility.Hidden;
             jugs.Pasar(Heroes[0]);
             foreach (Minions i in Heroes[0].Tablero1)
             {
@@ -654,6 +664,7 @@ namespace WpfApp2
             EmpiezaT1.Visibility = Visibility.Hidden;
             Manaj1.Visibility = Visibility.Hidden;
             Atacar.Visibility = Visibility.Hidden;
+            Rendirse.Visibility = Visibility.Hidden;
             HabilidadHeroe.Visibility = Visibility.Hidden;
             if (r1 == 1) { paladinjugador.Visibility = Visibility.Hidden; }
             else if (r1 == 2) { druidajugador.Visibility = Visibility.Hidden; }
@@ -818,6 +829,7 @@ namespace WpfApp2
             string va = Convert.ToString(Heroes[0].Mana);
             cantmana.Text = va;
             Manaj1.Value = Heroes[0].Mana;
+            Rendirse.Visibility = Visibility.Visible;
 
             cantmana.Visibility = Visibility.Visible;
             Mano.Visibility = Visibility.Visible;
@@ -1052,18 +1064,19 @@ namespace WpfApp2
         private void EmpiezaT2_Click(object sender, RoutedEventArgs e)
         {
             jugando = 1;
-             cantmana.Visibility = Visibility.Visible;
-            string va = Convert.ToString(Heroes[1].Mana);
-            cantmana.Text = va;
+            jugs.Jugars(Heroes[1], MJugador2);
+            cantmana.Visibility = Visibility.Visible;
+            string v = Convert.ToString(Heroes[1].Mana);
+            cantmana.Text = v;
             JugadorDos.Visibility = Visibility.Visible;
             JugadorUno.Visibility = Visibility.Hidden;
             Mano.Visibility = Visibility.Visible;
             BarraMano.Visibility = Visibility.Visible;
-            jugs.Jugars(Heroes[1], MJugador2);
-            Manaj2.Visibility = Visibility.Visible;
             Manaj2.Value = Heroes[1].Mana;
+            Manaj2.Visibility = Visibility.Visible;
             HabilidadHeroe.Visibility = Visibility.Visible;
             Atacar.Visibility = Visibility.Visible;
+            Rendirse.Visibility = Visibility.Visible;
             if (r2 == 1) { paladinjugador.Visibility = Visibility.Visible; }
             else if (r2 == 2) { druidajugador.Visibility = Visibility.Visible; }
             else if (r2 == 3) { cazadorjugador.Visibility = Visibility.Visible; }
@@ -1290,6 +1303,7 @@ namespace WpfApp2
         private void FinTurno2_Click(object sender, RoutedEventArgs e)
         {
             jugs.Pasar(Heroes[1]);
+            info.Visibility = Visibility.Hidden;
             cantmana.Visibility = Visibility.Hidden;
             foreach (Minions i in Heroes[0].Tablero1)
             {
@@ -1309,6 +1323,7 @@ namespace WpfApp2
             EmpiezaT2.Visibility = Visibility.Hidden;
             Manaj2.Visibility = Visibility.Hidden;
             Atacar.Visibility = Visibility.Hidden;
+            Rendirse.Visibility = Visibility.Hidden;
             HabilidadHeroe.Visibility = Visibility.Hidden;
             if (r2 == 1) { paladinjugador.Visibility = Visibility.Hidden; }
             else if (r2 == 2) { druidajugador.Visibility = Visibility.Hidden; }
@@ -1469,6 +1484,7 @@ namespace WpfApp2
         {
             if (jugando == 0)
             {
+                
                 if (Heroes[0].mano.Contains(wisp3))
                 {
                     if (jugs.jugarcartar(Heroes[0], wisp3) == 1)
@@ -1486,6 +1502,8 @@ namespace WpfApp2
                     if (wisp3.Seleccionada == 0)
                     { wisp3.Seleccionada = 1;
                         Wisp3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: "+wisp3.NombreCarta + "\n" + "Vida: " + wisp3.Vida +"\n" ;
                     }
                     else { wisp3.Seleccionada = 0; }
                 }
@@ -1503,12 +1521,19 @@ namespace WpfApp2
                         Wisp3.Visibility = Visibility.Hidden;
                         Wisp3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
+
                     }
                 }
                 else
                 {
                     if (wisp3.Seleccionada == 0)
-                    { wisp3.Seleccionada = 1; Wisp3.BorderBrush = new SolidColorBrush(Colors.Gold); }
+                    { wisp3.Seleccionada = 1;
+                        Wisp3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + wisp3.NombreCarta + "\n" + "Vida: " + wisp3.Vida + "\n";
+                    }
                     else { wisp3.Seleccionada = 0; }
                 }
             }
@@ -1526,12 +1551,18 @@ namespace WpfApp2
                         Bloodfen2.Visibility = Visibility.Hidden;
                         Bloodfen2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (bloodfen2.Seleccionada == 0)
-                    { bloodfen2.Seleccionada = 1; Wisp3.BorderBrush = new SolidColorBrush(Colors.Gold); }
+                    { bloodfen2.Seleccionada = 1;
+                        Bloodfen2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + bloodfen2.NombreCarta + "\n" + "Vida: " + bloodfen2.Vida + "\n";
+                    }
                     else { bloodfen2.Seleccionada = 0; }
                 }
 
@@ -1548,12 +1579,18 @@ namespace WpfApp2
                         Bloodfen2.Visibility = Visibility.Hidden;
                         Bloodfen2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (bloodfen2.Seleccionada == 0)
-                    { bloodfen2.Seleccionada = 1; Wisp3.BorderBrush = new SolidColorBrush(Colors.Gold); }
+                    { bloodfen2.Seleccionada = 1;
+                        Bloodfen2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + bloodfen2.NombreCarta + "\n" + "Vida: " + bloodfen2.Vida + "\n";
+                    }
                     else { bloodfen2.Seleccionada = 0; }
                 }
             }
@@ -1572,12 +1609,17 @@ namespace WpfApp2
                         Wisp1.Visibility = Visibility.Hidden;
                         Wisp1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (wisp1.Seleccionada == 0)
-                    { wisp1.Seleccionada = 1; Wisp1.BorderBrush = new SolidColorBrush(Colors.Gold); }
+                    { wisp1.Seleccionada = 1; Wisp1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + wisp1.NombreCarta + "\n" + "Vida: " + wisp1.Vida + "\n";
+                    }
                     else { wisp1.Seleccionada = 0; }
                 }
 
@@ -1594,12 +1636,18 @@ namespace WpfApp2
                         Wisp1.Visibility = Visibility.Hidden;
                         Wisp1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (wisp1.Seleccionada == 0)
-                    { wisp1.Seleccionada = 1; Wisp1.BorderBrush = new SolidColorBrush(Colors.Gold); }
+                    { wisp1.Seleccionada = 1; Wisp1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + wisp1.NombreCarta + "\n" + "Vida: " + wisp1.Vida + "\n";
+
+                    }
                     else { wisp1.Seleccionada = 0; }
                 }
             }
@@ -1618,12 +1666,18 @@ namespace WpfApp2
                         Wisp2.Visibility = Visibility.Hidden;
                         Wisp2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (wisp2.Seleccionada == 0)
-                    { wisp2.Seleccionada = 1; Wisp2.BorderBrush = new SolidColorBrush(Colors.Gold); }
+                    { wisp2.Seleccionada = 1; Wisp2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + wisp2.NombreCarta + "\n" + "Vida: " + wisp2.Vida + "\n";
+
+                    }
                     else { wisp2.Seleccionada = 0; }
                 }
 
@@ -1641,12 +1695,17 @@ namespace WpfApp2
                         Wisp2.Visibility = Visibility.Hidden;
                         Wisp2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (wisp2.Seleccionada == 0)
-                    { wisp2.Seleccionada = 1; Wisp2.BorderBrush = new SolidColorBrush(Colors.Gold); }
+                    { wisp2.Seleccionada = 1; Wisp2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + wisp2.NombreCarta + "\n" + "Vida: " + wisp2.Vida + "\n";
+                    }
                     else { wisp2.Seleccionada = 0; }
                 }
             }
@@ -1665,12 +1724,17 @@ namespace WpfApp2
                         Bloodfen1.Visibility = Visibility.Hidden;
                         Bloodfen1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (bloodfen1.Seleccionada == 0)
-                    { bloodfen1.Seleccionada = 1; }
+                    { bloodfen1.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + bloodfen1.NombreCarta + "\n" + "Vida: " + bloodfen1.Vida + "\n";
+                    }
                     else { bloodfen1.Seleccionada = 0; }
                 }
 
@@ -1688,12 +1752,17 @@ namespace WpfApp2
                         Bloodfen1.Visibility = Visibility.Hidden;
                         Bloodfen1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (bloodfen1.Seleccionada == 0)
-                    { bloodfen1.Seleccionada = 1; }
+                    { bloodfen1.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + bloodfen1.NombreCarta + "\n" + "Vida: " + bloodfen1.Vida + "\n";
+                    }
                     else { bloodfen1.Seleccionada = 0; }
                 }
             }
@@ -1712,12 +1781,17 @@ namespace WpfApp2
                         Bloodfen3.Visibility = Visibility.Hidden;
                         Bloodfen3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (bloodfen3.Seleccionada == 0)
-                    { bloodfen3.Seleccionada = 1; }
+                    { bloodfen3.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + bloodfen3.NombreCarta + "\n" + "Vida: " + bloodfen3.Vida + "\n";
+                    }
                     else { bloodfen3.Seleccionada = 0; }
                 }
 
@@ -1734,12 +1808,17 @@ namespace WpfApp2
                         Bloodfen3.Visibility = Visibility.Hidden;
                         Bloodfen3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (bloodfen3.Seleccionada == 0)
-                    { bloodfen3.Seleccionada = 1; }
+                    { bloodfen3.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + bloodfen3.NombreCarta + "\n" + "Vida: " + bloodfen3.Vida + "\n";
+                    }
                     else { bloodfen3.Seleccionada = 0; }
                 }
             }
@@ -1757,12 +1836,17 @@ namespace WpfApp2
                         Boulderfist1.Visibility = Visibility.Hidden;
                         Boulderfist1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (boulderfist1.Seleccionada == 0)
-                    { boulderfist1.Seleccionada = 1; }
+                    { boulderfist1.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + boulderfist1.NombreCarta + "\n" + "Vida: " + boulderfist1.Vida + "\n";
+                    }
                     else { boulderfist1.Seleccionada = 0; }
                 }
 
@@ -1779,12 +1863,17 @@ namespace WpfApp2
                         Boulderfist1.Visibility = Visibility.Hidden;
                         Boulderfist1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (boulderfist1.Seleccionada == 0)
-                    { boulderfist1.Seleccionada = 1; }
+                    { boulderfist1.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + boulderfist1.NombreCarta + "\n" + "Vida: " + boulderfist1.Vida + "\n";
+                    }
                     else { boulderfist1.Seleccionada = 0; }
                 }
             }
@@ -1802,12 +1891,17 @@ namespace WpfApp2
                         Boulderfist2.Visibility = Visibility.Hidden;
                         Boulderfist2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (boulderfist2.Seleccionada == 0)
-                    { boulderfist2.Seleccionada = 1; }
+                    { boulderfist2.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + boulderfist2.NombreCarta + "\n" + "Vida: " + boulderfist2.Vida + "\n";
+                    }
                     else { boulderfist2.Seleccionada = 0; }
                 }
 
@@ -1824,12 +1918,17 @@ namespace WpfApp2
                         Boulderfist2.Visibility = Visibility.Hidden;
                         Boulderfist2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (boulderfist2.Seleccionada == 0)
-                    { boulderfist2.Seleccionada = 1; }
+                    { boulderfist2.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + boulderfist2.NombreCarta + "\n" + "Vida: " + boulderfist2.Vida + "\n";
+                    }
                     else { boulderfist2.Seleccionada = 0; }
                 }
             }
@@ -1847,12 +1946,17 @@ namespace WpfApp2
                         Boulderfist3.Visibility = Visibility.Hidden;
                         Boulderfist3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (boulderfist3.Seleccionada == 0)
-                    { boulderfist3.Seleccionada = 1; }
+                    { boulderfist3.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + boulderfist3.NombreCarta + "\n" + "Vida: " + boulderfist3.Vida + "\n";
+                    }
                     else { boulderfist3.Seleccionada = 0; }
                 }
 
@@ -1869,12 +1973,17 @@ namespace WpfApp2
                         Boulderfist3.Visibility = Visibility.Hidden;
                         Boulderfist3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (boulderfist3.Seleccionada == 0)
-                    { boulderfist3.Seleccionada = 1; }
+                    { boulderfist3.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + boulderfist3.NombreCarta + "\n" + "Vida: " + boulderfist3.Vida + "\n";
+                    }
                     else { boulderfist3.Seleccionada = 0; }
                 }
             }
@@ -1892,12 +2001,17 @@ namespace WpfApp2
                         Chillwind1.Visibility = Visibility.Hidden;
                         Chillwind1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (chillwind1.Seleccionada == 0)
-                    { chillwind1.Seleccionada = 1; }
+                    { chillwind1.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + chillwind1.NombreCarta + "\n" + "Vida: " + chillwind1.Vida + "\n";
+                    }
                     else { chillwind1.Seleccionada = 0; }
                 }
 
@@ -1914,12 +2028,17 @@ namespace WpfApp2
                         Chillwind1.Visibility = Visibility.Hidden;
                         Chillwind1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (chillwind1.Seleccionada == 0)
-                    { chillwind1.Seleccionada = 1; }
+                    { chillwind1.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + chillwind1.NombreCarta + "\n" + "Vida: " + chillwind1.Vida + "\n";
+                    }
                     else { chillwind1.Seleccionada = 0; }
                 }
             }
@@ -1937,12 +2056,17 @@ namespace WpfApp2
                         Chillwind2.Visibility = Visibility.Hidden;
                         Chillwind2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (chillwind2.Seleccionada == 0)
-                    { chillwind2.Seleccionada = 1; }
+                    { chillwind2.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + chillwind2.NombreCarta + "\n" + "Vida: " + chillwind2.Vida + "\n";
+                    }
                     else { chillwind2.Seleccionada = 0; }
                 }
 
@@ -1959,12 +2083,17 @@ namespace WpfApp2
                         Chillwind2.Visibility = Visibility.Hidden;
                         Chillwind2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (chillwind2.Seleccionada == 0)
-                    { chillwind2.Seleccionada = 1; }
+                    { chillwind2.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + chillwind2.NombreCarta + "\n" + "Vida: " + chillwind2.Vida + "\n";
+                    }
                     else { chillwind2.Seleccionada = 0; }
                 }
             }
@@ -1982,12 +2111,17 @@ namespace WpfApp2
                         Chillwind3.Visibility = Visibility.Hidden;
                         Chillwind3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (chillwind3.Seleccionada == 0)
-                    { chillwind3.Seleccionada = 1; }
+                    { chillwind3.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + chillwind3.NombreCarta + "\n" + "Vida: " + chillwind3.Vida + "\n";
+                    }
                     else { chillwind3.Seleccionada = 0; }
                 }
 
@@ -2004,12 +2138,17 @@ namespace WpfApp2
                         Chillwind3.Visibility = Visibility.Hidden;
                         Chillwind3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (chillwind3.Seleccionada == 0)
-                    { chillwind3.Seleccionada = 1; }
+                    { chillwind3.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + chillwind3.NombreCarta + "\n" + "Vida: " + chillwind3.Vida + "\n";
+                    }
                     else { chillwind3.Seleccionada = 0; }
                 }
             }
@@ -2028,12 +2167,17 @@ namespace WpfApp2
                         Corehound1.Visibility = Visibility.Hidden;
                         Corehound1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (core1.Seleccionada == 0)
-                    { core1.Seleccionada = 1; }
+                    { core1.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + core1.NombreCarta + "\n" + "Vida: " + core1.Vida + "\n";
+                    }
                     else { core1.Seleccionada = 0; }
                 }
 
@@ -2050,12 +2194,17 @@ namespace WpfApp2
                         Corehound1.Visibility = Visibility.Hidden;
                         Corehound1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (core1.Seleccionada == 0)
-                    { core1.Seleccionada = 1; }
+                    { core1.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + core1.NombreCarta + "\n" + "Vida: " + core1.Vida + "\n";
+                    }
                     else { core1.Seleccionada = 0; }
                 }
             }
@@ -2074,12 +2223,17 @@ namespace WpfApp2
                         Corehound2.Visibility = Visibility.Hidden;
                         Corehound2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (core2.Seleccionada == 0)
-                    { core2.Seleccionada = 1; }
+                    { core2.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + core2.NombreCarta + "\n" + "Vida: " + core2.Vida + "\n";
+                    }
                     else { core2.Seleccionada = 0; }
                 }
 
@@ -2097,12 +2251,17 @@ namespace WpfApp2
                         Corehound2.Visibility = Visibility.Hidden;
                         Corehound2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (core2.Seleccionada == 0)
-                    { core2.Seleccionada = 1; }
+                    { core2.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + core2.NombreCarta + "\n" + "Vida: " + core2.Vida + "\n";
+                    }
                     else { core2.Seleccionada = 0; }
                 }
             }
@@ -2120,12 +2279,17 @@ namespace WpfApp2
                         Corehound3.Visibility = Visibility.Hidden;
                         Corehound3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (core3.Seleccionada == 0)
-                    { core3.Seleccionada = 1; }
+                    { core3.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + core3.NombreCarta + "\n" + "Vida: " + core3.Vida + "\n";
+                    }
                     else { core3.Seleccionada = 0; }
                 }
 
@@ -2142,12 +2306,17 @@ namespace WpfApp2
                         Corehound3.Visibility = Visibility.Hidden;
                         Corehound3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (core3.Seleccionada == 0)
-                    { core3.Seleccionada = 1; }
+                    { core3.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + core3.NombreCarta + "\n" + "Vida: " + core3.Vida + "\n";
+                    }
                     else { core3.Seleccionada = 0; }
                 }
             }
@@ -2165,12 +2334,17 @@ namespace WpfApp2
                         Magma1.Visibility = Visibility.Hidden;
                         Magma1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (magma1.Seleccionada == 0)
-                    { magma1.Seleccionada = 1; }
+                    { magma1.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + magma1.NombreCarta + "\n" + "Vida: " + magma1.Vida + "\n";
+                    }
                     else { magma1.Seleccionada = 0; }
                 }
 
@@ -2187,12 +2361,17 @@ namespace WpfApp2
                         Magma1.Visibility = Visibility.Hidden;
                         Magma1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (magma1.Seleccionada == 0)
-                    { magma1.Seleccionada = 1; }
+                    { magma1.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + magma1.NombreCarta + "\n" + "Vida: " + magma1.Vida + "\n";
+                    }
                     else { magma1.Seleccionada = 0; }
                 }
             }
@@ -2210,12 +2389,17 @@ namespace WpfApp2
                         Magma2.Visibility = Visibility.Hidden;
                         Magma2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (magma2.Seleccionada == 0)
-                    { magma2.Seleccionada = 1; }
+                    { magma2.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + magma2.NombreCarta + "\n" + "Vida: " + magma2.Vida + "\n";
+                    }
                     else { magma2.Seleccionada = 0; }
                 }
 
@@ -2232,12 +2416,17 @@ namespace WpfApp2
                         Magma2.Visibility = Visibility.Hidden;
                         Magma2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (magma2.Seleccionada == 0)
-                    { magma2.Seleccionada = 1; }
+                    { magma2.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + magma2.NombreCarta + "\n" + "Vida: " + magma2.Vida + "\n";
+                    }
                     else { magma2.Seleccionada = 0; }
                 }
             }
@@ -2255,12 +2444,17 @@ namespace WpfApp2
                         Magma3.Visibility = Visibility.Hidden;
                         Magma3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (magma3.Seleccionada == 0)
-                    { magma3.Seleccionada = 1; }
+                    { magma3.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + magma3.NombreCarta + "\n" + "Vida: " + magma3.Vida + "\n";
+                    }
                     else { magma3.Seleccionada = 0; }
                 }
 
@@ -2277,13 +2471,18 @@ namespace WpfApp2
                         Magma3.Visibility = Visibility.Hidden;
                         Magma3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
 
                     if (magma3.Seleccionada == 0)
-                    { magma3.Seleccionada = 1; }
+                    { magma3.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + magma3.NombreCarta + "\n" + "Vida: " + magma3.Vida + "\n";
+                    }
                     else { magma3.Seleccionada = 0; }
                 }
             }
@@ -2301,12 +2500,17 @@ namespace WpfApp2
                         Murloc1.Visibility = Visibility.Hidden;
                         Murloc1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (murloc1.Seleccionada == 0)
-                    { murloc1.Seleccionada = 1; }
+                    { murloc1.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + murloc1.NombreCarta + "\n" + "Vida: " + murloc1.Vida + "\n";
+                    }
                     else { murloc1.Seleccionada = 0; }
                 }
 
@@ -2323,12 +2527,17 @@ namespace WpfApp2
                         Murloc1.Visibility = Visibility.Hidden;
                         Murloc1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (murloc1.Seleccionada == 0)
-                    { murloc1.Seleccionada = 1; }
+                    { murloc1.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + murloc1.NombreCarta + "\n" + "Vida: " + murloc1.Vida + "\n";
+                    }
                     else { murloc1.Seleccionada = 0; }
                 }
             }
@@ -2346,12 +2555,17 @@ namespace WpfApp2
                         Murloc2.Visibility = Visibility.Hidden;
                         Murloc2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (murloc2.Seleccionada == 0)
-                    { murloc2.Seleccionada = 1; }
+                    { murloc2.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + murloc2.NombreCarta + "\n" + "Vida: " + murloc2.Vida + "\n";
+                    }
                     else { murloc2.Seleccionada = 0; }
                 }
 
@@ -2368,12 +2582,17 @@ namespace WpfApp2
                         Murloc2.Visibility = Visibility.Hidden;
                         Murloc2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (murloc2.Seleccionada == 0)
-                    { murloc2.Seleccionada = 1; }
+                    { murloc2.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + murloc2.NombreCarta + "\n" + "Vida: " + murloc2.Vida + "\n";
+                    }
                     else { murloc2.Seleccionada = 0; }
                 }
             }
@@ -2391,12 +2610,17 @@ namespace WpfApp2
                         Murloc3.Visibility = Visibility.Hidden;
                         Murloc3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
                 {
                     if (murloc3.Seleccionada == 0)
-                    { murloc3.Seleccionada = 1; }
+                    { murloc3.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + murloc3.NombreCarta + "\n" + "Vida: " + murloc3.Vida + "\n";
+                    }
                     else { murloc3.Seleccionada = 0; }
                 }
 
@@ -2413,12 +2637,17 @@ namespace WpfApp2
                         Murloc3.Visibility = Visibility.Hidden;
                         Murloc3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (murloc3.Seleccionada == 0)
-                    { murloc3.Seleccionada = 1; }
+                    { murloc3.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + murloc3.NombreCarta + "\n" + "Vida: " + murloc3.Vida + "\n";
+                    }
                     else { murloc3.Seleccionada = 0; }
                 }
             }
@@ -2436,6 +2665,8 @@ namespace WpfApp2
                         Oasis1.Visibility = Visibility.Hidden;
                         Oasis1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
@@ -2443,6 +2674,8 @@ namespace WpfApp2
                     if (oasis1.Seleccionada == 0)
                     {
                         oasis1.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + oasis1.NombreCarta + "\n" + "Vida: " + oasis1.Vida + "\n";
                     }
                     else { oasis1.Seleccionada = 0; }
                 }
@@ -2459,12 +2692,17 @@ namespace WpfApp2
                         Oasis1.Visibility = Visibility.Hidden;
                         Oasis1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (oasis1.Seleccionada == 0)
-                    { oasis1.Seleccionada = 1; }
+                    { oasis1.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + oasis1.NombreCarta + "\n" + "Vida: " + oasis1.Vida + "\n";
+                    }
                     else { oasis1.Seleccionada = 0; }
                 }
             }
@@ -2483,6 +2721,8 @@ namespace WpfApp2
                         Oasis2.Visibility = Visibility.Hidden;
                         Oasis2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
@@ -2490,6 +2730,8 @@ namespace WpfApp2
                     if (oasis2.Seleccionada == 0)
                     {
                         oasis2.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + oasis2.NombreCarta + "\n" + "Vida: " + oasis2.Vida + "\n";
                     }
                     else { oasis2.Seleccionada = 0; }
                 }
@@ -2507,12 +2749,17 @@ namespace WpfApp2
                         Oasis2.Visibility = Visibility.Hidden;
                         Oasis2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (oasis2.Seleccionada == 0)
-                    { oasis2.Seleccionada = 1; }
+                    { oasis2.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + oasis2.NombreCarta + "\n" + "Vida: " + oasis2.Vida + "\n";
+                    }
                     else { oasis2.Seleccionada = 0; }
                 }
             }
@@ -2530,6 +2777,8 @@ namespace WpfApp2
                         Oasis3.Visibility = Visibility.Hidden;
                         Oasis3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
@@ -2537,6 +2786,8 @@ namespace WpfApp2
                     if (oasis3.Seleccionada == 0)
                     {
                         oasis3.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + oasis3.NombreCarta + "\n" + "Vida: " + oasis3.Vida + "\n";
                     }
                     else { oasis3.Seleccionada = 0; }
                 }
@@ -2554,12 +2805,17 @@ namespace WpfApp2
                         Oasis3.Visibility = Visibility.Hidden;
                         Oasis3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (oasis3.Seleccionada == 0)
-                    { oasis3.Seleccionada = 1; }
+                    { oasis3.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + oasis3.NombreCarta + "\n" + "Vida: " + oasis3.Vida + "\n";
+                    }
                     else { oasis3.Seleccionada = 0; }
                 }
             }
@@ -2577,6 +2833,8 @@ namespace WpfApp2
                         River1.Visibility = Visibility.Hidden;
                         River1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
@@ -2584,6 +2842,8 @@ namespace WpfApp2
                     if (river1.Seleccionada == 0)
                     {
                         river1.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + river1.NombreCarta + "\n" + "Vida: " + river1.Vida + "\n";
                     }
                     else { river1.Seleccionada = 0; }
                 }
@@ -2601,12 +2861,17 @@ namespace WpfApp2
                         River1.Visibility = Visibility.Hidden;
                         River1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (river1.Seleccionada == 0)
-                    { river1.Seleccionada = 1; }
+                    { river1.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + river1.NombreCarta + "\n" + "Vida: " + river1.Vida + "\n";
+                    }
                     else { river1.Seleccionada = 0; }
                 }
             }
@@ -2625,6 +2890,8 @@ namespace WpfApp2
                         River2.Visibility = Visibility.Hidden;
                         River2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
 
@@ -2633,6 +2900,8 @@ namespace WpfApp2
                     if (river2.Seleccionada == 0)
                     {
                         river2.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + river2.NombreCarta + "\n" + "Vida: " + river2.Vida + "\n";
                     }
                     else { river2.Seleccionada = 0; }
                 }
@@ -2650,12 +2919,17 @@ namespace WpfApp2
                         River2.Visibility = Visibility.Hidden;
                         River2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (river2.Seleccionada == 0)
-                    { river2.Seleccionada = 1; }
+                    { river2.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + river2.NombreCarta + "\n" + "Vida: " + river2.Vida + "\n";
+                    }
                     else { river2.Seleccionada = 0; }
                 }
             }
@@ -2673,6 +2947,8 @@ namespace WpfApp2
                         River3.Visibility = Visibility.Hidden;
                         River3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
@@ -2680,6 +2956,8 @@ namespace WpfApp2
                     if (river3.Seleccionada == 0)
                     {
                         river3.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + river3.NombreCarta + "\n" + "Vida: " + river3.Vida + "\n";
                     }
                     else { river3.Seleccionada = 0; }
                 }
@@ -2697,12 +2975,17 @@ namespace WpfApp2
                         River3.Visibility = Visibility.Hidden;
                         River3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (river3.Seleccionada == 0)
-                    { river3.Seleccionada = 1; }
+                    { river3.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + river3.NombreCarta + "\n" + "Vida: " + river3.Vida + "\n";
+                    }
                     else { river3.Seleccionada = 0; }
                 }
             }
@@ -2720,6 +3003,8 @@ namespace WpfApp2
                         War1.Visibility = Visibility.Hidden;
                         War1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
@@ -2727,6 +3012,8 @@ namespace WpfApp2
                     if (war1.Seleccionada == 0)
                     {
                         war1.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + war1.NombreCarta + "\n" + "Vida: " + war1.Vida + "\n";
                     }
                     else { war1.Seleccionada = 0; }
                 }
@@ -2744,12 +3031,17 @@ namespace WpfApp2
                         War1.Visibility = Visibility.Hidden;
                         War1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (war1.Seleccionada == 0)
-                    { war1.Seleccionada = 1; }
+                    { war1.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + war1.NombreCarta + "\n" + "Vida: " + war1.Vida + "\n";
+                    }
                     else { war1.Seleccionada = 0; }
                 }
             }
@@ -2768,6 +3060,8 @@ namespace WpfApp2
                         War2.Visibility = Visibility.Hidden;
                         War2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
@@ -2775,6 +3069,8 @@ namespace WpfApp2
                     if (war2.Seleccionada == 0)
                     {
                         war2.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + war2.NombreCarta + "\n" + "Vida: " + war2.Vida + "\n";
                     }
                     else { war2.Seleccionada = 0; }
                 }
@@ -2790,12 +3086,17 @@ namespace WpfApp2
                         War2.Visibility = Visibility.Hidden;
                         War2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
                     }
                 }
                 else
                 {
                     if (war2.Seleccionada == 0)
-                    { war2.Seleccionada = 1; }
+                    { war2.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + war2.NombreCarta + "\n" + "Vida: " + war2.Vida + "\n";
+                    }
                     else { war2.Seleccionada = 0; }
                 }
 
@@ -2814,6 +3115,8 @@ namespace WpfApp2
                         War3.Visibility = Visibility.Hidden;
                         War3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
                     }
                 }
                 else
@@ -2821,6 +3124,8 @@ namespace WpfApp2
                     if (war3.Seleccionada == 0)
                     {
                         war3.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + war3.NombreCarta + "\n" + "Vida: " + war3.Vida + "\n";
                     }
                     else { war3.Seleccionada = 0; }
                 }
@@ -2838,12 +3143,18 @@ namespace WpfApp2
                         War3.Visibility = Visibility.Hidden;
                         War3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
+
                     }
                 }
                 else
                 {
                     if (war3.Seleccionada == 0)
-                    { war3.Seleccionada = 1; }
+                    { war3.Seleccionada = 1;
+                        info.Visibility = Visibility.Visible;
+                        info.Text = " Carta: " + war3.NombreCarta + "\n" + "Vida: " + war3.Vida + "\n";
+                    }
                     else { war3.Seleccionada = 0; }
                 }
             }
@@ -2852,6 +3163,7 @@ namespace WpfApp2
         private void Atacar_Click(object sender, RoutedEventArgs e)
         {
             int con = 0;
+            info.Visibility = Visibility.Hidden;
             if (jugando == 0)
             {
                 foreach (Minions ad in Heroes[0].Tablero1)
@@ -3495,11 +3807,9 @@ namespace WpfApp2
             He2G.Close();
         }      
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void Cargar_Click(object sender, RoutedEventArgs e)
         {
-            
-          
-
+         
             Stream He1C = new FileStream("Heroe1.txt", FileMode.Open, FileAccess.Read, FileShare.None);
             Stream He2C = new FileStream("Heroe2.txt", FileMode.Open, FileAccess.Read, FileShare.None);
             Stream Ma1C = new FileStream("Mazo1.txt", FileMode.Open, FileAccess.Read, FileShare.None);
@@ -3514,6 +3824,107 @@ namespace WpfApp2
             Ma2C.Close();
             He1C.Close();
             He2C.Close();
+
+            Tablero.Visibility = Visibility.Visible;
+            Mano.Visibility = Visibility.Visible;
+            Tableroj1.Visibility = Visibility.Visible;
+            Tableroj2.Visibility = Visibility.Visible;
+            Cargar.Visibility = Visibility.Hidden;
+
+            //ver quien tiene q jugar
+
+
+            if (Heroes[0].Nombre == "Paladin")
+            {
+                paladinjugador.Visibility = Visibility.Visible;
+
+            }
+            if (Heroes[1].Nombre == "Paladin")
+            {
+                otropaladin.Visibility = Visibility.Visible;
+            }
+            if (Heroes[0].Nombre == "Druida")
+            {
+                druidajugador.Visibility = Visibility.Visible;
+
+            }
+            if (Heroes[1].Nombre == "Druida")
+            {
+                otrodruida.Visibility = Visibility.Visible;
+            }
+            if (Heroes[0].Nombre == "Hunter")
+            {
+                cazadorjugador.Visibility = Visibility.Visible;
+
+            }
+            if (Heroes[1].Nombre == "Hunter")
+            {
+                otrocazador.Visibility = Visibility.Visible;
+            }
+            if (Heroes[0].Nombre == "Sacerdote")
+            {
+                sacerdotejugador.Visibility = Visibility.Visible;
+
+            }
+            if (Heroes[1].Nombre == "Sacerdote")
+            {
+                otrosacerdote.Visibility = Visibility.Visible;
+            }
+            if (Heroes[0].Nombre == "Picaro")
+            {
+                picarojugador.Visibility = Visibility.Visible;
+
+            }
+            if (Heroes[1].Nombre == "Picaro")
+            {
+                otropicaro.Visibility = Visibility.Visible;
+            }
+            if (Heroes[0].Nombre == "Brujo")
+            {
+                brujojugador.Visibility = Visibility.Visible;
+
+            }
+            if (Heroes[1].Nombre == "Brujo")
+            {
+                otrobrujo.Visibility = Visibility.Visible;
+            }
+            if (Heroes[0].Nombre == "Mago")
+            {
+                magojugador.Visibility = Visibility.Visible;
+
+            }
+            if (Heroes[1].Nombre == "Mago")
+            {
+                otromago.Visibility = Visibility.Visible;
+            }
+            if (Heroes[0].Nombre == "Chaman")
+            {
+                chamanjugador.Visibility = Visibility.Visible;
+
+            }
+            if (Heroes[1].Nombre == "Chaman")
+            {
+                otrochaman.Visibility = Visibility.Visible;
+            }
+            if (Heroes[0].Nombre == "Warrior")
+            {
+                guerrerojugador.Visibility = Visibility.Visible;
+
+            }
+            if (Heroes[1].Nombre == "Warrior")
+            {
+                otroguerrero.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Rendirse_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+
+            }
+            else
+            { }
         }
     }
 }
