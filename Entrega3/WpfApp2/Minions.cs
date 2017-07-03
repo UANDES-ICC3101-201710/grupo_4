@@ -28,12 +28,12 @@ namespace WpfApp2
 
         public void RestarVidaMs(Minions MiJ1, Minions MiJ2, List<Minions> TJ1, List<Minions> TJ2)
         {
-            MiJ1.Vida -= MiJ2.Daño;
-            MiJ2.Vida -= MiJ1.Daño;
-            if (MiJ1.Vida <= 0)
-            { TJ1.Remove(MiJ1); }
-            if (MiJ2.Vida <= 0)
-            { TJ2.Remove(MiJ2); }
+                    MiJ1.Vida -= MiJ2.Daño;
+                    MiJ2.Vida -= MiJ1.Daño;
+                    if (MiJ1.Vida <= 0)
+                    { TJ1.Remove(MiJ1); }
+                    if (MiJ2.Vida <= 0)
+                    { TJ2.Remove(MiJ2); }
         }
         public void RestarVidaHs(Heroe H, Minions M)
         {

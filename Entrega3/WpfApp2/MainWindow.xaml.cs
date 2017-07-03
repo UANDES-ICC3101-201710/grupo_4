@@ -223,7 +223,7 @@ namespace WpfApp2
                 r2 = 1;
                 r22 = 1;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
-
+                AtacarHeroe.Visibility = Visibility.Visible;
                 jugando = 0;
 
                 JugadorUno.Visibility = Visibility.Visible;
@@ -523,7 +523,7 @@ namespace WpfApp2
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
 
                 jugando = 0;
-
+                AtacarHeroe.Visibility = Visibility.Visible;
                 JugadorUno.Visibility = Visibility.Visible;
                 JugadorDos.Visibility = Visibility.Hidden;
                 jugs.Jugars(Heroes[0], MJugador1);
@@ -778,6 +778,7 @@ namespace WpfApp2
             }
             else
             {
+                AtacarHeroe.Visibility = Visibility.Visible;
                 Hunter Jugador2 = new Hunter(30, 0, "Hunter", 0, 0, 0, 0, 0);
                 Heroes.Add(Jugador2);
                 eligioheroe = 1;
@@ -1069,6 +1070,7 @@ namespace WpfApp2
             }
             else
             {
+                AtacarHeroe.Visibility = Visibility.Visible;
                 Sacerdote Jugador2 = new Sacerdote(30, 0, "Sacerdote", 0, 0, 0, 0, 0);
                 Heroes.Add(Jugador2);
                 eligioheroe = 1;
@@ -1360,6 +1362,7 @@ namespace WpfApp2
             }
             else
             {
+                AtacarHeroe.Visibility = Visibility.Visible;
                 Picaro Jugador2 = new Picaro(30, 0, "Picaro", 0, 0, 0, 0, 0);
                 Heroes.Add(Jugador2);
                 eligioheroe = 1;
@@ -1652,6 +1655,7 @@ namespace WpfApp2
             }
             else
             {
+                AtacarHeroe.Visibility = Visibility.Visible;
                 Brujo Jugador2 = new Brujo(30, 0, "Brujo", 0, 0, 0, 0, 0);
                 Heroes.Add(Jugador2);
                 eligioheroe = 1;
@@ -1945,6 +1949,7 @@ namespace WpfApp2
             }
             else
             {
+                AtacarHeroe.Visibility = Visibility.Visible;
                 Mago Jugador2 = new Mago(30, 0, "Mago", 0, 0, 0, 0, 0);
                 Heroes.Add(Jugador2);
                 eligioheroe = 1;
@@ -2228,6 +2233,7 @@ namespace WpfApp2
         {
             if (JugadorUno.Visibility == Visibility.Visible && eligioheroe == 0)
             {
+                AtacarHeroe.Visibility = Visibility.Visible;
                 Chaman Jugador1 = new Chaman(30, 0, "Chaman", 0, 0, 0, 0, 0);
                 Minions Totem1 = new Minions("Totem", 1, "Totem1", "Totem", 1, 1, 1, 0, 0);
                 Minions Totem2 = new Minions("Totem", 1, "Totem2", "Totem", 0, 2, 1, 0, 0);
@@ -2548,6 +2554,7 @@ namespace WpfApp2
             }
             else
             {
+                AtacarHeroe.Visibility = Visibility.Visible;
                 Warrior Jugador2 = new Warrior(30, 0, "Warrior", 0, 0, 0, 0, 0); ;
                 Heroes.Add(Jugador2);
                 eligioheroe = 1;
@@ -6005,7 +6012,16 @@ namespace WpfApp2
                 }
 
             }
+<<<<<<< Updated upstream
          
+=======
+
+            if (Heroes[0].Tablero1.Count() != 0) { foreach (Minions x in Heroes[0].Tablero1) { if (x.Vida <= 0) { Heroes[0].Tablero1.Remove(x); } } }
+            if (Heroes[1].Tablero1.Count() != 0)
+            { foreach (Minions x in Heroes[1].Tablero1) { if (x.Vida <= 0) { Heroes[1].Tablero1.Remove(x); } } }
+            //MessageBox.Show(Convert.ToString(Heroes[0].Tablero1.Count()));
+            //MessageBox.Show(Convert.ToString(Heroes[1].Tablero1.Count()));
+>>>>>>> Stashed changes
             if (Heroes[0].Tablero1.Count() != 0)
             {
                 foreach (Minions i in Heroes[0].Tablero1)
@@ -7092,6 +7108,7 @@ namespace WpfApp2
                     if (i.Seleccionada == 1)
                     {
                         Heroes[0].Vida -= i.Daño;
+<<<<<<< Updated upstream
                         if (Heroes[0].Vida <= 0)
                         {
                             ganador.Visibility = Visibility.Visible;
@@ -7121,6 +7138,9 @@ namespace WpfApp2
                             else if (Heroes[1].Nombre == "Warrior")
                             { warriorgan.Visibility = Visibility.Visible; }
                         }
+=======
+
+>>>>>>> Stashed changes
                         break;
                     }
                 }
