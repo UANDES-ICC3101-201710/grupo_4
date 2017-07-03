@@ -21,10 +21,7 @@ namespace WpfApp2
                 Here.Vida -= 2;
                 Mana -= 2;
             }
-           // else
-            //{
-              //  Console.WriteLine("No tienes Suficiente Mana");
-            //}
+           
         }
     }
 }

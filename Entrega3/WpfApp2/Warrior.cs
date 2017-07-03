@@ -23,10 +23,7 @@ namespace WpfApp2
                 Armadura += 2;
                 Mana -= 2;
             }
-            //else
-            //{
-              //  Console.WriteLine("No tienes Suficiente Mana");
-            //}
+            
         }
     }
 }

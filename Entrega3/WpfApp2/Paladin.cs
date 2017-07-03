@@ -21,12 +21,9 @@ namespace WpfApp2
             {
                 Mana -= 2;
                 Tablero1.Add(Miespeciales[0]);
-                //Console.WriteLine("Paladin Creado");
+               
             }
-            //else
-            //{
-                //Console.WriteLine("No tienes Suficiente Mana");
-            //}
+            
         }
     }
 }

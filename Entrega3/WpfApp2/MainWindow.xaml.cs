@@ -3961,16 +3961,16 @@ namespace WpfApp2
             }
             else
             {
-                if (Heroes[0].Nombre == "Paladin") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Druida") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Cazador") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Hunter") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Sacerdote") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Picaro") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Brujo") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Mago") { Heroes[0].Habilidad(Heroes[0]); }
-                else if (Heroes[0].Nombre == "Chaman") { Heroes[0].Habilidad(Heroes[0]); }
-                else { Heroes[0].Habilidad(Heroes[0]); }
+                if (Heroes[1].Nombre == "Paladin") { Heroes[0].Habilidad(Heroes[1]); }
+                else if (Heroes[1].Nombre == "Druida") { Heroes[0].Habilidad(Heroes[1]); }
+                else if (Heroes[1].Nombre == "Cazador") { Heroes[0].Habilidad(Heroes[1]); }
+                else if (Heroes[1].Nombre == "Hunter") { Heroes[0].Habilidad(Heroes[1]); }
+                else if (Heroes[1].Nombre == "Sacerdote") { Heroes[0].Habilidad(Heroes[1]); }
+                else if (Heroes[1].Nombre == "Picaro") { Heroes[0].Habilidad(Heroes[1]); }
+                else if (Heroes[1].Nombre == "Brujo") { Heroes[0].Habilidad(Heroes[1]); }
+                else if (Heroes[1].Nombre == "Mago") { Heroes[0].Habilidad(Heroes[1]); }
+                else if (Heroes[1].Nombre == "Chaman") { Heroes[0].Habilidad(Heroes[1]); }
+                else { Heroes[1].Habilidad(Heroes[1]); }
             }
            
 

@@ -46,10 +46,7 @@ namespace WpfApp2
                 return 1;
             }
             else { return 0; }
-            //else
-            //{
-            //  Console.WriteLine("No tienes Suficiente Mana");
-            //}
+           
         }
         public virtual void Habilidad(Heroe H)
         {
@@ -78,7 +75,7 @@ namespace WpfApp2
         public void Morir()
         {
             
-            //Console.WriteLine("Has muerto");
+            
             Environment.Exit(0);
 
         }

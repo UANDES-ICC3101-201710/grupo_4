@@ -21,12 +21,9 @@ namespace WpfApp2
                 Random r = new Random();
                 int ra = r.Next(0, 5);
                 Tablero1.Add(Miespeciales[ra]);
-                //Console.WriteLine("TotemAñadido: " + Miespeciales[ra].NombreCarta);
+                
             }
-            //else
-            //{
-                //Console.WriteLine("No tienes Suficiente Mana");
-            //}
+           
 
         }
     }

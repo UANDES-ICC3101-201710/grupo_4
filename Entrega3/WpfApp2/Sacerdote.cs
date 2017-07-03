@@ -18,14 +18,14 @@ namespace WpfApp2
         {
             if (Mana >= 2)
             {
-                //foreach (Minions c in Tablero1)
-                //{
-                //  Console.WriteLine("Nombre: " + c.Coste + " Daño: " + c.Daño + " Vida: " + c.Vida);
-                //}
-                //Console.WriteLine("Elige carta para Curar tablero  (numero de la posicion de la carta[0,1,2..]), -1 Curar Heroe.");
-                //string Cart2;
-                //Cart2 = Console.ReadLine();
-                //int C2 = Convert.ToInt32(Cart2);
+                foreach (Minions i in Tablero1)
+                {
+                    if (i.Seleccionada == 1)
+                    {
+                        i.Vida += 1;
+                    }
+                }
+                Mana -= 2;
             }
         }
               
@@ -38,10 +38,7 @@ namespace WpfApp2
                     else { H.Vida += 2; }
                 }
     }
-            //else
-            //{
-                //Console.WriteLine("No tienes Suficiente Mana");
-            //}
+            
 }
 
 

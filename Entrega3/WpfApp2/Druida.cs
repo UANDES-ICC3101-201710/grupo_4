@@ -21,6 +21,7 @@ namespace WpfApp2
                 Ataque += 1;
                 Armadura += 1;
                 HabilidadFindeTurno += 1;
+                Mana -= 2;
 
             }
         }
