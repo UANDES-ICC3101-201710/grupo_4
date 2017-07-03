@@ -545,6 +545,7 @@
 
             </StackPanel>
         </ScrollViewer>
+        <Button x:Name="AtacarHeroe" Background="{x:Null}" Visibility="Visible" HorizontalAlignment="Left" Margin="448,71,0,0" VerticalAlignment="Top" Width="109" Height="85" Click="AtacarHeroe_Click"/>
 
 
 

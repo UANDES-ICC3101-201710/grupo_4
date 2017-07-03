@@ -35,6 +35,10 @@ namespace WpfApp2
                     if (i.Seleccionada == 1)
                     {
                         i.Vida -= 1;
+                        if (i.Vida <= 0)
+                        {
+                            H.Tablero1.Remove(i); 
+                        }
                     }
                 }
                 Mana -= 2;
