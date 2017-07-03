@@ -164,7 +164,7 @@ namespace WpfApp2
 
         BinaryFormatter bf = new BinaryFormatter();
 
-        
+
 
 
         int eligioheroe = 0;
@@ -179,7 +179,7 @@ namespace WpfApp2
         {
             if (JugadorUno.Visibility == Visibility.Visible && eligioheroe == 0)
             {
-                Paladin Jugador1 = new Paladin(30, 0, "Paladin",0, 0, 0, 0, 0);
+                Paladin Jugador1 = new Paladin(30, 0, "Paladin", 0, 0, 0, 0, 0);
                 Heroes.Add(Jugador1);
                 Minions Pala = new Minions("Paladin", 0, "Paladin", "Guerrero", 1, 1, 1, 0, 0);
                 Jugador1.Miespeciales.Add(Pala);
@@ -211,17 +211,267 @@ namespace WpfApp2
                 JugadorDos.Visibility = Visibility.Hidden;
 
                 FinTurno1.Visibility = Visibility.Visible;
-                EmpiezaT1.Visibility = Visibility.Visible;
+
                 BarraTableroj1.Visibility = Visibility.Visible;
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
                 Tableroj2.Visibility = Visibility.Visible;
                 Guardar.Visibility = Visibility.Visible;
+                Manaj1.Visibility = Visibility.Visible;
+
+
                 r2 = 1;
                 r22 = 1;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
+
+                jugando = 0;
+
+                JugadorUno.Visibility = Visibility.Visible;
+                JugadorDos.Visibility = Visibility.Hidden;
+                jugs.Jugars(Heroes[0], MJugador1);
+                string va = Convert.ToString(Heroes[0].Mana);
+                cantmana.Text = va;
+                Manaj1.Value = Heroes[0].Mana;
+                Rendirse.Visibility = Visibility.Visible;
+
+                cantmana.Visibility = Visibility.Visible;
+                Mano.Visibility = Visibility.Visible;
+                BarraMano.Visibility = Visibility.Visible;
+                Manaj1.Visibility = Visibility.Visible;
+                Atacar.Visibility = Visibility.Visible;
+                Manaj1.Value = Heroes[0].Mana;
+                HabilidadHeroe.Visibility = Visibility.Visible;
+                vidaheroejug.Visibility = Visibility.Visible;
+                string f = Convert.ToString(Heroes[0].Vida);
+                vidaheroejug.Text = "Heroe: " + Heroes[0].Nombre + "\n" + "Vida: " + f;
+
+                Vidaheroenojug.Visibility = Visibility.Visible;
+                string d = Convert.ToString(Heroes[1].Vida);
+                Vidaheroenojug.Text = "Heroe: " + Heroes[1].Nombre + "\n" + "Vida: " + d;
+
+                if (r1 == 1) { paladinjugador.Visibility = Visibility.Visible; }
+                else if (r1 == 2) { druidajugador.Visibility = Visibility.Visible; }
+                else if (r1 == 3) { cazadorjugador.Visibility = Visibility.Visible; }
+                else if (r1 == 4) { sacerdotejugador.Visibility = Visibility.Visible; }
+                else if (r1 == 5) { picarojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 6) { brujojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 7) { magojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 8) { chamanjugador.Visibility = Visibility.Visible; }
+                else { guerrerojugador.Visibility = Visibility.Visible; }
+                if (r22 == 1) { otropaladin.Visibility = Visibility.Visible; }
+                else if (r22 == 2) { otrodruida.Visibility = Visibility.Visible; }
+                else if (r22 == 3) { otrocazador.Visibility = Visibility.Visible; }
+                else if (r22 == 4) { otrosacerdote.Visibility = Visibility.Visible; }
+                else if (r22 == 5) { otropicaro.Visibility = Visibility.Visible; }
+                else if (r22 == 6) { otrobrujo.Visibility = Visibility.Visible; }
+                else if (r22 == 7) { otromago.Visibility = Visibility.Visible; }
+                else if (r22 == 8) { otrochaman.Visibility = Visibility.Visible; }
+                else { otroguerrero.Visibility = Visibility.Visible; }
+
+                foreach (Minions i in Heroes[0].mano)
+                {
+                    if (i.NombreCarta == "Wisp1")
+                    {
+
+                        Wisp1.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp1.Visibility = Visibility.Visible;
+
+
+                    }
+                    if (i.NombreCarta == "Wisp2")
+                    {
+
+                        Wisp2.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Wisp3")
+                    {
+
+                        Wisp3.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Murloc1")
+                    {
+
+                        Murloc1.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Murloc2")
+                    {
+
+                        Murloc2.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc2.Visibility = Visibility.Visible;
+
+
+                    }
+                    if (i.NombreCarta == "Murloc3")
+                    {
+
+                        Murloc3.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Oasis1")
+                    {
+
+                        Oasis1.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Oasis2")
+                    {
+
+                        Oasis2.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Oasis3")
+                    {
+
+                        Oasis3.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound1")
+                    {
+
+                        Corehound1.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound2")
+                    {
+
+                        Corehound2.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound3")
+                    {
+
+                        Corehound3.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River1")
+                    {
+
+                        River1.Margin = new Thickness(0, 0, 0, 0);
+                        River1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River2")
+                    {
+
+                        River2.Margin = new Thickness(0, 0, 0, 0);
+                        River2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River3")
+                    {
+                        River3.Margin = new Thickness(0, 0, 0, 0);
+                        River3.Visibility = Visibility.Visible;
+                    }
+
+                    if (i.NombreCarta == "Bloodfen1")
+                    {
+
+                        Bloodfen1.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Bloodfen2")
+                    {
+
+                        Bloodfen2.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Bloodfen3")
+                    {
+
+                        Bloodfen3.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen3.Visibility = Visibility.Visible;
+
+                    }
+
+                    if (i.NombreCarta == "Magma1")
+                    {
+
+                        Magma1.Margin = new Thickness(0, 0, 0, 0);
+                        Magma1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Magma2")
+                    {
+
+                        Magma2.Margin = new Thickness(0, 0, 0, 0);
+                        Magma2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Magma3")
+                    {
+
+                        Magma3.Margin = new Thickness(0, 0, 0, 0);
+                        Magma3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Chillwind1")
+                    {
+
+                        Chillwind1.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Chillwind2")
+                    {
+
+                        Chillwind2.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Chillwind3")
+                    {
+
+                        Chillwind3.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War1")
+                    {
+
+                        War1.Margin = new Thickness(0, 0, 0, 0);
+                        War1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War2")
+                    {
+                        War2.Margin = new Thickness(0, 0, 0, 0);
+                        War2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War3")
+                    {
+
+                        War3.Margin = new Thickness(0, 0, 0, 0);
+                        War3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Boulderfist1")
+                    {
+
+                        Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Boulderfist2")
+                    {
+
+                        Boulderfist2.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Boulderfist3")
+                    {
+
+                        Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist3.Visibility = Visibility.Visible;
+                    }
+
+                }
             }
         }
+
 
         private void Druid_Click(object sender, RoutedEventArgs e)
         {
@@ -255,16 +505,263 @@ namespace WpfApp2
                 JugadorDos.Visibility = Visibility.Hidden;
 
                 FinTurno1.Visibility = Visibility.Visible;
-                EmpiezaT1.Visibility = Visibility.Visible;
+
                 BarraTableroj1.Visibility = Visibility.Visible;
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
                 Tableroj2.Visibility = Visibility.Visible;
                 Guardar.Visibility = Visibility.Visible;
+                vidaheroejug.Visibility = Visibility.Visible;
+                string f = Convert.ToString(Heroes[0].Vida);
+                vidaheroejug.Text = "Heroe: " + Heroes[0].Nombre + "\n" + "Vida: " + f;
+
+                Vidaheroenojug.Visibility = Visibility.Visible;
+                string d = Convert.ToString(Heroes[1].Vida);
+                Vidaheroenojug.Text = "Heroe: " + Heroes[1].Nombre + "\n" + "Vida: " + d;
                 r2 = 2;
                 r22 = 2;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
+
+                jugando = 0;
+
+                JugadorUno.Visibility = Visibility.Visible;
+                JugadorDos.Visibility = Visibility.Hidden;
+                jugs.Jugars(Heroes[0], MJugador1);
+                string va = Convert.ToString(Heroes[0].Mana);
+                cantmana.Text = va;
+                Manaj1.Value = Heroes[0].Mana;
+                Rendirse.Visibility = Visibility.Visible;
+
+                cantmana.Visibility = Visibility.Visible;
+                Mano.Visibility = Visibility.Visible;
+                BarraMano.Visibility = Visibility.Visible;
+                Manaj1.Visibility = Visibility.Visible;
+                Atacar.Visibility = Visibility.Visible;
+                Manaj1.Value = Heroes[0].Mana;
+                HabilidadHeroe.Visibility = Visibility.Visible;
+
+                if (r1 == 1) { paladinjugador.Visibility = Visibility.Visible; }
+                else if (r1 == 2) { druidajugador.Visibility = Visibility.Visible; }
+                else if (r1 == 3) { cazadorjugador.Visibility = Visibility.Visible; }
+                else if (r1 == 4) { sacerdotejugador.Visibility = Visibility.Visible; }
+                else if (r1 == 5) { picarojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 6) { brujojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 7) { magojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 8) { chamanjugador.Visibility = Visibility.Visible; }
+                else { guerrerojugador.Visibility = Visibility.Visible; }
+                if (r22 == 1) { otropaladin.Visibility = Visibility.Visible; }
+                else if (r22 == 2) { otrodruida.Visibility = Visibility.Visible; }
+                else if (r22 == 3) { otrocazador.Visibility = Visibility.Visible; }
+                else if (r22 == 4) { otrosacerdote.Visibility = Visibility.Visible; }
+                else if (r22 == 5) { otropicaro.Visibility = Visibility.Visible; }
+                else if (r22 == 6) { otrobrujo.Visibility = Visibility.Visible; }
+                else if (r22 == 7) { otromago.Visibility = Visibility.Visible; }
+                else if (r22 == 8) { otrochaman.Visibility = Visibility.Visible; }
+                else { otroguerrero.Visibility = Visibility.Visible; }
+
+                foreach (Minions i in Heroes[0].mano)
+                {
+                    if (i.NombreCarta == "Wisp1")
+                    {
+
+                        Wisp1.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp1.Visibility = Visibility.Visible;
+
+
+                    }
+                    if (i.NombreCarta == "Wisp2")
+                    {
+
+                        Wisp2.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Wisp3")
+                    {
+
+                        Wisp3.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Murloc1")
+                    {
+
+                        Murloc1.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Murloc2")
+                    {
+
+                        Murloc2.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc2.Visibility = Visibility.Visible;
+
+
+                    }
+                    if (i.NombreCarta == "Murloc3")
+                    {
+
+                        Murloc3.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Oasis1")
+                    {
+
+                        Oasis1.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Oasis2")
+                    {
+
+                        Oasis2.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Oasis3")
+                    {
+
+                        Oasis3.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound1")
+                    {
+
+                        Corehound1.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound2")
+                    {
+
+                        Corehound2.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound3")
+                    {
+
+                        Corehound3.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River1")
+                    {
+
+                        River1.Margin = new Thickness(0, 0, 0, 0);
+                        River1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River2")
+                    {
+
+                        River2.Margin = new Thickness(0, 0, 0, 0);
+                        River2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River3")
+                    {
+                        River3.Margin = new Thickness(0, 0, 0, 0);
+                        River3.Visibility = Visibility.Visible;
+                    }
+
+                    if (i.NombreCarta == "Bloodfen1")
+                    {
+
+                        Bloodfen1.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Bloodfen2")
+                    {
+
+                        Bloodfen2.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Bloodfen3")
+                    {
+
+                        Bloodfen3.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen3.Visibility = Visibility.Visible;
+
+                    }
+
+                    if (i.NombreCarta == "Magma1")
+                    {
+
+                        Magma1.Margin = new Thickness(0, 0, 0, 0);
+                        Magma1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Magma2")
+                    {
+
+                        Magma2.Margin = new Thickness(0, 0, 0, 0);
+                        Magma2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Magma3")
+                    {
+
+                        Magma3.Margin = new Thickness(0, 0, 0, 0);
+                        Magma3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Chillwind1")
+                    {
+
+                        Chillwind1.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Chillwind2")
+                    {
+
+                        Chillwind2.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Chillwind3")
+                    {
+
+                        Chillwind3.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War1")
+                    {
+
+                        War1.Margin = new Thickness(0, 0, 0, 0);
+                        War1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War2")
+                    {
+                        War2.Margin = new Thickness(0, 0, 0, 0);
+                        War2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War3")
+                    {
+
+                        War3.Margin = new Thickness(0, 0, 0, 0);
+                        War3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Boulderfist1")
+                    {
+
+                        Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Boulderfist2")
+                    {
+
+                        Boulderfist2.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Boulderfist3")
+                    {
+
+                        Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist3.Visibility = Visibility.Visible;
+                    }
+
+                }
             }
+
         }
 
         private void Cazador_Click(object sender, RoutedEventArgs e)
@@ -299,7 +796,8 @@ namespace WpfApp2
                 JugadorDos.Visibility = Visibility.Hidden;
 
                 FinTurno1.Visibility = Visibility.Visible;
-                EmpiezaT1.Visibility = Visibility.Visible;
+
+
                 BarraTableroj1.Visibility = Visibility.Visible;
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
@@ -308,6 +806,252 @@ namespace WpfApp2
                 r2 = 3;
                 r22 = 3;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
+                vidaheroejug.Visibility = Visibility.Visible;
+                string f = Convert.ToString(Heroes[0].Vida);
+                vidaheroejug.Text = "Heroe: " + Heroes[0].Nombre + "\n" + "Vida: " + f;
+
+                Vidaheroenojug.Visibility = Visibility.Visible;
+                string d = Convert.ToString(Heroes[1].Vida);
+                Vidaheroenojug.Text = "Heroe: " + Heroes[1].Nombre + "\n" + "Vida: " + d;
+
+                jugando = 0;
+
+                JugadorUno.Visibility = Visibility.Visible;
+                JugadorDos.Visibility = Visibility.Hidden;
+                jugs.Jugars(Heroes[0], MJugador1);
+                string va = Convert.ToString(Heroes[0].Mana);
+                cantmana.Text = va;
+                Manaj1.Value = Heroes[0].Mana;
+                Rendirse.Visibility = Visibility.Visible;
+
+                cantmana.Visibility = Visibility.Visible;
+                Mano.Visibility = Visibility.Visible;
+                BarraMano.Visibility = Visibility.Visible;
+                Manaj1.Visibility = Visibility.Visible;
+                Atacar.Visibility = Visibility.Visible;
+                Manaj1.Value = Heroes[0].Mana;
+                HabilidadHeroe.Visibility = Visibility.Visible;
+
+                if (r1 == 1) { paladinjugador.Visibility = Visibility.Visible; }
+                else if (r1 == 2) { druidajugador.Visibility = Visibility.Visible; }
+                else if (r1 == 3) { cazadorjugador.Visibility = Visibility.Visible; }
+                else if (r1 == 4) { sacerdotejugador.Visibility = Visibility.Visible; }
+                else if (r1 == 5) { picarojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 6) { brujojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 7) { magojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 8) { chamanjugador.Visibility = Visibility.Visible; }
+                else { guerrerojugador.Visibility = Visibility.Visible; }
+                if (r22 == 1) { otropaladin.Visibility = Visibility.Visible; }
+                else if (r22 == 2) { otrodruida.Visibility = Visibility.Visible; }
+                else if (r22 == 3) { otrocazador.Visibility = Visibility.Visible; }
+                else if (r22 == 4) { otrosacerdote.Visibility = Visibility.Visible; }
+                else if (r22 == 5) { otropicaro.Visibility = Visibility.Visible; }
+                else if (r22 == 6) { otrobrujo.Visibility = Visibility.Visible; }
+                else if (r22 == 7) { otromago.Visibility = Visibility.Visible; }
+                else if (r22 == 8) { otrochaman.Visibility = Visibility.Visible; }
+                else { otroguerrero.Visibility = Visibility.Visible; }
+
+                foreach (Minions i in Heroes[0].mano)
+                {
+                    if (i.NombreCarta == "Wisp1")
+                    {
+
+                        Wisp1.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp1.Visibility = Visibility.Visible;
+
+
+                    }
+                    if (i.NombreCarta == "Wisp2")
+                    {
+
+                        Wisp2.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Wisp3")
+                    {
+
+                        Wisp3.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Murloc1")
+                    {
+
+                        Murloc1.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Murloc2")
+                    {
+
+                        Murloc2.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc2.Visibility = Visibility.Visible;
+
+
+                    }
+                    if (i.NombreCarta == "Murloc3")
+                    {
+
+                        Murloc3.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Oasis1")
+                    {
+
+                        Oasis1.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Oasis2")
+                    {
+
+                        Oasis2.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Oasis3")
+                    {
+
+                        Oasis3.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound1")
+                    {
+
+                        Corehound1.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound2")
+                    {
+
+                        Corehound2.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound3")
+                    {
+
+                        Corehound3.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River1")
+                    {
+
+                        River1.Margin = new Thickness(0, 0, 0, 0);
+                        River1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River2")
+                    {
+
+                        River2.Margin = new Thickness(0, 0, 0, 0);
+                        River2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River3")
+                    {
+                        River3.Margin = new Thickness(0, 0, 0, 0);
+                        River3.Visibility = Visibility.Visible;
+                    }
+
+                    if (i.NombreCarta == "Bloodfen1")
+                    {
+
+                        Bloodfen1.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Bloodfen2")
+                    {
+
+                        Bloodfen2.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Bloodfen3")
+                    {
+
+                        Bloodfen3.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen3.Visibility = Visibility.Visible;
+
+                    }
+
+                    if (i.NombreCarta == "Magma1")
+                    {
+
+                        Magma1.Margin = new Thickness(0, 0, 0, 0);
+                        Magma1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Magma2")
+                    {
+
+                        Magma2.Margin = new Thickness(0, 0, 0, 0);
+                        Magma2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Magma3")
+                    {
+
+                        Magma3.Margin = new Thickness(0, 0, 0, 0);
+                        Magma3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Chillwind1")
+                    {
+
+                        Chillwind1.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Chillwind2")
+                    {
+
+                        Chillwind2.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Chillwind3")
+                    {
+
+                        Chillwind3.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War1")
+                    {
+
+                        War1.Margin = new Thickness(0, 0, 0, 0);
+                        War1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War2")
+                    {
+                        War2.Margin = new Thickness(0, 0, 0, 0);
+                        War2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War3")
+                    {
+
+                        War3.Margin = new Thickness(0, 0, 0, 0);
+                        War3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Boulderfist1")
+                    {
+
+                        Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Boulderfist2")
+                    {
+
+                        Boulderfist2.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Boulderfist3")
+                    {
+
+                        Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist3.Visibility = Visibility.Visible;
+                    }
+
+                }
             }
         }
 
@@ -343,7 +1087,7 @@ namespace WpfApp2
                 JugadorDos.Visibility = Visibility.Hidden;
 
                 FinTurno1.Visibility = Visibility.Visible;
-                EmpiezaT1.Visibility = Visibility.Visible;
+
                 BarraTableroj1.Visibility = Visibility.Visible;
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
@@ -352,6 +1096,253 @@ namespace WpfApp2
                 r2 = 4;
                 r22 = 4;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
+
+                jugando = 0;
+
+                vidaheroejug.Visibility = Visibility.Visible;
+                string f = Convert.ToString(Heroes[0].Vida);
+                vidaheroejug.Text = "Heroe: " + Heroes[0].Nombre + "\n" + "Vida: " + f;
+
+                Vidaheroenojug.Visibility = Visibility.Visible;
+                string d = Convert.ToString(Heroes[1].Vida);
+                Vidaheroenojug.Text = "Heroe: " + Heroes[1].Nombre + "\n" + "Vida: " + d;
+
+                JugadorUno.Visibility = Visibility.Visible;
+                JugadorDos.Visibility = Visibility.Hidden;
+                jugs.Jugars(Heroes[0], MJugador1);
+                string va = Convert.ToString(Heroes[0].Mana);
+                cantmana.Text = va;
+                Manaj1.Value = Heroes[0].Mana;
+                Rendirse.Visibility = Visibility.Visible;
+
+                cantmana.Visibility = Visibility.Visible;
+                Mano.Visibility = Visibility.Visible;
+                BarraMano.Visibility = Visibility.Visible;
+                Manaj1.Visibility = Visibility.Visible;
+                Atacar.Visibility = Visibility.Visible;
+                Manaj1.Value = Heroes[0].Mana;
+                HabilidadHeroe.Visibility = Visibility.Visible;
+
+                if (r1 == 1) { paladinjugador.Visibility = Visibility.Visible; }
+                else if (r1 == 2) { druidajugador.Visibility = Visibility.Visible; }
+                else if (r1 == 3) { cazadorjugador.Visibility = Visibility.Visible; }
+                else if (r1 == 4) { sacerdotejugador.Visibility = Visibility.Visible; }
+                else if (r1 == 5) { picarojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 6) { brujojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 7) { magojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 8) { chamanjugador.Visibility = Visibility.Visible; }
+                else { guerrerojugador.Visibility = Visibility.Visible; }
+                if (r22 == 1) { otropaladin.Visibility = Visibility.Visible; }
+                else if (r22 == 2) { otrodruida.Visibility = Visibility.Visible; }
+                else if (r22 == 3) { otrocazador.Visibility = Visibility.Visible; }
+                else if (r22 == 4) { otrosacerdote.Visibility = Visibility.Visible; }
+                else if (r22 == 5) { otropicaro.Visibility = Visibility.Visible; }
+                else if (r22 == 6) { otrobrujo.Visibility = Visibility.Visible; }
+                else if (r22 == 7) { otromago.Visibility = Visibility.Visible; }
+                else if (r22 == 8) { otrochaman.Visibility = Visibility.Visible; }
+                else { otroguerrero.Visibility = Visibility.Visible; }
+
+                foreach (Minions i in Heroes[0].mano)
+                {
+                    if (i.NombreCarta == "Wisp1")
+                    {
+
+                        Wisp1.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp1.Visibility = Visibility.Visible;
+
+
+                    }
+                    if (i.NombreCarta == "Wisp2")
+                    {
+
+                        Wisp2.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Wisp3")
+                    {
+
+                        Wisp3.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Murloc1")
+                    {
+
+                        Murloc1.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Murloc2")
+                    {
+
+                        Murloc2.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc2.Visibility = Visibility.Visible;
+
+
+                    }
+                    if (i.NombreCarta == "Murloc3")
+                    {
+
+                        Murloc3.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Oasis1")
+                    {
+
+                        Oasis1.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Oasis2")
+                    {
+
+                        Oasis2.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Oasis3")
+                    {
+
+                        Oasis3.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound1")
+                    {
+
+                        Corehound1.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound2")
+                    {
+
+                        Corehound2.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound3")
+                    {
+
+                        Corehound3.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River1")
+                    {
+
+                        River1.Margin = new Thickness(0, 0, 0, 0);
+                        River1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River2")
+                    {
+
+                        River2.Margin = new Thickness(0, 0, 0, 0);
+                        River2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River3")
+                    {
+                        River3.Margin = new Thickness(0, 0, 0, 0);
+                        River3.Visibility = Visibility.Visible;
+                    }
+
+                    if (i.NombreCarta == "Bloodfen1")
+                    {
+
+                        Bloodfen1.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Bloodfen2")
+                    {
+
+                        Bloodfen2.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Bloodfen3")
+                    {
+
+                        Bloodfen3.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen3.Visibility = Visibility.Visible;
+
+                    }
+
+                    if (i.NombreCarta == "Magma1")
+                    {
+
+                        Magma1.Margin = new Thickness(0, 0, 0, 0);
+                        Magma1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Magma2")
+                    {
+
+                        Magma2.Margin = new Thickness(0, 0, 0, 0);
+                        Magma2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Magma3")
+                    {
+
+                        Magma3.Margin = new Thickness(0, 0, 0, 0);
+                        Magma3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Chillwind1")
+                    {
+
+                        Chillwind1.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Chillwind2")
+                    {
+
+                        Chillwind2.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Chillwind3")
+                    {
+
+                        Chillwind3.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War1")
+                    {
+
+                        War1.Margin = new Thickness(0, 0, 0, 0);
+                        War1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War2")
+                    {
+                        War2.Margin = new Thickness(0, 0, 0, 0);
+                        War2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War3")
+                    {
+
+                        War3.Margin = new Thickness(0, 0, 0, 0);
+                        War3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Boulderfist1")
+                    {
+
+                        Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Boulderfist2")
+                    {
+
+                        Boulderfist2.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Boulderfist3")
+                    {
+
+                        Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist3.Visibility = Visibility.Visible;
+                    }
+
+                }
             }
         }
 
@@ -387,7 +1378,7 @@ namespace WpfApp2
                 JugadorDos.Visibility = Visibility.Hidden;
 
                 FinTurno1.Visibility = Visibility.Visible;
-                EmpiezaT1.Visibility = Visibility.Visible;
+
                 BarraTableroj1.Visibility = Visibility.Visible;
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
@@ -396,6 +1387,253 @@ namespace WpfApp2
                 r2 = 5;
                 r22 = 5;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
+
+                vidaheroejug.Visibility = Visibility.Visible;
+                string f = Convert.ToString(Heroes[0].Vida);
+                vidaheroejug.Text = "Heroe: " + Heroes[0].Nombre + "\n" + "Vida: " + f;
+
+                Vidaheroenojug.Visibility = Visibility.Visible;
+                string d = Convert.ToString(Heroes[1].Vida);
+                Vidaheroenojug.Text = "Heroe: " + Heroes[1].Nombre + "\n" + "Vida: " + d;
+
+                jugando = 0;
+
+                JugadorUno.Visibility = Visibility.Visible;
+                JugadorDos.Visibility = Visibility.Hidden;
+                jugs.Jugars(Heroes[0], MJugador1);
+                string va = Convert.ToString(Heroes[0].Mana);
+                cantmana.Text = va;
+                Manaj1.Value = Heroes[0].Mana;
+                Rendirse.Visibility = Visibility.Visible;
+
+                cantmana.Visibility = Visibility.Visible;
+                Mano.Visibility = Visibility.Visible;
+                BarraMano.Visibility = Visibility.Visible;
+                Manaj1.Visibility = Visibility.Visible;
+                Atacar.Visibility = Visibility.Visible;
+                Manaj1.Value = Heroes[0].Mana;
+                HabilidadHeroe.Visibility = Visibility.Visible;
+
+                if (r1 == 1) { paladinjugador.Visibility = Visibility.Visible; }
+                else if (r1 == 2) { druidajugador.Visibility = Visibility.Visible; }
+                else if (r1 == 3) { cazadorjugador.Visibility = Visibility.Visible; }
+                else if (r1 == 4) { sacerdotejugador.Visibility = Visibility.Visible; }
+                else if (r1 == 5) { picarojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 6) { brujojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 7) { magojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 8) { chamanjugador.Visibility = Visibility.Visible; }
+                else { guerrerojugador.Visibility = Visibility.Visible; }
+                if (r22 == 1) { otropaladin.Visibility = Visibility.Visible; }
+                else if (r22 == 2) { otrodruida.Visibility = Visibility.Visible; }
+                else if (r22 == 3) { otrocazador.Visibility = Visibility.Visible; }
+                else if (r22 == 4) { otrosacerdote.Visibility = Visibility.Visible; }
+                else if (r22 == 5) { otropicaro.Visibility = Visibility.Visible; }
+                else if (r22 == 6) { otrobrujo.Visibility = Visibility.Visible; }
+                else if (r22 == 7) { otromago.Visibility = Visibility.Visible; }
+                else if (r22 == 8) { otrochaman.Visibility = Visibility.Visible; }
+                else { otroguerrero.Visibility = Visibility.Visible; }
+
+                foreach (Minions i in Heroes[0].mano)
+                {
+                    if (i.NombreCarta == "Wisp1")
+                    {
+
+                        Wisp1.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp1.Visibility = Visibility.Visible;
+
+
+                    }
+                    if (i.NombreCarta == "Wisp2")
+                    {
+
+                        Wisp2.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Wisp3")
+                    {
+
+                        Wisp3.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Murloc1")
+                    {
+
+                        Murloc1.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Murloc2")
+                    {
+
+                        Murloc2.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc2.Visibility = Visibility.Visible;
+
+
+                    }
+                    if (i.NombreCarta == "Murloc3")
+                    {
+
+                        Murloc3.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Oasis1")
+                    {
+
+                        Oasis1.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Oasis2")
+                    {
+
+                        Oasis2.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Oasis3")
+                    {
+
+                        Oasis3.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound1")
+                    {
+
+                        Corehound1.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound2")
+                    {
+
+                        Corehound2.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound3")
+                    {
+
+                        Corehound3.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River1")
+                    {
+
+                        River1.Margin = new Thickness(0, 0, 0, 0);
+                        River1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River2")
+                    {
+
+                        River2.Margin = new Thickness(0, 0, 0, 0);
+                        River2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River3")
+                    {
+                        River3.Margin = new Thickness(0, 0, 0, 0);
+                        River3.Visibility = Visibility.Visible;
+                    }
+
+                    if (i.NombreCarta == "Bloodfen1")
+                    {
+
+                        Bloodfen1.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Bloodfen2")
+                    {
+
+                        Bloodfen2.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Bloodfen3")
+                    {
+
+                        Bloodfen3.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen3.Visibility = Visibility.Visible;
+
+                    }
+
+                    if (i.NombreCarta == "Magma1")
+                    {
+
+                        Magma1.Margin = new Thickness(0, 0, 0, 0);
+                        Magma1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Magma2")
+                    {
+
+                        Magma2.Margin = new Thickness(0, 0, 0, 0);
+                        Magma2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Magma3")
+                    {
+
+                        Magma3.Margin = new Thickness(0, 0, 0, 0);
+                        Magma3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Chillwind1")
+                    {
+
+                        Chillwind1.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Chillwind2")
+                    {
+
+                        Chillwind2.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Chillwind3")
+                    {
+
+                        Chillwind3.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War1")
+                    {
+
+                        War1.Margin = new Thickness(0, 0, 0, 0);
+                        War1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War2")
+                    {
+                        War2.Margin = new Thickness(0, 0, 0, 0);
+                        War2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War3")
+                    {
+
+                        War3.Margin = new Thickness(0, 0, 0, 0);
+                        War3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Boulderfist1")
+                    {
+
+                        Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Boulderfist2")
+                    {
+
+                        Boulderfist2.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Boulderfist3")
+                    {
+
+                        Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist3.Visibility = Visibility.Visible;
+                    }
+
+                }
             }
 
         }
@@ -432,7 +1670,7 @@ namespace WpfApp2
                 JugadorDos.Visibility = Visibility.Hidden;
 
                 FinTurno1.Visibility = Visibility.Visible;
-                EmpiezaT1.Visibility = Visibility.Visible;
+
                 BarraTableroj1.Visibility = Visibility.Visible;
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
@@ -441,6 +1679,253 @@ namespace WpfApp2
                 r2 = 6;
                 r22 = 6;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
+
+                vidaheroejug.Visibility = Visibility.Visible;
+                string f = Convert.ToString(Heroes[0].Vida);
+                vidaheroejug.Text = "Heroe: " + Heroes[0].Nombre + "\n" + "Vida: " + f;
+
+                Vidaheroenojug.Visibility = Visibility.Visible;
+                string d = Convert.ToString(Heroes[1].Vida);
+                Vidaheroenojug.Text = "Heroe: " + Heroes[1].Nombre + "\n" + "Vida: " + d;
+
+                jugando = 0;
+
+                JugadorUno.Visibility = Visibility.Visible;
+                JugadorDos.Visibility = Visibility.Hidden;
+                jugs.Jugars(Heroes[0], MJugador1);
+                string va = Convert.ToString(Heroes[0].Mana);
+                cantmana.Text = va;
+                Manaj1.Value = Heroes[0].Mana;
+                Rendirse.Visibility = Visibility.Visible;
+
+                cantmana.Visibility = Visibility.Visible;
+                Mano.Visibility = Visibility.Visible;
+                BarraMano.Visibility = Visibility.Visible;
+                Manaj1.Visibility = Visibility.Visible;
+                Atacar.Visibility = Visibility.Visible;
+                Manaj1.Value = Heroes[0].Mana;
+                HabilidadHeroe.Visibility = Visibility.Visible;
+
+                if (r1 == 1) { paladinjugador.Visibility = Visibility.Visible; }
+                else if (r1 == 2) { druidajugador.Visibility = Visibility.Visible; }
+                else if (r1 == 3) { cazadorjugador.Visibility = Visibility.Visible; }
+                else if (r1 == 4) { sacerdotejugador.Visibility = Visibility.Visible; }
+                else if (r1 == 5) { picarojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 6) { brujojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 7) { magojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 8) { chamanjugador.Visibility = Visibility.Visible; }
+                else { guerrerojugador.Visibility = Visibility.Visible; }
+                if (r22 == 1) { otropaladin.Visibility = Visibility.Visible; }
+                else if (r22 == 2) { otrodruida.Visibility = Visibility.Visible; }
+                else if (r22 == 3) { otrocazador.Visibility = Visibility.Visible; }
+                else if (r22 == 4) { otrosacerdote.Visibility = Visibility.Visible; }
+                else if (r22 == 5) { otropicaro.Visibility = Visibility.Visible; }
+                else if (r22 == 6) { otrobrujo.Visibility = Visibility.Visible; }
+                else if (r22 == 7) { otromago.Visibility = Visibility.Visible; }
+                else if (r22 == 8) { otrochaman.Visibility = Visibility.Visible; }
+                else { otroguerrero.Visibility = Visibility.Visible; }
+
+                foreach (Minions i in Heroes[0].mano)
+                {
+                    if (i.NombreCarta == "Wisp1")
+                    {
+
+                        Wisp1.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp1.Visibility = Visibility.Visible;
+
+
+                    }
+                    if (i.NombreCarta == "Wisp2")
+                    {
+
+                        Wisp2.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Wisp3")
+                    {
+
+                        Wisp3.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Murloc1")
+                    {
+
+                        Murloc1.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Murloc2")
+                    {
+
+                        Murloc2.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc2.Visibility = Visibility.Visible;
+
+
+                    }
+                    if (i.NombreCarta == "Murloc3")
+                    {
+
+                        Murloc3.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Oasis1")
+                    {
+
+                        Oasis1.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Oasis2")
+                    {
+
+                        Oasis2.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Oasis3")
+                    {
+
+                        Oasis3.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound1")
+                    {
+
+                        Corehound1.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound2")
+                    {
+
+                        Corehound2.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound3")
+                    {
+
+                        Corehound3.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River1")
+                    {
+
+                        River1.Margin = new Thickness(0, 0, 0, 0);
+                        River1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River2")
+                    {
+
+                        River2.Margin = new Thickness(0, 0, 0, 0);
+                        River2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River3")
+                    {
+                        River3.Margin = new Thickness(0, 0, 0, 0);
+                        River3.Visibility = Visibility.Visible;
+                    }
+
+                    if (i.NombreCarta == "Bloodfen1")
+                    {
+
+                        Bloodfen1.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Bloodfen2")
+                    {
+
+                        Bloodfen2.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Bloodfen3")
+                    {
+
+                        Bloodfen3.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen3.Visibility = Visibility.Visible;
+
+                    }
+
+                    if (i.NombreCarta == "Magma1")
+                    {
+
+                        Magma1.Margin = new Thickness(0, 0, 0, 0);
+                        Magma1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Magma2")
+                    {
+
+                        Magma2.Margin = new Thickness(0, 0, 0, 0);
+                        Magma2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Magma3")
+                    {
+
+                        Magma3.Margin = new Thickness(0, 0, 0, 0);
+                        Magma3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Chillwind1")
+                    {
+
+                        Chillwind1.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Chillwind2")
+                    {
+
+                        Chillwind2.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Chillwind3")
+                    {
+
+                        Chillwind3.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War1")
+                    {
+
+                        War1.Margin = new Thickness(0, 0, 0, 0);
+                        War1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War2")
+                    {
+                        War2.Margin = new Thickness(0, 0, 0, 0);
+                        War2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War3")
+                    {
+
+                        War3.Margin = new Thickness(0, 0, 0, 0);
+                        War3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Boulderfist1")
+                    {
+
+                        Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Boulderfist2")
+                    {
+
+                        Boulderfist2.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Boulderfist3")
+                    {
+
+                        Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist3.Visibility = Visibility.Visible;
+                    }
+
+                }
             }
 
 
@@ -478,7 +1963,7 @@ namespace WpfApp2
                 JugadorDos.Visibility = Visibility.Hidden;
 
                 FinTurno1.Visibility = Visibility.Visible;
-                EmpiezaT1.Visibility = Visibility.Visible;
+
                 BarraTableroj1.Visibility = Visibility.Visible;
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
@@ -488,6 +1973,252 @@ namespace WpfApp2
                 r22 = 7;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
 
+                vidaheroejug.Visibility = Visibility.Visible;
+                string f = Convert.ToString(Heroes[0].Vida);
+                vidaheroejug.Text = "Heroe: " + Heroes[0].Nombre + "\n" + "Vida: " + f;
+
+                Vidaheroenojug.Visibility = Visibility.Visible;
+                string d = Convert.ToString(Heroes[1].Vida);
+                Vidaheroenojug.Text = "Heroe: " + Heroes[1].Nombre + "\n" + "Vida: " + d;
+
+                jugando = 0;
+
+                JugadorUno.Visibility = Visibility.Visible;
+                JugadorDos.Visibility = Visibility.Hidden;
+                jugs.Jugars(Heroes[0], MJugador1);
+                string va = Convert.ToString(Heroes[0].Mana);
+                cantmana.Text = va;
+                Manaj1.Value = Heroes[0].Mana;
+                Rendirse.Visibility = Visibility.Visible;
+
+                cantmana.Visibility = Visibility.Visible;
+                Mano.Visibility = Visibility.Visible;
+                BarraMano.Visibility = Visibility.Visible;
+                Manaj1.Visibility = Visibility.Visible;
+                Atacar.Visibility = Visibility.Visible;
+                Manaj1.Value = Heroes[0].Mana;
+                HabilidadHeroe.Visibility = Visibility.Visible;
+
+                if (r1 == 1) { paladinjugador.Visibility = Visibility.Visible; }
+                else if (r1 == 2) { druidajugador.Visibility = Visibility.Visible; }
+                else if (r1 == 3) { cazadorjugador.Visibility = Visibility.Visible; }
+                else if (r1 == 4) { sacerdotejugador.Visibility = Visibility.Visible; }
+                else if (r1 == 5) { picarojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 6) { brujojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 7) { magojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 8) { chamanjugador.Visibility = Visibility.Visible; }
+                else { guerrerojugador.Visibility = Visibility.Visible; }
+                if (r22 == 1) { otropaladin.Visibility = Visibility.Visible; }
+                else if (r22 == 2) { otrodruida.Visibility = Visibility.Visible; }
+                else if (r22 == 3) { otrocazador.Visibility = Visibility.Visible; }
+                else if (r22 == 4) { otrosacerdote.Visibility = Visibility.Visible; }
+                else if (r22 == 5) { otropicaro.Visibility = Visibility.Visible; }
+                else if (r22 == 6) { otrobrujo.Visibility = Visibility.Visible; }
+                else if (r22 == 7) { otromago.Visibility = Visibility.Visible; }
+                else if (r22 == 8) { otrochaman.Visibility = Visibility.Visible; }
+                else { otroguerrero.Visibility = Visibility.Visible; }
+
+                foreach (Minions i in Heroes[0].mano)
+                {
+                    if (i.NombreCarta == "Wisp1")
+                    {
+
+                        Wisp1.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp1.Visibility = Visibility.Visible;
+
+
+                    }
+                    if (i.NombreCarta == "Wisp2")
+                    {
+
+                        Wisp2.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Wisp3")
+                    {
+
+                        Wisp3.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Murloc1")
+                    {
+
+                        Murloc1.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Murloc2")
+                    {
+
+                        Murloc2.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc2.Visibility = Visibility.Visible;
+
+
+                    }
+                    if (i.NombreCarta == "Murloc3")
+                    {
+
+                        Murloc3.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Oasis1")
+                    {
+
+                        Oasis1.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Oasis2")
+                    {
+
+                        Oasis2.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Oasis3")
+                    {
+
+                        Oasis3.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound1")
+                    {
+
+                        Corehound1.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound2")
+                    {
+
+                        Corehound2.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound3")
+                    {
+
+                        Corehound3.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River1")
+                    {
+
+                        River1.Margin = new Thickness(0, 0, 0, 0);
+                        River1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River2")
+                    {
+
+                        River2.Margin = new Thickness(0, 0, 0, 0);
+                        River2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River3")
+                    {
+                        River3.Margin = new Thickness(0, 0, 0, 0);
+                        River3.Visibility = Visibility.Visible;
+                    }
+
+                    if (i.NombreCarta == "Bloodfen1")
+                    {
+
+                        Bloodfen1.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Bloodfen2")
+                    {
+
+                        Bloodfen2.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Bloodfen3")
+                    {
+
+                        Bloodfen3.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen3.Visibility = Visibility.Visible;
+
+                    }
+
+                    if (i.NombreCarta == "Magma1")
+                    {
+
+                        Magma1.Margin = new Thickness(0, 0, 0, 0);
+                        Magma1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Magma2")
+                    {
+
+                        Magma2.Margin = new Thickness(0, 0, 0, 0);
+                        Magma2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Magma3")
+                    {
+
+                        Magma3.Margin = new Thickness(0, 0, 0, 0);
+                        Magma3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Chillwind1")
+                    {
+
+                        Chillwind1.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Chillwind2")
+                    {
+
+                        Chillwind2.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Chillwind3")
+                    {
+
+                        Chillwind3.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War1")
+                    {
+
+                        War1.Margin = new Thickness(0, 0, 0, 0);
+                        War1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War2")
+                    {
+                        War2.Margin = new Thickness(0, 0, 0, 0);
+                        War2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War3")
+                    {
+
+                        War3.Margin = new Thickness(0, 0, 0, 0);
+                        War3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Boulderfist1")
+                    {
+
+                        Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Boulderfist2")
+                    {
+
+                        Boulderfist2.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Boulderfist3")
+                    {
+
+                        Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist3.Visibility = Visibility.Visible;
+                    }
+
+                }
             }
 
 
@@ -542,7 +2273,7 @@ namespace WpfApp2
                 JugadorDos.Visibility = Visibility.Hidden;
 
                 FinTurno1.Visibility = Visibility.Visible;
-                EmpiezaT1.Visibility = Visibility.Visible;
+
                 BarraTableroj1.Visibility = Visibility.Visible;
                 BarraTableroj2.Visibility = Visibility.Visible;
                 Tableroj1.Visibility = Visibility.Visible;
@@ -551,6 +2282,253 @@ namespace WpfApp2
                 r2 = 8;
                 r22 = 8;
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
+
+                vidaheroejug.Visibility = Visibility.Visible;
+                string f = Convert.ToString(Heroes[0].Vida);
+                vidaheroejug.Text = "Heroe: " + Heroes[0].Nombre + "\n" + "Vida: " + f;
+
+                Vidaheroenojug.Visibility = Visibility.Visible;
+                string d = Convert.ToString(Heroes[1].Vida);
+                Vidaheroenojug.Text = "Heroe: " + Heroes[1].Nombre + "\n" + "Vida: " + d;
+
+                jugando = 0;
+
+                JugadorUno.Visibility = Visibility.Visible;
+                JugadorDos.Visibility = Visibility.Hidden;
+                jugs.Jugars(Heroes[0], MJugador1);
+                string va = Convert.ToString(Heroes[0].Mana);
+                cantmana.Text = va;
+                Manaj1.Value = Heroes[0].Mana;
+                Rendirse.Visibility = Visibility.Visible;
+
+                cantmana.Visibility = Visibility.Visible;
+                Mano.Visibility = Visibility.Visible;
+                BarraMano.Visibility = Visibility.Visible;
+                Manaj1.Visibility = Visibility.Visible;
+                Atacar.Visibility = Visibility.Visible;
+                Manaj1.Value = Heroes[0].Mana;
+                HabilidadHeroe.Visibility = Visibility.Visible;
+
+                if (r1 == 1) { paladinjugador.Visibility = Visibility.Visible; }
+                else if (r1 == 2) { druidajugador.Visibility = Visibility.Visible; }
+                else if (r1 == 3) { cazadorjugador.Visibility = Visibility.Visible; }
+                else if (r1 == 4) { sacerdotejugador.Visibility = Visibility.Visible; }
+                else if (r1 == 5) { picarojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 6) { brujojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 7) { magojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 8) { chamanjugador.Visibility = Visibility.Visible; }
+                else { guerrerojugador.Visibility = Visibility.Visible; }
+                if (r22 == 1) { otropaladin.Visibility = Visibility.Visible; }
+                else if (r22 == 2) { otrodruida.Visibility = Visibility.Visible; }
+                else if (r22 == 3) { otrocazador.Visibility = Visibility.Visible; }
+                else if (r22 == 4) { otrosacerdote.Visibility = Visibility.Visible; }
+                else if (r22 == 5) { otropicaro.Visibility = Visibility.Visible; }
+                else if (r22 == 6) { otrobrujo.Visibility = Visibility.Visible; }
+                else if (r22 == 7) { otromago.Visibility = Visibility.Visible; }
+                else if (r22 == 8) { otrochaman.Visibility = Visibility.Visible; }
+                else { otroguerrero.Visibility = Visibility.Visible; }
+
+                foreach (Minions i in Heroes[0].mano)
+                {
+                    if (i.NombreCarta == "Wisp1")
+                    {
+
+                        Wisp1.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp1.Visibility = Visibility.Visible;
+
+
+                    }
+                    if (i.NombreCarta == "Wisp2")
+                    {
+
+                        Wisp2.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Wisp3")
+                    {
+
+                        Wisp3.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Murloc1")
+                    {
+
+                        Murloc1.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Murloc2")
+                    {
+
+                        Murloc2.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc2.Visibility = Visibility.Visible;
+
+
+                    }
+                    if (i.NombreCarta == "Murloc3")
+                    {
+
+                        Murloc3.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Oasis1")
+                    {
+
+                        Oasis1.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Oasis2")
+                    {
+
+                        Oasis2.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Oasis3")
+                    {
+
+                        Oasis3.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound1")
+                    {
+
+                        Corehound1.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound2")
+                    {
+
+                        Corehound2.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound3")
+                    {
+
+                        Corehound3.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River1")
+                    {
+
+                        River1.Margin = new Thickness(0, 0, 0, 0);
+                        River1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River2")
+                    {
+
+                        River2.Margin = new Thickness(0, 0, 0, 0);
+                        River2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River3")
+                    {
+                        River3.Margin = new Thickness(0, 0, 0, 0);
+                        River3.Visibility = Visibility.Visible;
+                    }
+
+                    if (i.NombreCarta == "Bloodfen1")
+                    {
+
+                        Bloodfen1.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Bloodfen2")
+                    {
+
+                        Bloodfen2.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Bloodfen3")
+                    {
+
+                        Bloodfen3.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen3.Visibility = Visibility.Visible;
+
+                    }
+
+                    if (i.NombreCarta == "Magma1")
+                    {
+
+                        Magma1.Margin = new Thickness(0, 0, 0, 0);
+                        Magma1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Magma2")
+                    {
+
+                        Magma2.Margin = new Thickness(0, 0, 0, 0);
+                        Magma2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Magma3")
+                    {
+
+                        Magma3.Margin = new Thickness(0, 0, 0, 0);
+                        Magma3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Chillwind1")
+                    {
+
+                        Chillwind1.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Chillwind2")
+                    {
+
+                        Chillwind2.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Chillwind3")
+                    {
+
+                        Chillwind3.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War1")
+                    {
+
+                        War1.Margin = new Thickness(0, 0, 0, 0);
+                        War1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War2")
+                    {
+                        War2.Margin = new Thickness(0, 0, 0, 0);
+                        War2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War3")
+                    {
+
+                        War3.Margin = new Thickness(0, 0, 0, 0);
+                        War3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Boulderfist1")
+                    {
+
+                        Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Boulderfist2")
+                    {
+
+                        Boulderfist2.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Boulderfist3")
+                    {
+
+                        Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist3.Visibility = Visibility.Visible;
+                    }
+
+                }
             }
 
 
@@ -593,12 +2571,259 @@ namespace WpfApp2
 
 
                 FinTurno1.Visibility = Visibility.Visible;
-                EmpiezaT1.Visibility = Visibility.Visible;
+
                 Guardar.Visibility = Visibility.Visible;
                 r2 = 9;
                 r22 = 9;
 
                 int t = MyV.QuienParte(Heroes[0], Heroes[1], MJugador1, MJugador2);
+
+                vidaheroejug.Visibility = Visibility.Visible;
+                string f = Convert.ToString(Heroes[0].Vida);
+                vidaheroejug.Text = "Heroe: " + Heroes[0].Nombre + "\n" + "Vida: " + f;
+
+                Vidaheroenojug.Visibility = Visibility.Visible;
+                string d = Convert.ToString(Heroes[1].Vida);
+                Vidaheroenojug.Text = "Heroe: " + Heroes[1].Nombre + "\n" + "Vida: " + d;
+
+                jugando = 0;
+
+                JugadorUno.Visibility = Visibility.Visible;
+                JugadorDos.Visibility = Visibility.Hidden;
+                jugs.Jugars(Heroes[0], MJugador1);
+                string va = Convert.ToString(Heroes[0].Mana);
+                cantmana.Text = va;
+                Manaj1.Value = Heroes[0].Mana;
+                Rendirse.Visibility = Visibility.Visible;
+
+                cantmana.Visibility = Visibility.Visible;
+                Mano.Visibility = Visibility.Visible;
+                BarraMano.Visibility = Visibility.Visible;
+                Manaj1.Visibility = Visibility.Visible;
+                Atacar.Visibility = Visibility.Visible;
+                Manaj1.Value = Heroes[0].Mana;
+                HabilidadHeroe.Visibility = Visibility.Visible;
+
+                if (r1 == 1) { paladinjugador.Visibility = Visibility.Visible; }
+                else if (r1 == 2) { druidajugador.Visibility = Visibility.Visible; }
+                else if (r1 == 3) { cazadorjugador.Visibility = Visibility.Visible; }
+                else if (r1 == 4) { sacerdotejugador.Visibility = Visibility.Visible; }
+                else if (r1 == 5) { picarojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 6) { brujojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 7) { magojugador.Visibility = Visibility.Visible; }
+                else if (r1 == 8) { chamanjugador.Visibility = Visibility.Visible; }
+                else { guerrerojugador.Visibility = Visibility.Visible; }
+                if (r22 == 1) { otropaladin.Visibility = Visibility.Visible; }
+                else if (r22 == 2) { otrodruida.Visibility = Visibility.Visible; }
+                else if (r22 == 3) { otrocazador.Visibility = Visibility.Visible; }
+                else if (r22 == 4) { otrosacerdote.Visibility = Visibility.Visible; }
+                else if (r22 == 5) { otropicaro.Visibility = Visibility.Visible; }
+                else if (r22 == 6) { otrobrujo.Visibility = Visibility.Visible; }
+                else if (r22 == 7) { otromago.Visibility = Visibility.Visible; }
+                else if (r22 == 8) { otrochaman.Visibility = Visibility.Visible; }
+                else { otroguerrero.Visibility = Visibility.Visible; }
+
+                foreach (Minions i in Heroes[0].mano)
+                {
+                    if (i.NombreCarta == "Wisp1")
+                    {
+
+                        Wisp1.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp1.Visibility = Visibility.Visible;
+
+
+                    }
+                    if (i.NombreCarta == "Wisp2")
+                    {
+
+                        Wisp2.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Wisp3")
+                    {
+
+                        Wisp3.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Murloc1")
+                    {
+
+                        Murloc1.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Murloc2")
+                    {
+
+                        Murloc2.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc2.Visibility = Visibility.Visible;
+
+
+                    }
+                    if (i.NombreCarta == "Murloc3")
+                    {
+
+                        Murloc3.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Oasis1")
+                    {
+
+                        Oasis1.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Oasis2")
+                    {
+
+                        Oasis2.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Oasis3")
+                    {
+
+                        Oasis3.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound1")
+                    {
+
+                        Corehound1.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound2")
+                    {
+
+                        Corehound2.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Corehound3")
+                    {
+
+                        Corehound3.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River1")
+                    {
+
+                        River1.Margin = new Thickness(0, 0, 0, 0);
+                        River1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River2")
+                    {
+
+                        River2.Margin = new Thickness(0, 0, 0, 0);
+                        River2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "River3")
+                    {
+                        River3.Margin = new Thickness(0, 0, 0, 0);
+                        River3.Visibility = Visibility.Visible;
+                    }
+
+                    if (i.NombreCarta == "Bloodfen1")
+                    {
+
+                        Bloodfen1.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Bloodfen2")
+                    {
+
+                        Bloodfen2.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Bloodfen3")
+                    {
+
+                        Bloodfen3.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen3.Visibility = Visibility.Visible;
+
+                    }
+
+                    if (i.NombreCarta == "Magma1")
+                    {
+
+                        Magma1.Margin = new Thickness(0, 0, 0, 0);
+                        Magma1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Magma2")
+                    {
+
+                        Magma2.Margin = new Thickness(0, 0, 0, 0);
+                        Magma2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Magma3")
+                    {
+
+                        Magma3.Margin = new Thickness(0, 0, 0, 0);
+                        Magma3.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Chillwind1")
+                    {
+
+                        Chillwind1.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Chillwind2")
+                    {
+
+                        Chillwind2.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Chillwind3")
+                    {
+
+                        Chillwind3.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War1")
+                    {
+
+                        War1.Margin = new Thickness(0, 0, 0, 0);
+                        War1.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War2")
+                    {
+                        War2.Margin = new Thickness(0, 0, 0, 0);
+                        War2.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "War3")
+                    {
+
+                        War3.Margin = new Thickness(0, 0, 0, 0);
+                        War3.Visibility = Visibility.Visible;
+
+                    }
+                    if (i.NombreCarta == "Boulderfist1")
+                    {
+
+                        Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist1.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Boulderfist2")
+                    {
+
+                        Boulderfist2.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist2.Visibility = Visibility.Visible;
+                    }
+                    if (i.NombreCarta == "Boulderfist3")
+                    {
+
+                        Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist3.Visibility = Visibility.Visible;
+                    }
+
+                }
             }
 
 
@@ -615,7 +2840,7 @@ namespace WpfApp2
                 JugadorUno.Visibility = Visibility.Hidden;
                 JugadorDos.Visibility = Visibility.Hidden;
                 HabilidadHeroe.Visibility = Visibility.Hidden;
-                
+
             }
         }
 
@@ -660,8 +2885,7 @@ namespace WpfApp2
             cantmana.Visibility = Visibility.Hidden;
             FinTurno1.Visibility = Visibility.Hidden;
             FinTurno2.Visibility = Visibility.Visible;
-            EmpiezaT2.Visibility = Visibility.Visible;
-            EmpiezaT1.Visibility = Visibility.Hidden;
+
             Manaj1.Visibility = Visibility.Hidden;
             Atacar.Visibility = Visibility.Hidden;
             Rendirse.Visibility = Visibility.Hidden;
@@ -816,253 +3040,6 @@ namespace WpfApp2
                 }
             }
 
-
-        }
-
-        private void EmpiezaT1_Click(object sender, RoutedEventArgs e)
-        {
-            jugando = 0;
-
-            JugadorUno.Visibility = Visibility.Visible;
-            JugadorDos.Visibility = Visibility.Hidden;
-            jugs.Jugars(Heroes[0], MJugador1);
-            string va = Convert.ToString(Heroes[0].Mana);
-            cantmana.Text = va;
-            Manaj1.Value = Heroes[0].Mana;
-            Rendirse.Visibility = Visibility.Visible;
-
-            cantmana.Visibility = Visibility.Visible;
-            Mano.Visibility = Visibility.Visible;
-            BarraMano.Visibility = Visibility.Visible;
-            Manaj1.Visibility = Visibility.Visible;
-            Atacar.Visibility = Visibility.Visible;
-            Manaj1.Value = Heroes[0].Mana;
-            HabilidadHeroe.Visibility = Visibility.Visible;
-            
-            if (r1 == 1) { paladinjugador.Visibility = Visibility.Visible; }
-            else if (r1 == 2) { druidajugador.Visibility = Visibility.Visible; }
-            else if (r1 == 3) { cazadorjugador.Visibility = Visibility.Visible; }
-            else if (r1 == 4) { sacerdotejugador.Visibility = Visibility.Visible; }
-            else if (r1 == 5) { picarojugador.Visibility = Visibility.Visible; }
-            else if (r1 == 6) { brujojugador.Visibility = Visibility.Visible; }
-            else if (r1 == 7) { magojugador.Visibility = Visibility.Visible; }
-            else if (r1 == 8) { chamanjugador.Visibility = Visibility.Visible; }
-            else { guerrerojugador.Visibility = Visibility.Visible; }
-            if (r22 == 1) { otropaladin.Visibility = Visibility.Visible; }
-            else if (r22 == 2) { otrodruida.Visibility = Visibility.Visible; }
-            else if (r22 == 3) { otrocazador.Visibility = Visibility.Visible; }
-            else if (r22 == 4) { otrosacerdote.Visibility = Visibility.Visible; }
-            else if (r22 == 5) { otropicaro.Visibility = Visibility.Visible; }
-            else if (r22 == 6) { otrobrujo.Visibility = Visibility.Visible; }
-            else if (r22 == 7) { otromago.Visibility = Visibility.Visible; }
-            else if (r22 == 8) { otrochaman.Visibility = Visibility.Visible; }
-            else { otroguerrero.Visibility = Visibility.Visible; }
-
-            foreach (Minions i in Heroes[0].mano)
-            {
-                if (i.NombreCarta == "Wisp1")
-                {
-
-                    Wisp1.Margin = new Thickness(0, 0, 0, 0);
-                    Wisp1.Visibility = Visibility.Visible;
-
-
-                }
-                if (i.NombreCarta == "Wisp2")
-                {
-
-                    Wisp2.Margin = new Thickness(0, 0, 0, 0);
-                    Wisp2.Visibility = Visibility.Visible;
-
-                }
-                if (i.NombreCarta == "Wisp3")
-                {
-
-                    Wisp3.Margin = new Thickness(0, 0, 0, 0);
-                    Wisp3.Visibility = Visibility.Visible;
-
-                }
-                if (i.NombreCarta == "Murloc1")
-                {
-
-                    Murloc1.Margin = new Thickness(0, 0, 0, 0);
-                    Murloc1.Visibility = Visibility.Visible;
-
-                }
-                if (i.NombreCarta == "Murloc2")
-                {
-
-                    Murloc2.Margin = new Thickness(0, 0, 0, 0);
-                    Murloc2.Visibility = Visibility.Visible;
-
-
-                }
-                if (i.NombreCarta == "Murloc3")
-                {
-
-                    Murloc3.Margin = new Thickness(0, 0, 0, 0);
-                    Murloc3.Visibility = Visibility.Visible;
-
-                }
-                if (i.NombreCarta == "Oasis1")
-                {
-
-                    Oasis1.Margin = new Thickness(0, 0, 0, 0);
-                    Oasis1.Visibility = Visibility.Visible;
-                }
-                if (i.NombreCarta == "Oasis2")
-                {
-
-                    Oasis2.Margin = new Thickness(0, 0, 0, 0);
-                    Oasis2.Visibility = Visibility.Visible;
-                }
-                if (i.NombreCarta == "Oasis3")
-                {
-
-                    Oasis3.Margin = new Thickness(0, 0, 0, 0);
-                    Oasis3.Visibility = Visibility.Visible;
-                }
-                if (i.NombreCarta == "Corehound1")
-                {
-
-                    Corehound1.Margin = new Thickness(0, 0, 0, 0);
-                    Corehound1.Visibility = Visibility.Visible;
-                }
-                if (i.NombreCarta == "Corehound2")
-                {
-
-                    Corehound2.Margin = new Thickness(0, 0, 0, 0);
-                    Corehound2.Visibility = Visibility.Visible;
-                }
-                if (i.NombreCarta == "Corehound3")
-                {
-
-                    Corehound3.Margin = new Thickness(0, 0, 0, 0);
-                    Corehound3.Visibility = Visibility.Visible;
-                }
-                if (i.NombreCarta == "River1")
-                {
-
-                    River1.Margin = new Thickness(0, 0, 0, 0);
-                    River1.Visibility = Visibility.Visible;
-                }
-                if (i.NombreCarta == "River2")
-                {
-
-                    River2.Margin = new Thickness(0, 0, 0, 0);
-                    River2.Visibility = Visibility.Visible;
-                }
-                if (i.NombreCarta == "River3")
-                {
-                    River3.Margin = new Thickness(0, 0, 0, 0);
-                    River3.Visibility = Visibility.Visible;
-                }
-
-                if (i.NombreCarta == "Bloodfen1")
-                {
-
-                    Bloodfen1.Margin = new Thickness(0, 0, 0, 0);
-                    Bloodfen1.Visibility = Visibility.Visible;
-
-                }
-                if (i.NombreCarta == "Bloodfen2")
-                {
-
-                    Bloodfen2.Margin = new Thickness(0, 0, 0, 0);
-                    Bloodfen2.Visibility = Visibility.Visible;
-
-                }
-                if (i.NombreCarta == "Bloodfen3")
-                {
-
-                    Bloodfen3.Margin = new Thickness(0, 0, 0, 0);
-                    Bloodfen3.Visibility = Visibility.Visible;
-
-                }
-
-                if (i.NombreCarta == "Magma1")
-                {
-
-                    Magma1.Margin = new Thickness(0, 0, 0, 0);
-                    Magma1.Visibility = Visibility.Visible;
-                }
-                if (i.NombreCarta == "Magma2")
-                {
-
-                    Magma2.Margin = new Thickness(0, 0, 0, 0);
-                    Magma2.Visibility = Visibility.Visible;
-                }
-                if (i.NombreCarta == "Magma3")
-                {
-
-                    Magma3.Margin = new Thickness(0, 0, 0, 0);
-                    Magma3.Visibility = Visibility.Visible;
-                }
-                if (i.NombreCarta == "Chillwind1")
-                {
-
-                    Chillwind1.Margin = new Thickness(0, 0, 0, 0);
-                    Chillwind1.Visibility = Visibility.Visible;
-
-                }
-                if (i.NombreCarta == "Chillwind2")
-                {
-
-                    Chillwind2.Margin = new Thickness(0, 0, 0, 0);
-                    Chillwind2.Visibility = Visibility.Visible;
-
-                }
-                if (i.NombreCarta == "Chillwind3")
-                {
-
-                    Chillwind3.Margin = new Thickness(0, 0, 0, 0);
-                    Chillwind3.Visibility = Visibility.Visible;
-
-                }
-                if (i.NombreCarta == "War1")
-                {
-
-                    War1.Margin = new Thickness(0, 0, 0, 0);
-                    War1.Visibility = Visibility.Visible;
-
-                }
-                if (i.NombreCarta == "War2")
-                {
-                    War2.Margin = new Thickness(0, 0, 0, 0);
-                    War2.Visibility = Visibility.Visible;
-
-                }
-                if (i.NombreCarta == "War3")
-                {
-
-                    War3.Margin = new Thickness(0, 0, 0, 0);
-                    War3.Visibility = Visibility.Visible;
-
-                }
-                if (i.NombreCarta == "Boulderfist1")
-                {
-
-                    Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
-                    Boulderfist1.Visibility = Visibility.Visible;
-                }
-                if (i.NombreCarta == "Boulderfist2")
-                {
-
-                    Boulderfist2.Margin = new Thickness(0, 0, 0, 0);
-                    Boulderfist2.Visibility = Visibility.Visible;
-                }
-                if (i.NombreCarta == "Boulderfist3")
-                {
-
-                    Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
-                    Boulderfist3.Visibility = Visibility.Visible;
-                }
-                EmpiezaT1.Visibility = Visibility.Hidden;
-            }
-        }
-
-        private void EmpiezaT2_Click(object sender, RoutedEventArgs e)
-        {
             jugando = 1;
             jugs.Jugars(Heroes[1], MJugador2);
             cantmana.Visibility = Visibility.Visible;
@@ -1077,6 +3054,15 @@ namespace WpfApp2
             HabilidadHeroe.Visibility = Visibility.Visible;
             Atacar.Visibility = Visibility.Visible;
             Rendirse.Visibility = Visibility.Visible;
+
+            vidaheroejug.Visibility = Visibility.Visible;
+            string f = Convert.ToString(Heroes[1].Vida);
+            vidaheroejug.Text = "Heroe: " + Heroes[1].Nombre + "\n" + "Vida: " + f;
+
+            Vidaheroenojug.Visibility = Visibility.Visible;
+            string d = Convert.ToString(Heroes[0].Vida);
+            Vidaheroenojug.Text = "Heroe: " + Heroes[0].Nombre + "\n" + "Vida: " + d;
+
             if (r2 == 1) { paladinjugador.Visibility = Visibility.Visible; }
             else if (r2 == 2) { druidajugador.Visibility = Visibility.Visible; }
             else if (r2 == 3) { cazadorjugador.Visibility = Visibility.Visible; }
@@ -1296,9 +3282,14 @@ namespace WpfApp2
                     Boulderfist3.Visibility = Visibility.Visible;
                 }
 
-                EmpiezaT2.Visibility = Visibility.Hidden;
+
             }
+
+
+
+
         }
+
 
         private void FinTurno2_Click(object sender, RoutedEventArgs e)
         {
@@ -1319,8 +3310,7 @@ namespace WpfApp2
             BarraMano.Visibility = Visibility.Hidden;
             FinTurno2.Visibility = Visibility.Hidden;
             FinTurno1.Visibility = Visibility.Visible;
-            EmpiezaT1.Visibility = Visibility.Visible;
-            EmpiezaT2.Visibility = Visibility.Hidden;
+
             Manaj2.Visibility = Visibility.Hidden;
             Atacar.Visibility = Visibility.Hidden;
             Rendirse.Visibility = Visibility.Hidden;
@@ -1475,6 +3465,257 @@ namespace WpfApp2
                 }
 
             }
+
+            jugando = 0;
+
+            JugadorUno.Visibility = Visibility.Visible;
+            JugadorDos.Visibility = Visibility.Hidden;
+            jugs.Jugars(Heroes[0], MJugador1);
+            string va = Convert.ToString(Heroes[0].Mana);
+            cantmana.Text = va;
+            Manaj1.Value = Heroes[0].Mana;
+            Rendirse.Visibility = Visibility.Visible;
+
+            cantmana.Visibility = Visibility.Visible;
+            Mano.Visibility = Visibility.Visible;
+            BarraMano.Visibility = Visibility.Visible;
+            Manaj1.Visibility = Visibility.Visible;
+            Atacar.Visibility = Visibility.Visible;
+            Manaj1.Value = Heroes[0].Mana;
+            HabilidadHeroe.Visibility = Visibility.Visible;
+
+            vidaheroejug.Visibility = Visibility.Visible;
+            string f = Convert.ToString(Heroes[0].Vida);
+            vidaheroejug.Text = "Heroe: " + Heroes[0].Nombre + "\n" + "Vida: " + f;
+
+            Vidaheroenojug.Visibility = Visibility.Visible;
+            string d = Convert.ToString(Heroes[1].Vida);
+            Vidaheroenojug.Text = "Heroe: " + Heroes[1].Nombre + "\n" + "Vida: " + d;
+
+
+
+            if (r1 == 1) { paladinjugador.Visibility = Visibility.Visible; }
+            else if (r1 == 2) { druidajugador.Visibility = Visibility.Visible; }
+            else if (r1 == 3) { cazadorjugador.Visibility = Visibility.Visible; }
+            else if (r1 == 4) { sacerdotejugador.Visibility = Visibility.Visible; }
+            else if (r1 == 5) { picarojugador.Visibility = Visibility.Visible; }
+            else if (r1 == 6) { brujojugador.Visibility = Visibility.Visible; }
+            else if (r1 == 7) { magojugador.Visibility = Visibility.Visible; }
+            else if (r1 == 8) { chamanjugador.Visibility = Visibility.Visible; }
+            else { guerrerojugador.Visibility = Visibility.Visible; }
+            if (r22 == 1) { otropaladin.Visibility = Visibility.Visible; }
+            else if (r22 == 2) { otrodruida.Visibility = Visibility.Visible; }
+            else if (r22 == 3) { otrocazador.Visibility = Visibility.Visible; }
+            else if (r22 == 4) { otrosacerdote.Visibility = Visibility.Visible; }
+            else if (r22 == 5) { otropicaro.Visibility = Visibility.Visible; }
+            else if (r22 == 6) { otrobrujo.Visibility = Visibility.Visible; }
+            else if (r22 == 7) { otromago.Visibility = Visibility.Visible; }
+            else if (r22 == 8) { otrochaman.Visibility = Visibility.Visible; }
+            else { otroguerrero.Visibility = Visibility.Visible; }
+
+            foreach (Minions i in Heroes[0].mano)
+            {
+                if (i.NombreCarta == "Wisp1")
+                {
+
+                    Wisp1.Margin = new Thickness(0, 0, 0, 0);
+                    Wisp1.Visibility = Visibility.Visible;
+
+
+                }
+                if (i.NombreCarta == "Wisp2")
+                {
+
+                    Wisp2.Margin = new Thickness(0, 0, 0, 0);
+                    Wisp2.Visibility = Visibility.Visible;
+
+                }
+                if (i.NombreCarta == "Wisp3")
+                {
+
+                    Wisp3.Margin = new Thickness(0, 0, 0, 0);
+                    Wisp3.Visibility = Visibility.Visible;
+
+                }
+                if (i.NombreCarta == "Murloc1")
+                {
+
+                    Murloc1.Margin = new Thickness(0, 0, 0, 0);
+                    Murloc1.Visibility = Visibility.Visible;
+
+                }
+                if (i.NombreCarta == "Murloc2")
+                {
+
+                    Murloc2.Margin = new Thickness(0, 0, 0, 0);
+                    Murloc2.Visibility = Visibility.Visible;
+
+
+                }
+                if (i.NombreCarta == "Murloc3")
+                {
+
+                    Murloc3.Margin = new Thickness(0, 0, 0, 0);
+                    Murloc3.Visibility = Visibility.Visible;
+
+                }
+                if (i.NombreCarta == "Oasis1")
+                {
+
+                    Oasis1.Margin = new Thickness(0, 0, 0, 0);
+                    Oasis1.Visibility = Visibility.Visible;
+                }
+                if (i.NombreCarta == "Oasis2")
+                {
+
+                    Oasis2.Margin = new Thickness(0, 0, 0, 0);
+                    Oasis2.Visibility = Visibility.Visible;
+                }
+                if (i.NombreCarta == "Oasis3")
+                {
+
+                    Oasis3.Margin = new Thickness(0, 0, 0, 0);
+                    Oasis3.Visibility = Visibility.Visible;
+                }
+                if (i.NombreCarta == "Corehound1")
+                {
+
+                    Corehound1.Margin = new Thickness(0, 0, 0, 0);
+                    Corehound1.Visibility = Visibility.Visible;
+                }
+                if (i.NombreCarta == "Corehound2")
+                {
+
+                    Corehound2.Margin = new Thickness(0, 0, 0, 0);
+                    Corehound2.Visibility = Visibility.Visible;
+                }
+                if (i.NombreCarta == "Corehound3")
+                {
+
+                    Corehound3.Margin = new Thickness(0, 0, 0, 0);
+                    Corehound3.Visibility = Visibility.Visible;
+                }
+                if (i.NombreCarta == "River1")
+                {
+
+                    River1.Margin = new Thickness(0, 0, 0, 0);
+                    River1.Visibility = Visibility.Visible;
+                }
+                if (i.NombreCarta == "River2")
+                {
+
+                    River2.Margin = new Thickness(0, 0, 0, 0);
+                    River2.Visibility = Visibility.Visible;
+                }
+                if (i.NombreCarta == "River3")
+                {
+                    River3.Margin = new Thickness(0, 0, 0, 0);
+                    River3.Visibility = Visibility.Visible;
+                }
+
+                if (i.NombreCarta == "Bloodfen1")
+                {
+
+                    Bloodfen1.Margin = new Thickness(0, 0, 0, 0);
+                    Bloodfen1.Visibility = Visibility.Visible;
+
+                }
+                if (i.NombreCarta == "Bloodfen2")
+                {
+
+                    Bloodfen2.Margin = new Thickness(0, 0, 0, 0);
+                    Bloodfen2.Visibility = Visibility.Visible;
+
+                }
+                if (i.NombreCarta == "Bloodfen3")
+                {
+
+                    Bloodfen3.Margin = new Thickness(0, 0, 0, 0);
+                    Bloodfen3.Visibility = Visibility.Visible;
+
+                }
+
+                if (i.NombreCarta == "Magma1")
+                {
+
+                    Magma1.Margin = new Thickness(0, 0, 0, 0);
+                    Magma1.Visibility = Visibility.Visible;
+                }
+                if (i.NombreCarta == "Magma2")
+                {
+
+                    Magma2.Margin = new Thickness(0, 0, 0, 0);
+                    Magma2.Visibility = Visibility.Visible;
+                }
+                if (i.NombreCarta == "Magma3")
+                {
+
+                    Magma3.Margin = new Thickness(0, 0, 0, 0);
+                    Magma3.Visibility = Visibility.Visible;
+                }
+                if (i.NombreCarta == "Chillwind1")
+                {
+
+                    Chillwind1.Margin = new Thickness(0, 0, 0, 0);
+                    Chillwind1.Visibility = Visibility.Visible;
+
+                }
+                if (i.NombreCarta == "Chillwind2")
+                {
+
+                    Chillwind2.Margin = new Thickness(0, 0, 0, 0);
+                    Chillwind2.Visibility = Visibility.Visible;
+
+                }
+                if (i.NombreCarta == "Chillwind3")
+                {
+
+                    Chillwind3.Margin = new Thickness(0, 0, 0, 0);
+                    Chillwind3.Visibility = Visibility.Visible;
+
+                }
+                if (i.NombreCarta == "War1")
+                {
+
+                    War1.Margin = new Thickness(0, 0, 0, 0);
+                    War1.Visibility = Visibility.Visible;
+
+                }
+                if (i.NombreCarta == "War2")
+                {
+                    War2.Margin = new Thickness(0, 0, 0, 0);
+                    War2.Visibility = Visibility.Visible;
+
+                }
+                if (i.NombreCarta == "War3")
+                {
+
+                    War3.Margin = new Thickness(0, 0, 0, 0);
+                    War3.Visibility = Visibility.Visible;
+
+                }
+                if (i.NombreCarta == "Boulderfist1")
+                {
+
+                    Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                    Boulderfist1.Visibility = Visibility.Visible;
+                }
+                if (i.NombreCarta == "Boulderfist2")
+                {
+
+                    Boulderfist2.Margin = new Thickness(0, 0, 0, 0);
+                    Boulderfist2.Visibility = Visibility.Visible;
+                }
+                if (i.NombreCarta == "Boulderfist3")
+                {
+
+                    Boulderfist1.Margin = new Thickness(0, 0, 0, 0);
+                    Boulderfist3.Visibility = Visibility.Visible;
+                }
+
+            }
+
+
 
 
 
