@@ -1501,11 +1501,17 @@ namespace WpfApp2
                 {
                     if (wisp3.Seleccionada == 0)
                     { wisp3.Seleccionada = 1;
-                        Wisp3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        Wisp3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        
+
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: "+wisp3.NombreCarta + "\n" + "Vida: " + wisp3.Vida +"\n" ;
                     }
-                    else { wisp3.Seleccionada = 0; }
+                    else
+                    { wisp3.Seleccionada = 0;
+                        Wisp3j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+
+                    }
                 }
 
                 
@@ -1530,11 +1536,15 @@ namespace WpfApp2
                 {
                     if (wisp3.Seleccionada == 0)
                     { wisp3.Seleccionada = 1;
-                        Wisp3.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        Wisp3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + wisp3.NombreCarta + "\n" + "Vida: " + wisp3.Vida + "\n";
                     }
-                    else { wisp3.Seleccionada = 0; }
+                    else
+                    { wisp3.Seleccionada = 0;
+                        Wisp3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -1559,11 +1569,13 @@ namespace WpfApp2
                 {
                     if (bloodfen2.Seleccionada == 0)
                     { bloodfen2.Seleccionada = 1;
-                        Bloodfen2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        Bloodfen2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + bloodfen2.NombreCarta + "\n" + "Vida: " + bloodfen2.Vida + "\n";
                     }
-                    else { bloodfen2.Seleccionada = 0; }
+                    else { bloodfen2.Seleccionada = 0;
+                        Bloodfen2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -1587,11 +1599,13 @@ namespace WpfApp2
                 {
                     if (bloodfen2.Seleccionada == 0)
                     { bloodfen2.Seleccionada = 1;
-                        Bloodfen2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        Bloodfen2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + bloodfen2.NombreCarta + "\n" + "Vida: " + bloodfen2.Vida + "\n";
                     }
-                    else { bloodfen2.Seleccionada = 0; }
+                    else { bloodfen2.Seleccionada = 0;
+                        Bloodfen2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
 
@@ -1607,7 +1621,7 @@ namespace WpfApp2
                     {
                        jugs.jugarcartar(Heroes[0], wisp1);
                         Wisp1.Visibility = Visibility.Hidden;
-                        Wisp1.Visibility = Visibility.Visible;
+                        Wisp1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
                         string va = Convert.ToString(Heroes[0].Mana);
                         cantmana.Text = va;
@@ -1616,11 +1630,16 @@ namespace WpfApp2
                 else
                 {
                     if (wisp1.Seleccionada == 0)
-                    { wisp1.Seleccionada = 1; Wisp1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    {
+                        wisp1.Seleccionada = 1;
+                        Wisp1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + wisp1.NombreCarta + "\n" + "Vida: " + wisp1.Vida + "\n";
                     }
-                    else { wisp1.Seleccionada = 0; }
+                    else { wisp1.Seleccionada = 0;
+                        Wisp1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -1643,12 +1662,16 @@ namespace WpfApp2
                 else
                 {
                     if (wisp1.Seleccionada == 0)
-                    { wisp1.Seleccionada = 1; Wisp1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    { wisp1.Seleccionada = 1;
+                        Wisp1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + wisp1.NombreCarta + "\n" + "Vida: " + wisp1.Vida + "\n";
 
                     }
-                    else { wisp1.Seleccionada = 0; }
+                    else { wisp1.Seleccionada = 0;
+                        Wisp1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
 
@@ -1673,12 +1696,16 @@ namespace WpfApp2
                 else
                 {
                     if (wisp2.Seleccionada == 0)
-                    { wisp2.Seleccionada = 1; Wisp2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    { wisp2.Seleccionada = 1;
+                        Wisp2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                        
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + wisp2.NombreCarta + "\n" + "Vida: " + wisp2.Vida + "\n";
 
                     }
-                    else { wisp2.Seleccionada = 0; }
+                    else { wisp2.Seleccionada = 0;
+                        Wisp2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -1702,11 +1729,15 @@ namespace WpfApp2
                 else
                 {
                     if (wisp2.Seleccionada == 0)
-                    { wisp2.Seleccionada = 1; Wisp2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    { wisp2.Seleccionada = 1;
+                        Wisp2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                       
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + wisp2.NombreCarta + "\n" + "Vida: " + wisp2.Vida + "\n";
                     }
-                    else { wisp2.Seleccionada = 0; }
+                    else { wisp2.Seleccionada = 0;
+                        Wisp2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
 
@@ -1732,10 +1763,13 @@ namespace WpfApp2
                 {
                     if (bloodfen1.Seleccionada == 0)
                     { bloodfen1.Seleccionada = 1;
+                        Bloodfen1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + bloodfen1.NombreCarta + "\n" + "Vida: " + bloodfen1.Vida + "\n";
                     }
-                    else { bloodfen1.Seleccionada = 0; }
+                    else { bloodfen1.Seleccionada = 0;
+                        Bloodfen1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -1760,10 +1794,13 @@ namespace WpfApp2
                 {
                     if (bloodfen1.Seleccionada == 0)
                     { bloodfen1.Seleccionada = 1;
+                        Bloodfen1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + bloodfen1.NombreCarta + "\n" + "Vida: " + bloodfen1.Vida + "\n";
                     }
-                    else { bloodfen1.Seleccionada = 0; }
+                    else { bloodfen1.Seleccionada = 0;
+                        Bloodfen1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
 
@@ -1789,10 +1826,13 @@ namespace WpfApp2
                 {
                     if (bloodfen3.Seleccionada == 0)
                     { bloodfen3.Seleccionada = 1;
+                        Bloodfen3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + bloodfen3.NombreCarta + "\n" + "Vida: " + bloodfen3.Vida + "\n";
                     }
-                    else { bloodfen3.Seleccionada = 0; }
+                    else { bloodfen3.Seleccionada = 0;
+                        Bloodfen3j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -1816,10 +1856,13 @@ namespace WpfApp2
                 {
                     if (bloodfen3.Seleccionada == 0)
                     { bloodfen3.Seleccionada = 1;
+                        Bloodfen3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + bloodfen3.NombreCarta + "\n" + "Vida: " + bloodfen3.Vida + "\n";
                     }
-                    else { bloodfen3.Seleccionada = 0; }
+                    else { bloodfen3.Seleccionada = 0;
+                        Bloodfen3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -1844,10 +1887,13 @@ namespace WpfApp2
                 {
                     if (boulderfist1.Seleccionada == 0)
                     { boulderfist1.Seleccionada = 1;
+                        Boulderfist1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + boulderfist1.NombreCarta + "\n" + "Vida: " + boulderfist1.Vida + "\n";
                     }
-                    else { boulderfist1.Seleccionada = 0; }
+                    else { boulderfist1.Seleccionada = 0;
+                        Boulderfist1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -1871,10 +1917,13 @@ namespace WpfApp2
                 {
                     if (boulderfist1.Seleccionada == 0)
                     { boulderfist1.Seleccionada = 1;
+                        Boulderfist1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + boulderfist1.NombreCarta + "\n" + "Vida: " + boulderfist1.Vida + "\n";
                     }
-                    else { boulderfist1.Seleccionada = 0; }
+                    else { boulderfist1.Seleccionada = 0;
+                        Boulderfist1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -1899,10 +1948,13 @@ namespace WpfApp2
                 {
                     if (boulderfist2.Seleccionada == 0)
                     { boulderfist2.Seleccionada = 1;
+                        Boulderfist2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + boulderfist2.NombreCarta + "\n" + "Vida: " + boulderfist2.Vida + "\n";
                     }
-                    else { boulderfist2.Seleccionada = 0; }
+                    else { boulderfist2.Seleccionada = 0;
+                        Boulderfist2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -1926,10 +1978,13 @@ namespace WpfApp2
                 {
                     if (boulderfist2.Seleccionada == 0)
                     { boulderfist2.Seleccionada = 1;
+                        Boulderfist2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + boulderfist2.NombreCarta + "\n" + "Vida: " + boulderfist2.Vida + "\n";
                     }
-                    else { boulderfist2.Seleccionada = 0; }
+                    else { boulderfist2.Seleccionada = 0;
+                        Boulderfist2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -1954,10 +2009,13 @@ namespace WpfApp2
                 {
                     if (boulderfist3.Seleccionada == 0)
                     { boulderfist3.Seleccionada = 1;
+                        Boulderfist3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + boulderfist3.NombreCarta + "\n" + "Vida: " + boulderfist3.Vida + "\n";
                     }
-                    else { boulderfist3.Seleccionada = 0; }
+                    else { boulderfist3.Seleccionada = 0;
+                        Boulderfist3j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -1981,10 +2039,13 @@ namespace WpfApp2
                 {
                     if (boulderfist3.Seleccionada == 0)
                     { boulderfist3.Seleccionada = 1;
+                        Boulderfist3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + boulderfist3.NombreCarta + "\n" + "Vida: " + boulderfist3.Vida + "\n";
                     }
-                    else { boulderfist3.Seleccionada = 0; }
+                    else { boulderfist3.Seleccionada = 0;
+                        Boulderfist3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -2009,10 +2070,13 @@ namespace WpfApp2
                 {
                     if (chillwind1.Seleccionada == 0)
                     { chillwind1.Seleccionada = 1;
+                        Chillwind1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + chillwind1.NombreCarta + "\n" + "Vida: " + chillwind1.Vida + "\n";
                     }
-                    else { chillwind1.Seleccionada = 0; }
+                    else { chillwind1.Seleccionada = 0;
+                        Chillwind1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -2036,10 +2100,13 @@ namespace WpfApp2
                 {
                     if (chillwind1.Seleccionada == 0)
                     { chillwind1.Seleccionada = 1;
+                        Chillwind1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + chillwind1.NombreCarta + "\n" + "Vida: " + chillwind1.Vida + "\n";
                     }
-                    else { chillwind1.Seleccionada = 0; }
+                    else { chillwind1.Seleccionada = 0;
+                        Chillwind1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -2064,10 +2131,13 @@ namespace WpfApp2
                 {
                     if (chillwind2.Seleccionada == 0)
                     { chillwind2.Seleccionada = 1;
+                        Chillwind2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + chillwind2.NombreCarta + "\n" + "Vida: " + chillwind2.Vida + "\n";
                     }
-                    else { chillwind2.Seleccionada = 0; }
+                    else { chillwind2.Seleccionada = 0;
+                        Chillwind2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -2091,10 +2161,13 @@ namespace WpfApp2
                 {
                     if (chillwind2.Seleccionada == 0)
                     { chillwind2.Seleccionada = 1;
+                        Chillwind2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + chillwind2.NombreCarta + "\n" + "Vida: " + chillwind2.Vida + "\n";
                     }
-                    else { chillwind2.Seleccionada = 0; }
+                    else { chillwind2.Seleccionada = 0;
+                        Chillwind2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -2119,10 +2192,13 @@ namespace WpfApp2
                 {
                     if (chillwind3.Seleccionada == 0)
                     { chillwind3.Seleccionada = 1;
+                        Chillwind3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + chillwind3.NombreCarta + "\n" + "Vida: " + chillwind3.Vida + "\n";
                     }
-                    else { chillwind3.Seleccionada = 0; }
+                    else { chillwind3.Seleccionada = 0;
+                        Chillwind3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                 }
 
                 
@@ -2146,10 +2222,13 @@ namespace WpfApp2
                 {
                     if (chillwind3.Seleccionada == 0)
                     { chillwind3.Seleccionada = 1;
+                        Chillwind3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + chillwind3.NombreCarta + "\n" + "Vida: " + chillwind3.Vida + "\n";
                     }
-                    else { chillwind3.Seleccionada = 0; }
+                    else { chillwind3.Seleccionada = 0;
+                        Chillwind3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -2175,10 +2254,13 @@ namespace WpfApp2
                 {
                     if (core1.Seleccionada == 0)
                     { core1.Seleccionada = 1;
+                        Corehound1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + core1.NombreCarta + "\n" + "Vida: " + core1.Vida + "\n";
                     }
-                    else { core1.Seleccionada = 0; }
+                    else { core1.Seleccionada = 0;
+                        Corehound1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -2202,10 +2284,13 @@ namespace WpfApp2
                 {
                     if (core1.Seleccionada == 0)
                     { core1.Seleccionada = 1;
+                        Corehound1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + core1.NombreCarta + "\n" + "Vida: " + core1.Vida + "\n";
                     }
-                    else { core1.Seleccionada = 0; }
+                    else { core1.Seleccionada = 0;
+                        Corehound1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -2231,10 +2316,13 @@ namespace WpfApp2
                 {
                     if (core2.Seleccionada == 0)
                     { core2.Seleccionada = 1;
+                        Corehound2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + core2.NombreCarta + "\n" + "Vida: " + core2.Vida + "\n";
                     }
-                    else { core2.Seleccionada = 0; }
+                    else { core2.Seleccionada = 0;
+                        Corehound2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                    
@@ -2259,10 +2347,13 @@ namespace WpfApp2
                 {
                     if (core2.Seleccionada == 0)
                     { core2.Seleccionada = 1;
+                        Corehound2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + core2.NombreCarta + "\n" + "Vida: " + core2.Vida + "\n";
                     }
-                    else { core2.Seleccionada = 0; }
+                    else { core2.Seleccionada = 0;
+                        Corehound2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -2287,10 +2378,13 @@ namespace WpfApp2
                 {
                     if (core3.Seleccionada == 0)
                     { core3.Seleccionada = 1;
+                        Corehound3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + core3.NombreCarta + "\n" + "Vida: " + core3.Vida + "\n";
                     }
-                    else { core3.Seleccionada = 0; }
+                    else { core3.Seleccionada = 0;
+                        Corehound3j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -2314,10 +2408,13 @@ namespace WpfApp2
                 {
                     if (core3.Seleccionada == 0)
                     { core3.Seleccionada = 1;
+                        Corehound3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + core3.NombreCarta + "\n" + "Vida: " + core3.Vida + "\n";
                     }
-                    else { core3.Seleccionada = 0; }
+                    else { core3.Seleccionada = 0;
+                        Corehound3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -2342,10 +2439,13 @@ namespace WpfApp2
                 {
                     if (magma1.Seleccionada == 0)
                     { magma1.Seleccionada = 1;
+                        Magma1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + magma1.NombreCarta + "\n" + "Vida: " + magma1.Vida + "\n";
                     }
-                    else { magma1.Seleccionada = 0; }
+                    else { magma1.Seleccionada = 0;
+                        Magma1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                
@@ -2369,10 +2469,13 @@ namespace WpfApp2
                 {
                     if (magma1.Seleccionada == 0)
                     { magma1.Seleccionada = 1;
+                        Magma1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + magma1.NombreCarta + "\n" + "Vida: " + magma1.Vida + "\n";
                     }
-                    else { magma1.Seleccionada = 0; }
+                    else { magma1.Seleccionada = 0;
+                        Magma1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -2397,10 +2500,13 @@ namespace WpfApp2
                 {
                     if (magma2.Seleccionada == 0)
                     { magma2.Seleccionada = 1;
+                        Magma2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + magma2.NombreCarta + "\n" + "Vida: " + magma2.Vida + "\n";
                     }
-                    else { magma2.Seleccionada = 0; }
+                    else { magma2.Seleccionada = 0;
+                        Magma2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -2424,10 +2530,13 @@ namespace WpfApp2
                 {
                     if (magma2.Seleccionada == 0)
                     { magma2.Seleccionada = 1;
+                        Magma2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + magma2.NombreCarta + "\n" + "Vida: " + magma2.Vida + "\n";
                     }
-                    else { magma2.Seleccionada = 0; }
+                    else { magma2.Seleccionada = 0;
+                        Magma2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -2452,10 +2561,13 @@ namespace WpfApp2
                 {
                     if (magma3.Seleccionada == 0)
                     { magma3.Seleccionada = 1;
+                        Magma3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + magma3.NombreCarta + "\n" + "Vida: " + magma3.Vida + "\n";
                     }
-                    else { magma3.Seleccionada = 0; }
+                    else { magma3.Seleccionada = 0;
+                        Magma3j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -2480,10 +2592,13 @@ namespace WpfApp2
 
                     if (magma3.Seleccionada == 0)
                     { magma3.Seleccionada = 1;
+                        Magma3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + magma3.NombreCarta + "\n" + "Vida: " + magma3.Vida + "\n";
                     }
-                    else { magma3.Seleccionada = 0; }
+                    else { magma3.Seleccionada = 0;
+                        Magma3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -2508,10 +2623,13 @@ namespace WpfApp2
                 {
                     if (murloc1.Seleccionada == 0)
                     { murloc1.Seleccionada = 1;
+                        Murloc1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + murloc1.NombreCarta + "\n" + "Vida: " + murloc1.Vida + "\n";
                     }
-                    else { murloc1.Seleccionada = 0; }
+                    else { murloc1.Seleccionada = 0;
+                        Murloc1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -2535,10 +2653,13 @@ namespace WpfApp2
                 {
                     if (murloc1.Seleccionada == 0)
                     { murloc1.Seleccionada = 1;
+                        Murloc1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + murloc1.NombreCarta + "\n" + "Vida: " + murloc1.Vida + "\n";
                     }
-                    else { murloc1.Seleccionada = 0; }
+                    else { murloc1.Seleccionada = 0;
+                        Murloc1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -2563,10 +2684,13 @@ namespace WpfApp2
                 {
                     if (murloc2.Seleccionada == 0)
                     { murloc2.Seleccionada = 1;
+                        Murloc2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + murloc2.NombreCarta + "\n" + "Vida: " + murloc2.Vida + "\n";
                     }
-                    else { murloc2.Seleccionada = 0; }
+                    else { murloc2.Seleccionada = 0;
+                        Murloc2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -2590,10 +2714,13 @@ namespace WpfApp2
                 {
                     if (murloc2.Seleccionada == 0)
                     { murloc2.Seleccionada = 1;
+                        Murloc2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + murloc2.NombreCarta + "\n" + "Vida: " + murloc2.Vida + "\n";
                     }
-                    else { murloc2.Seleccionada = 0; }
+                    else { murloc2.Seleccionada = 0;
+                        Murloc2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -2618,10 +2745,13 @@ namespace WpfApp2
                 {
                     if (murloc3.Seleccionada == 0)
                     { murloc3.Seleccionada = 1;
+                        Murloc3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + murloc3.NombreCarta + "\n" + "Vida: " + murloc3.Vida + "\n";
                     }
-                    else { murloc3.Seleccionada = 0; }
+                    else { murloc3.Seleccionada = 0;
+                        Murloc3j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -2645,10 +2775,13 @@ namespace WpfApp2
                 {
                     if (murloc3.Seleccionada == 0)
                     { murloc3.Seleccionada = 1;
+                        Murloc3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + murloc3.NombreCarta + "\n" + "Vida: " + murloc3.Vida + "\n";
                     }
-                    else { murloc3.Seleccionada = 0; }
+                    else { murloc3.Seleccionada = 0;
+                       Murloc3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -2674,10 +2807,13 @@ namespace WpfApp2
                     if (oasis1.Seleccionada == 0)
                     {
                         oasis1.Seleccionada = 1;
+                        Oasis1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + oasis1.NombreCarta + "\n" + "Vida: " + oasis1.Vida + "\n";
                     }
-                    else { oasis1.Seleccionada = 0; }
+                    else { oasis1.Seleccionada = 0;
+                        Oasis1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
             }
@@ -2700,10 +2836,13 @@ namespace WpfApp2
                 {
                     if (oasis1.Seleccionada == 0)
                     { oasis1.Seleccionada = 1;
+                        Oasis1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + oasis1.NombreCarta + "\n" + "Vida: " + oasis1.Vida + "\n";
                     }
-                    else { oasis1.Seleccionada = 0; }
+                    else { oasis1.Seleccionada = 0;
+                        Oasis1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    }
                 }
             }
             
@@ -2730,10 +2869,13 @@ namespace WpfApp2
                     if (oasis2.Seleccionada == 0)
                     {
                         oasis2.Seleccionada = 1;
+                        Oasis2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + oasis2.NombreCarta + "\n" + "Vida: " + oasis2.Vida + "\n";
                     }
-                    else { oasis2.Seleccionada = 0; }
+                    else { oasis2.Seleccionada = 0;
+                        Oasis2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -2757,10 +2899,13 @@ namespace WpfApp2
                 {
                     if (oasis2.Seleccionada == 0)
                     { oasis2.Seleccionada = 1;
+                        Oasis2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + oasis2.NombreCarta + "\n" + "Vida: " + oasis2.Vida + "\n";
                     }
-                    else { oasis2.Seleccionada = 0; }
+                    else { oasis2.Seleccionada = 0;
+                        Oasis2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -2786,10 +2931,14 @@ namespace WpfApp2
                     if (oasis3.Seleccionada == 0)
                     {
                         oasis3.Seleccionada = 1;
+                        Oasis3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + oasis3.NombreCarta + "\n" + "Vida: " + oasis3.Vida + "\n";
                     }
-                    else { oasis3.Seleccionada = 0; }
+                    else { oasis3.Seleccionada = 0;
+                        Oasis3j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -2813,10 +2962,13 @@ namespace WpfApp2
                 {
                     if (oasis3.Seleccionada == 0)
                     { oasis3.Seleccionada = 1;
+                        Oasis3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + oasis3.NombreCarta + "\n" + "Vida: " + oasis3.Vida + "\n";
                     }
-                    else { oasis3.Seleccionada = 0; }
+                    else { oasis3.Seleccionada = 0;
+                        Oasis3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -2842,10 +2994,13 @@ namespace WpfApp2
                     if (river1.Seleccionada == 0)
                     {
                         river1.Seleccionada = 1;
+                        River1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + river1.NombreCarta + "\n" + "Vida: " + river1.Vida + "\n";
                     }
-                    else { river1.Seleccionada = 0; }
+                    else { river1.Seleccionada = 0;
+                        River1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -2869,10 +3024,13 @@ namespace WpfApp2
                 {
                     if (river1.Seleccionada == 0)
                     { river1.Seleccionada = 1;
+                        River1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + river1.NombreCarta + "\n" + "Vida: " + river1.Vida + "\n";
                     }
-                    else { river1.Seleccionada = 0; }
+                    else { river1.Seleccionada = 0;
+                        River1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -2900,10 +3058,13 @@ namespace WpfApp2
                     if (river2.Seleccionada == 0)
                     {
                         river2.Seleccionada = 1;
+                        River2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + river2.NombreCarta + "\n" + "Vida: " + river2.Vida + "\n";
                     }
-                    else { river2.Seleccionada = 0; }
+                    else { river2.Seleccionada = 0;
+                        River2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -2927,10 +3088,13 @@ namespace WpfApp2
                 {
                     if (river2.Seleccionada == 0)
                     { river2.Seleccionada = 1;
+                        River2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + river2.NombreCarta + "\n" + "Vida: " + river2.Vida + "\n";
                     }
-                    else { river2.Seleccionada = 0; }
+                    else { river2.Seleccionada = 0;
+                        River2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -2956,10 +3120,13 @@ namespace WpfApp2
                     if (river3.Seleccionada == 0)
                     {
                         river3.Seleccionada = 1;
+                        River3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + river3.NombreCarta + "\n" + "Vida: " + river3.Vida + "\n";
                     }
-                    else { river3.Seleccionada = 0; }
+                    else { river3.Seleccionada = 0;
+                        River3j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -2983,10 +3150,13 @@ namespace WpfApp2
                 {
                     if (river3.Seleccionada == 0)
                     { river3.Seleccionada = 1;
+                        River3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + river3.NombreCarta + "\n" + "Vida: " + river3.Vida + "\n";
                     }
-                    else { river3.Seleccionada = 0; }
+                    else { river3.Seleccionada = 0;
+                        River3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -3012,10 +3182,13 @@ namespace WpfApp2
                     if (war1.Seleccionada == 0)
                     {
                         war1.Seleccionada = 1;
+                        War1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + war1.NombreCarta + "\n" + "Vida: " + war1.Vida + "\n";
                     }
-                    else { war1.Seleccionada = 0; }
+                    else { war1.Seleccionada = 0;
+                        War1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -3039,10 +3212,13 @@ namespace WpfApp2
                 {
                     if (war1.Seleccionada == 0)
                     { war1.Seleccionada = 1;
+                        War1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + war1.NombreCarta + "\n" + "Vida: " + war1.Vida + "\n";
                     }
-                    else { war1.Seleccionada = 0; }
+                    else { war1.Seleccionada = 0;
+                        War1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -3069,10 +3245,13 @@ namespace WpfApp2
                     if (war2.Seleccionada == 0)
                     {
                         war2.Seleccionada = 1;
+                        War2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + war2.NombreCarta + "\n" + "Vida: " + war2.Vida + "\n";
                     }
-                    else { war2.Seleccionada = 0; }
+                    else { war2.Seleccionada = 0;
+                        War2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
             else
@@ -3094,10 +3273,13 @@ namespace WpfApp2
                 {
                     if (war2.Seleccionada == 0)
                     { war2.Seleccionada = 1;
+                        War2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + war2.NombreCarta + "\n" + "Vida: " + war2.Vida + "\n";
                     }
-                    else { war2.Seleccionada = 0; }
+                    else { war2.Seleccionada = 0;
+                        War2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
             }
@@ -3124,10 +3306,13 @@ namespace WpfApp2
                     if (war3.Seleccionada == 0)
                     {
                         war3.Seleccionada = 1;
+                        War3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + war3.NombreCarta + "\n" + "Vida: " + war3.Vida + "\n";
                     }
-                    else { war3.Seleccionada = 0; }
+                    else { war3.Seleccionada = 0;
+                        War3j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
 
                 
@@ -3152,10 +3337,13 @@ namespace WpfApp2
                 {
                     if (war3.Seleccionada == 0)
                     { war3.Seleccionada = 1;
+                        War3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
                         info.Visibility = Visibility.Visible;
                         info.Text = " Carta: " + war3.NombreCarta + "\n" + "Vida: " + war3.Vida + "\n";
                     }
-                    else { war3.Seleccionada = 0; }
+                    else { war3.Seleccionada = 0;
+                        War3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    }
                 }
             }
         }
@@ -3170,17 +3358,16 @@ namespace WpfApp2
                 {
 
                     if (ad.Seleccionada == 1)
-
                     {
-
+                        
                         foreach (Minions af in Heroes[1].Tablero1)
                         {
                             if (af.Seleccionada == 1)
                             {
-
+                                
                                 ad.RestarVidaMs(ad, af, Heroes[0].Tablero1, Heroes[1].Tablero1);
-                                MessageBox.Show(Convert.ToString(Heroes[0].Tablero1.Count()));
-                                MessageBox.Show(Convert.ToString(Heroes[1].Tablero1.Count()));
+                                //MessageBox.Show(Convert.ToString(Heroes[0].Tablero1.Count()));
+                                //MessageBox.Show(Convert.ToString(Heroes[1].Tablero1.Count()));
                                 MessageBox.Show("Atacaste");
 
                                 con = 1;
@@ -3220,8 +3407,8 @@ namespace WpfApp2
                 }
 
             }
-            MessageBox.Show(Convert.ToString(Heroes[0].Tablero1.Count()));
-            MessageBox.Show(Convert.ToString(Heroes[1].Tablero1.Count()));
+            //MessageBox.Show(Convert.ToString(Heroes[0].Tablero1.Count()));
+            //MessageBox.Show(Convert.ToString(Heroes[1].Tablero1.Count()));
             if (Heroes[0].Tablero1.Count() != 0)
             {
                 foreach (Minions i in Heroes[0].Tablero1)
@@ -3921,10 +4108,63 @@ namespace WpfApp2
         {
             if (jugando == 0)
             {
+                ganador.Visibility = Visibility.Visible;
+                if (Heroes[1].Nombre == "Paladin")
+                {
+                    paladingan.Visibility = Visibility.Visible;
+                }
+                else if (Heroes[1].Nombre == "Druida")
+                {
+                    druidagan.Visibility = Visibility.Visible;
+                }
+                else if (Heroes[1].Nombre == "Hunter")
+                {
+                    huntergan.Visibility = Visibility.Visible;
+                }
+                else if (Heroes[1].Nombre == "Sacerdote")
+                {
+                    priestgan.Visibility = Visibility.Visible;
+                }
+                else if (Heroes[1].Nombre == "Picaro")
+
+                { picarogan.Visibility = Visibility.Visible; }
+                else if (Heroes[1].Nombre == "Brujo")
+                { brujogan.Visibility = Visibility.Visible; }
+                else if (Heroes[1].Nombre == "Chaman")
+                { chamangan.Visibility = Visibility.Visible; }
+                else if (Heroes[1].Nombre == "Warrior")
+                { warriorgan.Visibility = Visibility.Visible; }
 
             }
             else
-            { }
+            {
+                ganador.Visibility = Visibility.Visible;
+                if (Heroes[0].Nombre == "Paladin")
+                {
+                    paladingan.Visibility = Visibility.Visible;
+                }
+                else if (Heroes[0].Nombre == "Druida")
+                {
+                    druidagan.Visibility = Visibility.Visible;
+                }
+                else if (Heroes[0].Nombre == "Hunter")
+                {
+                    huntergan.Visibility = Visibility.Visible;
+                }
+                else if (Heroes[0].Nombre == "Sacerdote")
+                {
+                    priestgan.Visibility = Visibility.Visible;
+                }
+                else if (Heroes[0].Nombre == "Picaro")
+
+                { picarogan.Visibility = Visibility.Visible; }
+                else if (Heroes[0].Nombre == "Brujo")
+                { brujogan.Visibility = Visibility.Visible; }
+                else if (Heroes[0].Nombre == "Chaman")
+                { chamangan.Visibility = Visibility.Visible; }
+                else if (Heroes[0].Nombre == "Warrior")
+                { warriorgan.Visibility = Visibility.Visible; }
+            }
         }
     }
 }

@@ -175,7 +175,31 @@
     <Resource Include="sacerdoteshico.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="victory copy.jpg" />
+    <Resource Include="victory copy copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Malfurion_Stormrage%28621%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Rexxar%28484%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Uther_Lightbringer%28257%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Priestgan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="chamangan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="warriorgan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="brujogan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="picarogan.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
