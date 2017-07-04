@@ -37,7 +37,7 @@ namespace WpfApp2
             {
                 if (warrior.PonerenTablero(C) == 1)
                 {
-                    warrior.PonerenTablero(C);
+                    
                     return 1;
                 }
             }

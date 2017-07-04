@@ -3737,7 +3737,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], wisp3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], wisp3);
+                        
                         Wisp3.Visibility = Visibility.Hidden;
                         Wisp3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -3776,7 +3776,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], wisp3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], wisp3);
+                        
                         Wisp3.Visibility = Visibility.Hidden;
                         Wisp3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -3816,7 +3816,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], bloodfen2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], bloodfen2);
+                        
                         Bloodfen2.Visibility = Visibility.Hidden;
                         Bloodfen2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -3852,7 +3852,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], bloodfen2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], bloodfen2);
+                        
                         Bloodfen2.Visibility = Visibility.Hidden;
                         Bloodfen2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -3890,7 +3890,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], wisp1) == 1)
                     {
-                       jugs.jugarcartar(Heroes[0], wisp1);
+                       
                         Wisp1.Visibility = Visibility.Hidden;
                         Wisp1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -3928,7 +3928,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], wisp1) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], wisp1);
+                        
                         Wisp1.Visibility = Visibility.Hidden;
                         Wisp1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -3968,7 +3968,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], wisp2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], wisp2);
+                        
                         Wisp2.Visibility = Visibility.Hidden;
                         Wisp2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -4007,7 +4007,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], wisp2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], wisp2);
+                        
                         Wisp2.Visibility = Visibility.Hidden;
                         Wisp2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -4046,7 +4046,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], bloodfen1) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], bloodfen1);
+                        
                         Bloodfen1.Visibility = Visibility.Hidden;
                         Bloodfen1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -4081,7 +4081,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], bloodfen1) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], bloodfen1);
+                        
                         Bloodfen1.Visibility = Visibility.Hidden;
                         Bloodfen1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -4119,7 +4119,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], bloodfen3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], bloodfen3);
+                        
                         Bloodfen3.Visibility = Visibility.Hidden;
                         Bloodfen3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -4155,7 +4155,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], bloodfen3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], bloodfen3);
+                        
                         Bloodfen3.Visibility = Visibility.Hidden;
                         Bloodfen3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -4192,7 +4192,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], boulderfist1) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], boulderfist1);
+                        
                         Boulderfist1.Visibility = Visibility.Hidden;
                         Boulderfist1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -4228,7 +4228,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], boulderfist1) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], boulderfist1);
+                        
                         Boulderfist1.Visibility = Visibility.Hidden;
                         Boulderfist1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -4265,7 +4265,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], boulderfist2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], boulderfist2);
+                        
                         Boulderfist2.Visibility = Visibility.Hidden;
                         Boulderfist2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -4301,7 +4301,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], boulderfist2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], boulderfist2);
+                        
                         Boulderfist2.Visibility = Visibility.Hidden;
                         Boulderfist2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -4338,7 +4338,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], boulderfist3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], boulderfist3);
+                        
                         Boulderfist3.Visibility = Visibility.Hidden;
                         Boulderfist3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -4374,7 +4374,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], boulderfist3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], boulderfist3);
+                        
                         Boulderfist3.Visibility = Visibility.Hidden;
                         Boulderfist3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -4411,7 +4411,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], chillwind1) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], chillwind1);
+                        
                         Chillwind1.Visibility = Visibility.Hidden;
                         Chillwind1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -4447,7 +4447,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], chillwind1) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], chillwind1);
+                        
                         Chillwind1.Visibility = Visibility.Hidden;
                         Chillwind1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -4484,7 +4484,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], chillwind2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], chillwind2);
+                        
                         Chillwind2.Visibility = Visibility.Hidden;
                         Chillwind2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -4520,7 +4520,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], chillwind2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], chillwind2);
+                        
                         Chillwind2.Visibility = Visibility.Hidden;
                         Chillwind2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -4557,7 +4557,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], chillwind3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], chillwind3);
+                        
                         Chillwind3.Visibility = Visibility.Hidden;
                         Chillwind3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -4593,7 +4593,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], chillwind3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], chillwind3);
+                        
                         Chillwind3.Visibility = Visibility.Hidden;
                         Chillwind3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -4630,7 +4630,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], core1) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], core1);
+                        
 
                         Corehound1.Visibility = Visibility.Hidden;
                         Corehound1j1.Visibility = Visibility.Visible;
@@ -4667,7 +4667,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], core1) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], core1);
+                        
                         Corehound1.Visibility = Visibility.Hidden;
                         Corehound1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -4705,7 +4705,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], core2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], core2);
+                        
                         Corehound2.Visibility = Visibility.Hidden;
                         Corehound2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -4742,7 +4742,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], core2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], core2);
+                        
                         Corehound2.Visibility = Visibility.Hidden;
                         Corehound2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -4779,7 +4779,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], core3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], core3);
+                        
                         Corehound3.Visibility = Visibility.Hidden;
                         Corehound3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -4815,7 +4815,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], core3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], core3);
+                        
                         Corehound3.Visibility = Visibility.Hidden;
                         Corehound3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -4852,7 +4852,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], magma1) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], magma1);
+                        
                         Magma1.Visibility = Visibility.Hidden;
                         Magma1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -4888,7 +4888,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], magma1) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], magma1);
+                        
                         Magma1.Visibility = Visibility.Hidden;
                         Magma1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -4925,7 +4925,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], magma2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], magma2);
+                        
                         Magma2.Visibility = Visibility.Hidden;
                         Magma2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -4961,7 +4961,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], magma2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], magma2);
+                        
                         Magma2.Visibility = Visibility.Hidden;
                         Magma2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -4998,7 +4998,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], magma3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], magma3);
+                        
                         Magma3.Visibility = Visibility.Hidden;
                         Magma3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -5034,7 +5034,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], magma3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], magma3);
+                        
                         Magma3.Visibility = Visibility.Hidden;
                         Magma3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -5072,7 +5072,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], murloc1) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], murloc1);
+                        
                         Murloc1.Visibility = Visibility.Hidden;
                         Murloc1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -5108,7 +5108,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], murloc1) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], murloc1);
+                        
                         Murloc1.Visibility = Visibility.Hidden;
                         Murloc1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -5145,7 +5145,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], murloc2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], murloc2);
+                        
                         Murloc2.Visibility = Visibility.Hidden;
                         Murloc2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -5181,7 +5181,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], murloc2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], murloc2);
+                        
                         Murloc2.Visibility = Visibility.Hidden;
                         Murloc2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -5218,7 +5218,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], murloc3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], murloc3);
+                        
                         Murloc3.Visibility = Visibility.Hidden;
                         Murloc3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -5254,7 +5254,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], murloc3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], murloc3); 
+                         
                         Murloc3.Visibility = Visibility.Hidden;
                         Murloc3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -5291,7 +5291,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], oasis1) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], oasis1);
+                        
                         Oasis1.Visibility = Visibility.Hidden;
                         Oasis1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -5327,7 +5327,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], oasis1) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], oasis1);
+                        
                         Oasis1.Visibility = Visibility.Hidden;
                         Oasis1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -5365,7 +5365,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], oasis2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], oasis2);
+                        
                         Oasis2.Visibility = Visibility.Hidden;
                         Oasis2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -5402,7 +5402,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], oasis2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], oasis2);
+                        
                         Oasis2.Visibility = Visibility.Hidden;
                         Oasis2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -5439,7 +5439,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], oasis3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], oasis3);
+                        
                         Oasis3.Visibility = Visibility.Hidden;
                         Oasis3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -5477,7 +5477,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], oasis3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], oasis3);
+                        
                         Oasis3.Visibility = Visibility.Hidden;
                         Oasis3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -5514,7 +5514,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], river1) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], river1);
+                        
                         River1.Visibility = Visibility.Hidden;
                         River1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -5551,7 +5551,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], river1) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], river1);
+                        
                         River1.Visibility = Visibility.Hidden;
                         River1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -5589,7 +5589,6 @@ namespace WpfApp2
                     
                     if (jugs.jugarcartar(Heroes[0], river2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], river2);
                         River2.Visibility = Visibility.Hidden;
                         River2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -5627,7 +5626,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], river2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], river2);
+                        
                         River2.Visibility = Visibility.Hidden;
                         River2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -5664,7 +5663,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], river3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], river3);
+                        
                         River3.Visibility = Visibility.Hidden;
                         River3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -5701,7 +5700,6 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], river3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], river3);
                         River3.Visibility = Visibility.Hidden;
                         River3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -5738,7 +5736,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], war1) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], war1);
+                        
                         War1.Visibility = Visibility.Hidden;
                         War1j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -5775,7 +5773,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], war1) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], war1);
+                        
                         War1.Visibility = Visibility.Hidden;
                         War1j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -5813,7 +5811,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], war2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], war2);
+                       
                         War2.Visibility = Visibility.Hidden;
                         War2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -5848,7 +5846,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], war2) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], war2);
+                        
                         War2.Visibility = Visibility.Hidden;
                         War2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -5886,7 +5884,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], war3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[0], war3);
+                        
                         War3.Visibility = Visibility.Hidden;
                         War3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -5923,7 +5921,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], war3) == 1)
                     {
-                        jugs.jugarcartar(Heroes[1], war3);
+                       
                         War3.Visibility = Visibility.Hidden;
                         War3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -6013,8 +6011,11 @@ namespace WpfApp2
 
             }
 
+<<<<<<< Updated upstream
          
 
+=======
+>>>>>>> Stashed changes
 
             if (Heroes[0].Tablero1.Count() != 0) { foreach (Minions x in Heroes[0].Tablero1) { if (x.Vida <= 0) { Heroes[0].Tablero1.Remove(x); } } }
             if (Heroes[1].Tablero1.Count() != 0)
@@ -6830,7 +6831,271 @@ namespace WpfApp2
 
         }
 
+        public void MostrarCartas1(List<Minions> Lista) {
+            if ((Lista.Count() != 0))
+            {
+                foreach (Minions i in Lista)
+                {
+                    if (i.NombreCarta == "Wisp1")
+                    {
 
+                        Wisp1j2.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp1j2.Visibility = Visibility.Visible;
+
+
+                    }
+                    else { Wisp1j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Wisp2")
+                    {
+
+                        Wisp2j2.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp2j2.Visibility = Visibility.Visible;
+
+                    }
+                    else { Wisp2j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Wisp3")
+                    {
+
+                        Wisp3j2.Margin = new Thickness(0, 0, 0, 0);
+                        Wisp3j2.Visibility = Visibility.Visible;
+
+                    }
+                    else { Wisp3j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Murloc1")
+                    {
+
+                        Murloc1.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc1j2.Visibility = Visibility.Visible;
+
+                    }
+                    else { Murloc1j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Murloc2")
+                    {
+
+                        Murloc2.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc2j2.Visibility = Visibility.Visible;
+                    }
+                    else { Murloc2j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Murloc3")
+                    {
+
+                        Murloc3.Margin = new Thickness(0, 0, 0, 0);
+                        Murloc3j2.Visibility = Visibility.Visible;
+
+                    }
+                    else { Murloc3j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Oasis1")
+                    {
+
+                        Oasis1.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis1j2.Visibility = Visibility.Visible;
+                    }
+                    else { Oasis1j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Oasis2")
+                    {
+
+                        Oasis2.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis2j2.Visibility = Visibility.Visible;
+                    }
+                    else { Oasis2j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Oasis3")
+                    {
+
+                        Oasis3.Margin = new Thickness(0, 0, 0, 0);
+                        Oasis3j2.Visibility = Visibility.Visible;
+                    }
+                    else { Oasis3j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Corehound1")
+                    {
+
+                        Corehound1.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound1j2.Visibility = Visibility.Visible;
+                    }
+                    else { Corehound1j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Corehound2")
+                    {
+
+                        Corehound2.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound2j2.Visibility = Visibility.Visible;
+                    }
+                    else { Corehound2j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Corehound3")
+                    {
+
+                        Corehound3.Margin = new Thickness(0, 0, 0, 0);
+                        Corehound3j2.Visibility = Visibility.Visible;
+                    }
+                    else { Corehound3j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "River1")
+                    {
+
+                        River1j1.Margin = new Thickness(0, 0, 0, 0);
+                        River1j2.Visibility = Visibility.Visible;
+                    }
+                    else { River1j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "River2")
+                    {
+
+                        River2j1.Margin = new Thickness(0, 0, 0, 0);
+                        River2j2.Visibility = Visibility.Visible;
+                    }
+                    else { River2j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "River3")
+                    {
+                        River3j1.Margin = new Thickness(0, 0, 0, 0);
+                        River3j2.Visibility = Visibility.Visible;
+                    }
+                    else { River3j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Bloodfen1")
+                    {
+
+                        Bloodfen1j1.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen1j2.Visibility = Visibility.Visible;
+
+                    }
+                    else { Bloodfen1j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Bloodfen2")
+                    {
+
+                        Bloodfen2j1.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen2j2.Visibility = Visibility.Visible;
+
+                    }
+                    else { Bloodfen2j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Bloodfen3")
+                    {
+
+                        Bloodfen3j1.Margin = new Thickness(0, 0, 0, 0);
+                        Bloodfen3j2.Visibility = Visibility.Visible;
+
+                    }
+                    else { Bloodfen3j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Magma1")
+                    {
+
+                        Magma1j1.Margin = new Thickness(0, 0, 0, 0);
+                        Magma1j2.Visibility = Visibility.Visible;
+                    }
+                    else { Magma1j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Magma2")
+                    {
+
+                        Magma2j1.Margin = new Thickness(0, 0, 0, 0);
+                        Magma2j2.Visibility = Visibility.Visible;
+                    }
+                    else { Magma2j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Magma3")
+                    {
+
+                        Magma3j1.Margin = new Thickness(0, 0, 0, 0);
+                        Magma3j2.Visibility = Visibility.Visible;
+                    }
+                    else { Magma3j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Chillwind1")
+                    {
+
+                        Chillwind1j1.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind1j2.Visibility = Visibility.Visible;
+
+                    }
+                    else { Chillwind1j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Chillwind2")
+                    {
+
+                        Chillwind2j1.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind2j2.Visibility = Visibility.Visible;
+
+                    }
+                    else { Chillwind2j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Chillwind3")
+                    {
+
+                        Chillwind3j1.Margin = new Thickness(0, 0, 0, 0);
+                        Chillwind3j2.Visibility = Visibility.Visible;
+
+                    }
+                    else { Chillwind3j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "War1")
+                    {
+
+                        War1j1.Margin = new Thickness(0, 0, 0, 0);
+                        War1j2.Visibility = Visibility.Visible;
+
+                    }
+                    else { War1j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "War2")
+                    {
+                        War2j1.Margin = new Thickness(0, 0, 0, 0);
+                        War2j2.Visibility = Visibility.Visible;
+
+                    }
+                    else { War2j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "War3")
+                    {
+
+                        War3j1.Margin = new Thickness(0, 0, 0, 0);
+                        War3j2.Visibility = Visibility.Visible;
+
+                    }
+                    else { War3j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Boulderfist1")
+                    {
+
+                        Boulderfist1j1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist1j2.Visibility = Visibility.Visible;
+                    }
+                    else { Boulderfist1j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Boulderfist2")
+                    {
+
+                        Boulderfist2j1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist2j2.Visibility = Visibility.Visible;
+                    }
+                    else { Boulderfist3j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Boulderfist3")
+                    {
+
+                        Boulderfist3j1.Margin = new Thickness(0, 0, 0, 0);
+                        Boulderfist3j2.Visibility = Visibility.Visible;
+                    }
+                    else { Boulderfist3j2.Visibility = Visibility.Hidden; }
+                }
+            }
+            else
+            {
+                Wisp1j2.Visibility = Visibility.Hidden;
+                Wisp2j2.Visibility = Visibility.Hidden;
+                Wisp3j2.Visibility = Visibility.Hidden;
+                Murloc1j2.Visibility = Visibility.Hidden;
+                Murloc2j2.Visibility = Visibility.Hidden;
+                Murloc3j2.Visibility = Visibility.Hidden;
+                Bloodfen1j2.Visibility = Visibility.Hidden;
+                Bloodfen2j2.Visibility = Visibility.Hidden;
+                Bloodfen3j2.Visibility = Visibility.Hidden;
+                River1j2.Visibility = Visibility.Hidden;
+                River2j2.Visibility = Visibility.Hidden;
+                River3j2.Visibility = Visibility.Hidden;
+                Magma2j2.Visibility = Visibility.Hidden;
+                Magma1j2.Visibility = Visibility.Hidden;
+                Magma3j2.Visibility = Visibility.Hidden;
+                Chillwind1j2.Visibility = Visibility.Hidden;
+                Chillwind2j2.Visibility = Visibility.Hidden;
+                Chillwind3j2.Visibility = Visibility.Hidden;
+                Oasis1j2.Visibility = Visibility.Hidden;
+                Oasis2j2.Visibility = Visibility.Hidden;
+                Oasis3j2.Visibility = Visibility.Hidden;
+                Boulderfist1j2.Visibility = Visibility.Hidden;
+                Boulderfist2j2.Visibility = Visibility.Hidden;
+                Boulderfist3j2.Visibility = Visibility.Hidden;
+                War1j2.Visibility = Visibility.Hidden;
+                War2j2.Visibility = Visibility.Hidden;
+                War3j2.Visibility = Visibility.Hidden;
+                Corehound1j2.Visibility = Visibility.Hidden;
+                Corehound2j2.Visibility = Visibility.Hidden;
+                Corehound3j2.Visibility = Visibility.Hidden;
+
+            }
+        }
 
         private void HabilidadHeroe_Click(object sender, RoutedEventArgs e)
         {
@@ -6855,7 +7120,7 @@ namespace WpfApp2
                 else if (Heroes[1].Nombre == "Sacerdote") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
                 else if (Heroes[1].Nombre == "Picaro") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
                 else if (Heroes[1].Nombre == "Brujo") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
-                else if (Heroes[1].Nombre == "Mago") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); ; MostrarCartas(Heroes[1].Tablero1); }
+                else if (Heroes[1].Nombre == "Mago") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); ; MostrarCartas1(Heroes[1].Tablero1); }
                 else if (Heroes[1].Nombre == "Chaman") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
                 else { Heroes[1].Habilidad(Heroes[1]); }
             }
@@ -7108,6 +7373,10 @@ namespace WpfApp2
                     if (i.Seleccionada == 1)
                     {
                         Heroes[0].Vida -= i.Daño;
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
                         if (Heroes[0].Vida <= 0)
                         {
                             ganador.Visibility = Visibility.Visible;
