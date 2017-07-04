@@ -2875,6 +2875,8 @@ namespace WpfApp2
 
         private void FinTurno1_Click(object sender, RoutedEventArgs e)
         {
+            BarraTableroj1.Margin = new Thickness(142, 166, 156, 424);
+            BarraTableroj2.Margin = new Thickness(142, 358, 157, 247);
             foreach (Minions y in Heroes[0].Tablero1)
             {
                 y.NDT = 0;
@@ -3313,6 +3315,8 @@ namespace WpfApp2
 
         private void FinTurno2_Click(object sender, RoutedEventArgs e)
         {
+            BarraTableroj1.Margin = new Thickness(142, 358, 157, 247);
+            BarraTableroj2.Margin = new Thickness(142, 166, 156, 424);
             foreach (Minions y in Heroes[1].Tablero1)
             {
                 y.NDT = 0;
