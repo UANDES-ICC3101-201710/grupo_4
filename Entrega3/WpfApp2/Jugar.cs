@@ -13,11 +13,7 @@ namespace WpfApp2
         {
             warrior.Robar(mwarrior.mazo1, warrior.mano);
 
-            foreach (Minions m in warrior.Tablero1)
-            {
-                m.NDT = 1;
-                m.TurnoP = 0;
-            }
+            
             if (warrior.Conteodemana < 10)
             {
                 warrior.Conteodemana += 1;

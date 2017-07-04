@@ -472,7 +472,6 @@ namespace WpfApp2
             }
         }
 
-
         private void Druid_Click(object sender, RoutedEventArgs e)
         {
             if (JugadorUno.Visibility == Visibility.Visible && eligioheroe == 0)
@@ -2877,12 +2876,12 @@ namespace WpfApp2
         {
             BarraTableroj1.Margin = new Thickness(142, 166, 156, 424);
             BarraTableroj2.Margin = new Thickness(142, 358, 157, 247);
+
+
             foreach (Minions y in Heroes[0].Tablero1)
             {
                 y.NDT = 0;
             }
-
-
             foreach (Minions y in Heroes[1].Tablero1)
             {
                 y.NDT = 0;
@@ -3311,8 +3310,6 @@ namespace WpfApp2
 
 
         }
-
-
         private void FinTurno2_Click(object sender, RoutedEventArgs e)
         {
             BarraTableroj1.Margin = new Thickness(142, 358, 157, 247);
@@ -3325,6 +3322,7 @@ namespace WpfApp2
             {
                 y.NDT = 0;
             }
+
             jugs.Pasar(Heroes[1]);
             info.Visibility = Visibility.Hidden;
             cantmana.Visibility = Visibility.Hidden;
@@ -3843,7 +3841,6 @@ namespace WpfApp2
             }
 
         }
-
         private void Wisp3j2_Click(object sender, RoutedEventArgs e)
         {
 
@@ -4263,7 +4260,6 @@ namespace WpfApp2
             }
 
         }
-
         private void Boulderfist2_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
@@ -4503,8 +4499,6 @@ namespace WpfApp2
                 Chillwind2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
             }
         }
-
-
         private void Chillwind3_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
@@ -4771,7 +4765,6 @@ namespace WpfApp2
             }
 
         }
-
         private void Bloodfen2j2_Click(object sender, RoutedEventArgs e)
         {
             if (bloodfen2.Seleccionada == 0)
@@ -4815,8 +4808,6 @@ namespace WpfApp2
             }
 
         }
-
-
         private void Boulderfist1j2_Click(object sender, RoutedEventArgs e)
         {
             if (boulderfist1.Seleccionada == 0)
@@ -4839,7 +4830,6 @@ namespace WpfApp2
             }
 
         }
-
         private void Boulderfist2j2_Click(object sender, RoutedEventArgs e)
         {
 
@@ -4863,8 +4853,6 @@ namespace WpfApp2
             }
 
         }
-
-
         private void Boulderfist3j2_Click(object sender, RoutedEventArgs e)
         {
 
@@ -4888,8 +4876,6 @@ namespace WpfApp2
             }
 
         }
-
-
         private void Chillwind1j2_Click(object sender, RoutedEventArgs e)
         {
             if (chillwind1.Seleccionada == 0)
@@ -4912,7 +4898,6 @@ namespace WpfApp2
             }
 
         }
-
         private void Chillwind2j2_Click(object sender, RoutedEventArgs e)
         {
             if (chillwind2.Seleccionada == 0)
@@ -4957,7 +4942,6 @@ namespace WpfApp2
             }
 
         }
-
         private void Corehound1j2_Click(object sender, RoutedEventArgs e)
         {
             if (core1.Seleccionada == 0)
@@ -4980,7 +4964,6 @@ namespace WpfApp2
             }
 
         }
-
         private void Corehound2j2_Click(object sender, RoutedEventArgs e)
         {
             if (core2.Seleccionada == 0)
@@ -5003,8 +4986,6 @@ namespace WpfApp2
             }
 
         }
-
-
         private void Corehound3j2_Click(object sender, RoutedEventArgs e)
         {
             if (core3.Seleccionada == 0)
@@ -5071,7 +5052,6 @@ namespace WpfApp2
             }
 
         }
-
         private void Magma3j2_Click(object sender, RoutedEventArgs e)
         {
 
@@ -5095,7 +5075,6 @@ namespace WpfApp2
             }
 
         }
-
         private void Murloc1j2_Click(object sender, RoutedEventArgs e)
         {
             if (murloc1.Seleccionada == 0)
@@ -5118,7 +5097,6 @@ namespace WpfApp2
             }
 
         }
-
         private void Murloc2j2_Click(object sender, RoutedEventArgs e)
         {
             if (murloc2.Seleccionada == 0)
@@ -5207,7 +5185,6 @@ namespace WpfApp2
             }
 
         }
-
         private void Oasis3j2_Click(object sender, RoutedEventArgs e)
         {
             if (oasis3.Seleccionada == 0)
@@ -5318,7 +5295,6 @@ namespace WpfApp2
             }
 
         }
-
         private void War2j2_Click(object sender, RoutedEventArgs e)
         {
             if (war2.Seleccionada == 0)
@@ -5341,7 +5317,6 @@ namespace WpfApp2
             }
 
         }
-
         private void War3j2_Click(object sender, RoutedEventArgs e)
         {
             if (war3.Seleccionada == 0)
@@ -6299,7 +6274,7 @@ namespace WpfApp2
                                 //MessageBox.Show(Convert.ToString(Heroes[0].Tablero1.Count()));
                                 //MessageBox.Show(Convert.ToString(Heroes[1].Tablero1.Count()));
                                 MessageBox.Show("Atacaste");
-
+                                
                                 con = 1;
                                 break;
                             }
