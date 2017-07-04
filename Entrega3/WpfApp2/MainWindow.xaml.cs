@@ -2875,7 +2875,7 @@ namespace WpfApp2
 
         private void FinTurno1_Click(object sender, RoutedEventArgs e)
         {
-            foreach( Minions y in Heroes[0].Tablero1)
+            foreach (Minions y in Heroes[0].Tablero1)
             {
                 y.NDT = 0;
             }
@@ -3748,17 +3748,16 @@ namespace WpfApp2
 
 
         }
-
         private void Wisp3_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
             {
-                
+
                 if (Heroes[0].mano.Contains(wisp3))
                 {
                     if (jugs.jugarcartar(Heroes[0], wisp3) == 1)
                     {
-                        
+
                         Wisp3.Visibility = Visibility.Hidden;
                         Wisp3j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -3766,7 +3765,9 @@ namespace WpfApp2
                         cantmana.Text = va;
                     }
                 }
-                
+
+
+
             }
             else
             {
@@ -3775,7 +3776,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], wisp3) == 1)
                     {
-                        
+
                         Wisp3.Visibility = Visibility.Hidden;
                         Wisp3j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -3784,34 +3785,108 @@ namespace WpfApp2
 
                     }
                 }
-               
+
             }
         }
-        private void Wisp3j2_Click(object sender, RoutedEventArgs e)
+        private void Wisp3_Clickj1(object sender, RoutedEventArgs e)
         {
-        
-                if (wisp3.Seleccionada == 0)
-                {
-                    wisp3.Seleccionada = 1;
-                    Wisp3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
-                    {
-                        if (i.NombreCarta != "Wisp3")
-                        { i.Seleccionada = 0; }
 
-                    }
-
-                    info.Visibility = Visibility.Visible;
-                    info.Text = " Carta: " + wisp3.NombreCarta + "\n" + "Vida: " + wisp3.Vida + "\n";
-                }
-                else
+            if (wisp3.Seleccionada == 0)
+            {
+                wisp3.Seleccionada = 1;
+                Wisp3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[0].Tablero1)
                 {
-                    wisp3.Seleccionada = 0;
-                    Wisp3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    if (i.NombreCarta != "Wisp3")
+                    { i.Seleccionada = 0; }
+
                 }
-           
+
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + wisp3.NombreCarta + "\n" + "Vida: " + wisp3.Vida + "\n";
+            }
+            else
+            {
+                wisp3.Seleccionada = 0;
+                Wisp3j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+
+            }
+
+
+        }
+        private void Wisp1j2_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (wisp1.Seleccionada == 0)
+            {
+                wisp1.Seleccionada = 1;
+                Wisp1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
+                {
+                    if (i.NombreCarta != "Wisp1")
+                    { i.Seleccionada = 0; }
+
+                }
+
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + wisp1.NombreCarta + "\n" + "Vida: " + wisp1.Vida + "\n";
+
+            }
+            else
+            {
+                wisp1.Seleccionada = 0;
+                Wisp1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
         }
 
+        private void Wisp3j2_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (wisp3.Seleccionada == 0)
+            {
+                wisp3.Seleccionada = 1;
+                Wisp3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
+                {
+                    if (i.NombreCarta != "Wisp3")
+                    { i.Seleccionada = 0; }
+
+                }
+
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + wisp3.NombreCarta + "\n" + "Vida: " + wisp3.Vida + "\n";
+            }
+            else
+            {
+                wisp3.Seleccionada = 0;
+                Wisp3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+        private void Wisp2j2_Click(object sender, RoutedEventArgs e)
+        {
+            if (wisp2.Seleccionada == 0)
+            {
+                wisp2.Seleccionada = 1;
+                Wisp2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
+                {
+                    if (i.NombreCarta != "Wisp2")
+                    { i.Seleccionada = 0; }
+
+                }
+
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + wisp2.NombreCarta + "\n" + "Vida: " + wisp2.Vida + "\n";
+            }
+            else
+            {
+                wisp2.Seleccionada = 0;
+                Wisp2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
         private void Bloodfen2_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
@@ -3820,7 +3895,7 @@ namespace WpfApp2
                 {
                     if (jugs.jugarcartar(Heroes[0], bloodfen2) == 1)
                     {
-                        
+
                         Bloodfen2.Visibility = Visibility.Hidden;
                         Bloodfen2j1.Visibility = Visibility.Visible;
                         Manaj1.Value = Heroes[0].Mana;
@@ -3828,10 +3903,9 @@ namespace WpfApp2
                         cantmana.Text = va;
                     }
                 }
-                
-                
 
-                
+
+
             }
             else
             {
@@ -3840,7 +3914,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], bloodfen2) == 1)
                     {
-                        
+
                         Bloodfen2.Visibility = Visibility.Hidden;
                         Bloodfen2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -3848,8 +3922,848 @@ namespace WpfApp2
                         cantmana.Text = v;
                     }
                 }
-                
-                
+
+            }
+
+        }
+        private void Bloodfen2_Clickj1(object sender, RoutedEventArgs e)
+        {
+
+            if (bloodfen2.Seleccionada == 0)
+            {
+                bloodfen2.Seleccionada = 1;
+                Bloodfen2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[0].Tablero1)
+                {
+                    if (i.NombreCarta != "Bloodfen2")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + bloodfen2.NombreCarta + "\n" + "Vida: " + bloodfen2.Vida + "\n";
+            }
+            else
+            {
+                bloodfen2.Seleccionada = 0;
+                Bloodfen2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+
+        }
+        private void Wisp1_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                if (Heroes[0].mano.Contains(wisp1))
+                {
+                    if (jugs.jugarcartar(Heroes[0], wisp1) == 1)
+                    {
+
+                        Wisp1.Visibility = Visibility.Hidden;
+                        Wisp1j1.Visibility = Visibility.Visible;
+                        Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
+                    }
+                }
+
+
+
+            }
+            else
+            {
+                if (Heroes[1].mano.Contains(wisp1))
+                {
+
+                    if (jugs.jugarcartar(Heroes[1], wisp1) == 1)
+                    {
+
+                        Wisp1.Visibility = Visibility.Hidden;
+                        Wisp1j2.Visibility = Visibility.Visible;
+                        Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
+                    }
+                }
+
+            }
+
+        }
+        private void Wisp1_Clickj1(object sender, RoutedEventArgs e)
+        {
+
+            if (wisp1.Seleccionada == 0)
+            {
+                wisp1.Seleccionada = 1;
+                Wisp1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[0].Tablero1)
+                {
+                    if (i.NombreCarta != "Wisp1")
+                    { i.Seleccionada = 0; }
+
+                }
+
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + wisp1.NombreCarta + "\n" + "Vida: " + wisp1.Vida + "\n";
+            }
+            else
+            {
+                wisp1.Seleccionada = 0;
+                Wisp1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+        private void Wisp2_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                if (Heroes[0].mano.Contains(wisp2))
+                {
+                    if (jugs.jugarcartar(Heroes[0], wisp2) == 1)
+                    {
+
+                        Wisp2.Visibility = Visibility.Hidden;
+                        Wisp2j1.Visibility = Visibility.Visible;
+                        Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
+                    }
+                }
+
+
+
+
+            }
+            else
+            {
+                if (Heroes[1].mano.Contains(wisp2))
+                {
+
+                    if (jugs.jugarcartar(Heroes[1], wisp2) == 1)
+                    {
+
+                        Wisp2.Visibility = Visibility.Hidden;
+                        Wisp2j2.Visibility = Visibility.Visible;
+                        Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
+                    }
+                }
+
+            }
+
+        }
+        private void Wisp2_Clickj1(object sender, RoutedEventArgs e)
+        {
+
+            if (wisp2.Seleccionada == 0)
+            {
+                wisp2.Seleccionada = 1;
+                Wisp2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[0].Tablero1)
+                {
+                    if (i.NombreCarta != "Wisp2")
+                    { i.Seleccionada = 0; }
+
+                }
+
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + wisp2.NombreCarta + "\n" + "Vida: " + wisp2.Vida + "\n";
+
+            }
+            else
+            {
+                wisp2.Seleccionada = 0;
+                Wisp2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+        private void Bloodfen1_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                if (Heroes[0].mano.Contains(bloodfen1))
+                {
+                    if (jugs.jugarcartar(Heroes[0], bloodfen1) == 1)
+                    {
+
+                        Bloodfen1.Visibility = Visibility.Hidden;
+                        Bloodfen1j1.Visibility = Visibility.Visible;
+                        Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
+                    }
+                }
+
+
+
+            }
+            else
+            {
+                if (Heroes[1].mano.Contains(bloodfen1))
+                {
+
+                    if (jugs.jugarcartar(Heroes[1], bloodfen1) == 1)
+                    {
+
+                        Bloodfen1.Visibility = Visibility.Hidden;
+                        Bloodfen1j2.Visibility = Visibility.Visible;
+                        Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
+                    }
+                }
+
+
+            }
+
+        }
+        private void Bloodfen1_Clickj1(object sender, RoutedEventArgs e)
+        {
+
+
+            if (bloodfen1.Seleccionada == 0)
+            {
+                bloodfen1.Seleccionada = 1;
+                Bloodfen1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[0].Tablero1)
+                {
+                    if (i.NombreCarta != "Bloodfen1")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + bloodfen1.NombreCarta + "\n" + "Vida: " + bloodfen1.Vida + "\n";
+            }
+            else
+            {
+                bloodfen1.Seleccionada = 0;
+                Bloodfen1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+        }
+        private void Bloodfen3_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                if (Heroes[0].mano.Contains(bloodfen3))
+                {
+                    if (jugs.jugarcartar(Heroes[0], bloodfen3) == 1)
+                    {
+
+                        Bloodfen3.Visibility = Visibility.Hidden;
+                        Bloodfen3j1.Visibility = Visibility.Visible;
+                        Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
+                    }
+                }
+
+
+
+            }
+            else
+            {
+                if (Heroes[1].mano.Contains(bloodfen3))
+                {
+
+                    if (jugs.jugarcartar(Heroes[1], bloodfen3) == 1)
+                    {
+
+                        Bloodfen3.Visibility = Visibility.Hidden;
+                        Bloodfen3j2.Visibility = Visibility.Visible;
+                        Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
+                    }
+                }
+
+            }
+        }
+        private void Bloodfen3_Clickj1(object sender, RoutedEventArgs e)
+        {
+
+            if (bloodfen3.Seleccionada == 0)
+            {
+                bloodfen3.Seleccionada = 1;
+                Bloodfen3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[0].Tablero1)
+                {
+                    if (i.NombreCarta != "Bloodfen3")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + bloodfen3.NombreCarta + "\n" + "Vida: " + bloodfen3.Vida + "\n";
+            }
+            else
+            {
+                bloodfen3.Seleccionada = 0;
+                Bloodfen3j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+        private void Boulderfist1_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                if (Heroes[0].mano.Contains(boulderfist1))
+                {
+                    if (jugs.jugarcartar(Heroes[0], boulderfist1) == 1)
+                    {
+
+                        Boulderfist1.Visibility = Visibility.Hidden;
+                        Boulderfist1j1.Visibility = Visibility.Visible;
+                        Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
+                    }
+                }
+
+
+
+            }
+            else
+            {
+                if (Heroes[1].mano.Contains(boulderfist1))
+                {
+
+                    if (jugs.jugarcartar(Heroes[1], boulderfist1) == 1)
+                    {
+
+                        Boulderfist1.Visibility = Visibility.Hidden;
+                        Boulderfist1j2.Visibility = Visibility.Visible;
+                        Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
+                    }
+                }
+
+            }
+        }
+        private void Boulderfist1_Clickj1(object sender, RoutedEventArgs e)
+        {
+            if (boulderfist1.Seleccionada == 0)
+            { boulderfist1.Seleccionada = 1;
+                Boulderfist1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[0].Tablero1)
+                {
+                    if (i.NombreCarta != "Boulderfist1")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + boulderfist1.NombreCarta + "\n" + "Vida: " + boulderfist1.Vida + "\n";
+            }
+            else { boulderfist1.Seleccionada = 0;
+                Boulderfist1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+
+        private void Boulderfist2_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                if (Heroes[0].mano.Contains(boulderfist2))
+                {
+                    if (jugs.jugarcartar(Heroes[0], boulderfist2) == 1)
+                    {
+
+                        Boulderfist2.Visibility = Visibility.Hidden;
+                        Boulderfist2j1.Visibility = Visibility.Visible;
+                        Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
+                    }
+                }
+
+
+
+            }
+            else
+            {
+                if (Heroes[1].mano.Contains(boulderfist2))
+                {
+
+                    if (jugs.jugarcartar(Heroes[1], boulderfist2) == 1)
+                    {
+
+                        Boulderfist2.Visibility = Visibility.Hidden;
+                        Boulderfist2j2.Visibility = Visibility.Visible;
+                        Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
+                    }
+                }
+
+            }
+        }
+        private void Boulderfist2_Clickj1(object sender, RoutedEventArgs e)
+        {
+            if (boulderfist2.Seleccionada == 0)
+            { boulderfist2.Seleccionada = 1;
+                Boulderfist2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[0].Tablero1)
+                {
+                    if (i.NombreCarta != "Boulderfist2")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + boulderfist2.NombreCarta + "\n" + "Vida: " + boulderfist2.Vida + "\n";
+            }
+            else { boulderfist2.Seleccionada = 0;
+                Boulderfist2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+        private void Boulderfist3_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                if (Heroes[0].mano.Contains(boulderfist3))
+                {
+                    if (jugs.jugarcartar(Heroes[0], boulderfist3) == 1)
+                    {
+
+                        Boulderfist3.Visibility = Visibility.Hidden;
+                        Boulderfist3j1.Visibility = Visibility.Visible;
+                        Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
+                    }
+                }
+
+
+
+            }
+            else
+            {
+                if (Heroes[1].mano.Contains(boulderfist3))
+                {
+
+                    if (jugs.jugarcartar(Heroes[1], boulderfist3) == 1)
+                    {
+
+                        Boulderfist3.Visibility = Visibility.Hidden;
+                        Boulderfist3j2.Visibility = Visibility.Visible;
+                        Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
+                    }
+                }
+            }
+        }
+        private void Boulderfist3_Clickj1(object sender, RoutedEventArgs e)
+        {
+            if (boulderfist3.Seleccionada == 0)
+            {
+                boulderfist3.Seleccionada = 1;
+                Boulderfist3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[0].Tablero1)
+                {
+                    if (i.NombreCarta != "Boulderfist3")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + boulderfist3.NombreCarta + "\n" + "Vida: " + boulderfist3.Vida + "\n";
+            }
+            else
+            {
+                boulderfist3.Seleccionada = 0;
+                Boulderfist3j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+        private void Chillwind1_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                if (Heroes[0].mano.Contains(chillwind1))
+                {
+                    if (jugs.jugarcartar(Heroes[0], chillwind1) == 1)
+                    {
+
+                        Chillwind1.Visibility = Visibility.Hidden;
+                        Chillwind1j1.Visibility = Visibility.Visible;
+                        Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
+                    }
+                }
+
+
+
+            }
+            else
+            {
+                if (Heroes[1].mano.Contains(chillwind1))
+                {
+
+                    if (jugs.jugarcartar(Heroes[1], chillwind1) == 1)
+                    {
+
+                        Chillwind1.Visibility = Visibility.Hidden;
+                        Chillwind1j2.Visibility = Visibility.Visible;
+                        Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
+                    }
+                }
+
+
+            }
+        }
+        private void Chillwind1_Clickj1(object sender, RoutedEventArgs e)
+        {
+
+            if (chillwind1.Seleccionada == 0)
+            {
+                chillwind1.Seleccionada = 1;
+                Chillwind1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[0].Tablero1)
+                {
+                    if (i.NombreCarta != "Chillwind1")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + chillwind1.NombreCarta + "\n" + "Vida: " + chillwind1.Vida + "\n";
+            }
+            else
+            {
+                chillwind1.Seleccionada = 0;
+                Chillwind1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+        private void Chillwind2_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                if (Heroes[0].mano.Contains(chillwind2))
+                {
+                    if (jugs.jugarcartar(Heroes[0], chillwind2) == 1)
+                    {
+
+                        Chillwind2.Visibility = Visibility.Hidden;
+                        Chillwind2j1.Visibility = Visibility.Visible;
+                        Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
+                    }
+                }
+
+
+
+
+            }
+            else
+            {
+                if (Heroes[1].mano.Contains(chillwind2))
+                {
+
+                    if (jugs.jugarcartar(Heroes[1], chillwind2) == 1)
+                    {
+
+                        Chillwind2.Visibility = Visibility.Hidden;
+                        Chillwind2j2.Visibility = Visibility.Visible;
+                        Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
+                    }
+                }
+            }
+
+        }
+        private void Chillwind2_Clickj1(object sender, RoutedEventArgs e)
+        {
+
+            if (chillwind2.Seleccionada == 0)
+            {
+                chillwind2.Seleccionada = 1;
+                Chillwind2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[0].Tablero1)
+                {
+                    if (i.NombreCarta != "Chillwind2")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + chillwind2.NombreCarta + "\n" + "Vida: " + chillwind2.Vida + "\n";
+            }
+            else
+            {
+                chillwind2.Seleccionada = 0;
+                Chillwind2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+        }
+
+
+        private void Chillwind3_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                if (Heroes[0].mano.Contains(chillwind3))
+                {
+                    if (jugs.jugarcartar(Heroes[0], chillwind3) == 1)
+                    {
+
+                        Chillwind3.Visibility = Visibility.Hidden;
+                        Chillwind3j1.Visibility = Visibility.Visible;
+                        Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
+                    }
+                }
+
+
+
+            }
+            else
+            {
+                if (Heroes[1].mano.Contains(chillwind3))
+                {
+
+                    if (jugs.jugarcartar(Heroes[1], chillwind3) == 1)
+                    {
+
+                        Chillwind3.Visibility = Visibility.Hidden;
+                        Chillwind3j2.Visibility = Visibility.Visible;
+                        Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
+                    }
+                }
+
+            }
+        }
+        private void Chillwind3_Clickj1(object sender, RoutedEventArgs e)
+        {
+
+            if (chillwind3.Seleccionada == 0)
+            {
+                chillwind3.Seleccionada = 1;
+                Chillwind3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[0].Tablero1)
+                {
+                    if (i.NombreCarta != "Chillwind3")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + chillwind3.NombreCarta + "\n" + "Vida: " + chillwind3.Vida + "\n";
+            }
+            else
+            {
+                chillwind3.Seleccionada = 0;
+                Chillwind3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+            }
+
+        }
+        private void Corehound1_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                if (Heroes[0].mano.Contains(core1))
+                {
+                    if (jugs.jugarcartar(Heroes[0], core1) == 1)
+                    {
+
+
+                        Corehound1.Visibility = Visibility.Hidden;
+                        Corehound1j1.Visibility = Visibility.Visible;
+                        Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
+                    }
+                }
+
+
+
+            }
+            else
+            {
+                if (Heroes[1].mano.Contains(core1))
+                {
+
+                    if (jugs.jugarcartar(Heroes[1], core1) == 1)
+                    {
+
+                        Corehound1.Visibility = Visibility.Hidden;
+                        Corehound1j2.Visibility = Visibility.Visible;
+                        Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
+                    }
+                }
+            }
+        }
+        private void Corehound1_Clickj1(object sender, RoutedEventArgs e)
+        {
+
+            if (core1.Seleccionada == 0)
+            {
+                core1.Seleccionada = 1;
+                Corehound1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[0].Tablero1)
+                {
+                    if (i.NombreCarta != "Corehound1")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + core1.NombreCarta + "\n" + "Vida: " + core1.Vida + "\n";
+            }
+            else
+            {
+                core1.Seleccionada = 0;
+                Corehound1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+        private void Corehound2_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+
+                if (Heroes[0].mano.Contains(core2))
+                {
+                    if (jugs.jugarcartar(Heroes[0], core2) == 1)
+                    {
+
+                        Corehound2.Visibility = Visibility.Hidden;
+                        Corehound2j1.Visibility = Visibility.Visible;
+                        Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
+                    }
+                }
+
+
+
+
+            }
+            else
+            {
+                if (Heroes[1].mano.Contains(core2))
+                {
+
+                    if (jugs.jugarcartar(Heroes[1], core2) == 1)
+                    {
+
+                        Corehound2.Visibility = Visibility.Hidden;
+                        Corehound2j2.Visibility = Visibility.Visible;
+                        Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
+                    }
+                }
+
+            }
+        }
+        private void Corehound2_Clickj1(object sender, RoutedEventArgs e)
+        {
+
+            if (core2.Seleccionada == 0)
+            {
+                core2.Seleccionada = 1;
+                Corehound2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[0].Tablero1)
+                {
+                    if (i.NombreCarta != "Corehound2")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + core2.NombreCarta + "\n" + "Vida: " + core2.Vida + "\n";
+            }
+            else
+            {
+                core2.Seleccionada = 0;
+                Corehound2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+        private void Corehound3_Click(object sender, RoutedEventArgs e)
+        {
+            if (jugando == 0)
+            {
+                if (Heroes[0].mano.Contains(core3))
+                {
+                    if (jugs.jugarcartar(Heroes[0], core3) == 1)
+                    {
+
+                        Corehound3.Visibility = Visibility.Hidden;
+                        Corehound3j1.Visibility = Visibility.Visible;
+                        Manaj1.Value = Heroes[0].Mana;
+                        string va = Convert.ToString(Heroes[0].Mana);
+                        cantmana.Text = va;
+                    }
+                }
+
+
+
+            }
+            else
+            {
+                if (Heroes[1].mano.Contains(core3))
+                {
+
+                    if (jugs.jugarcartar(Heroes[1], core3) == 1)
+                    {
+
+                        Corehound3.Visibility = Visibility.Hidden;
+                        Corehound3j2.Visibility = Visibility.Visible;
+                        Manaj2.Value = Heroes[1].Mana;
+                        string v = Convert.ToString(Heroes[1].Mana);
+                        cantmana.Text = v;
+                    }
+                }
+
+            }
+        }
+        private void Corehound3_Clickj1(object sender, RoutedEventArgs e)
+        {
+
+            if (core3.Seleccionada == 0)
+            { core3.Seleccionada = 1;
+                Corehound3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[0].Tablero1)
+                {
+                    if (i.NombreCarta != "Corehound3")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + core3.NombreCarta + "\n" + "Vida: " + core3.Vida + "\n";
+            }
+            else { core3.Seleccionada = 0;
+                Corehound3j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+        }
+        private void Bloodfen1j2_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            if (bloodfen1.Seleccionada == 0)
+            {
+                bloodfen1.Seleccionada = 1;
+                Bloodfen1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
+                {
+                    if (i.NombreCarta != "Bloodfen1")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + bloodfen1.NombreCarta + "\n" + "Vida: " + bloodfen1.Vida + "\n";
+            }
+            else
+            {
+                bloodfen1.Seleccionada = 0;
+                Bloodfen1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
             }
 
         }
@@ -3875,822 +4789,577 @@ namespace WpfApp2
                 Bloodfen2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
             }
         }
-
-        private void Wisp1_Click(object sender, RoutedEventArgs e)
-        {
-            if (jugando == 0)
-            {
-                if (Heroes[0].mano.Contains(wisp1))
-                {
-                    if (jugs.jugarcartar(Heroes[0], wisp1) == 1)
-                    {
-                       
-                        Wisp1.Visibility = Visibility.Hidden;
-                        Wisp1j1.Visibility = Visibility.Visible;
-                        Manaj1.Value = Heroes[0].Mana;
-                        string va = Convert.ToString(Heroes[0].Mana);
-                        cantmana.Text = va;
-                    }
-                }
-                
-                
-
-                
-            }
-            else
-            {
-                if (Heroes[1].mano.Contains(wisp1))
-                {
-
-                    if (jugs.jugarcartar(Heroes[1], wisp1) == 1)
-                    {
-                        
-                        Wisp1.Visibility = Visibility.Hidden;
-                        Wisp1j2.Visibility = Visibility.Visible;
-                        Manaj2.Value = Heroes[1].Mana;
-                        string v = Convert.ToString(Heroes[1].Mana);
-                        cantmana.Text = v;
-                    }
-                }
-               
-            }
-
-        }
-
-        private void Wisp1j2_Click(object sender, RoutedEventArgs e)
-        { 
-                
-                if (wisp1.Seleccionada == 0)
-                {
-                    wisp1.Seleccionada = 1;
-                    Wisp1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
-                    {
-                        if (i.NombreCarta != "Wisp1")
-                        { i.Seleccionada = 0; }
-
-                    }
-
-                    info.Visibility = Visibility.Visible;
-                    info.Text = " Carta: " + wisp1.NombreCarta + "\n" + "Vida: " + wisp1.Vida + "\n";
-
-                }
-                else
-                {
-                    wisp1.Seleccionada = 0;
-                    Wisp1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
-                }
-            
-        }
-
-        private void Wisp2_Click(object sender, RoutedEventArgs e)
-        {
-            if (jugando == 0)
-            {
-                if (Heroes[0].mano.Contains(wisp2))
-                {
-                    if (jugs.jugarcartar(Heroes[0], wisp2) == 1)
-                    {
-                        
-                        Wisp2.Visibility = Visibility.Hidden;
-                        Wisp2j1.Visibility = Visibility.Visible;
-                        Manaj1.Value = Heroes[0].Mana;
-                        string va = Convert.ToString(Heroes[0].Mana);
-                        cantmana.Text = va;
-                    }
-                }
-                
-
-            }
-            else
-            {
-                if (Heroes[1].mano.Contains(wisp2))
-                {
-
-                    if (jugs.jugarcartar(Heroes[1], wisp2) == 1)
-                    {
-                        
-                        Wisp2.Visibility = Visibility.Hidden;
-                        Wisp2j2.Visibility = Visibility.Visible;
-                        Manaj2.Value = Heroes[1].Mana;
-                        string v = Convert.ToString(Heroes[1].Mana);
-                        cantmana.Text = v;
-                    }
-                }
-               
-            }
-
-        }
-
-        private void Wisp2j2_Click(object sender, RoutedEventArgs e)
-        {  
-                if (wisp2.Seleccionada == 0)
-                {
-                    wisp2.Seleccionada = 1;
-                    Wisp2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
-                    {
-                        if (i.NombreCarta != "Wisp2")
-                        { i.Seleccionada = 0; }
-
-                    }
-
-                    info.Visibility = Visibility.Visible;
-                    info.Text = " Carta: " + wisp2.NombreCarta + "\n" + "Vida: " + wisp2.Vida + "\n";
-                }
-                else
-                {
-                    wisp2.Seleccionada = 0;
-                    Wisp2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
-                }
-            
-        }
-
-        private void Bloodfen1_Click(object sender, RoutedEventArgs e)
-        {
-            if (jugando == 0)
-            {
-                if (Heroes[0].mano.Contains(bloodfen1))
-                {
-                    if (jugs.jugarcartar(Heroes[0], bloodfen1) == 1)
-                    {
-                        
-                        Bloodfen1.Visibility = Visibility.Hidden;
-                        Bloodfen1j1.Visibility = Visibility.Visible;
-                        Manaj1.Value = Heroes[0].Mana;
-                        string va = Convert.ToString(Heroes[0].Mana);
-                        cantmana.Text = va;
-                    }
-                }
-                
-
-            }
-            else
-            {
-                if (Heroes[1].mano.Contains(bloodfen1))
-                {
-
-                    if (jugs.jugarcartar(Heroes[1], bloodfen1) == 1)
-                    {
-                        
-                        Bloodfen1.Visibility = Visibility.Hidden;
-                        Bloodfen1j2.Visibility = Visibility.Visible;
-                        Manaj2.Value = Heroes[1].Mana;
-                        string v = Convert.ToString(Heroes[1].Mana);
-                        cantmana.Text = v;
-                    }
-                }
-                
-            }
-
-        }
-
-        private void Bloodfen1j2_Click(object sender, RoutedEventArgs e)
-        {
-         
-                
-                if (bloodfen1.Seleccionada == 0)
-                {
-                    bloodfen1.Seleccionada = 1;
-                    Bloodfen1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
-                    {
-                        if (i.NombreCarta != "Bloodfen1")
-                        { i.Seleccionada = 0; }
-
-                    }
-                    info.Visibility = Visibility.Visible;
-                    info.Text = " Carta: " + bloodfen1.NombreCarta + "\n" + "Vida: " + bloodfen1.Vida + "\n";
-                }
-                else
-                {
-                    bloodfen1.Seleccionada = 0;
-                    Bloodfen1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
-                }
-            
-        }
-
-        private void Bloodfen3_Click(object sender, RoutedEventArgs e)
-        {
-            if (jugando == 0)
-            {
-                if (Heroes[0].mano.Contains(bloodfen3))
-                {
-                    if (jugs.jugarcartar(Heroes[0], bloodfen3) == 1)
-                    {
-                        
-                        Bloodfen3.Visibility = Visibility.Hidden;
-                        Bloodfen3j1.Visibility = Visibility.Visible;
-                        Manaj1.Value = Heroes[0].Mana;
-                        string va = Convert.ToString(Heroes[0].Mana);
-                        cantmana.Text = va;
-                    }
-                }
-                
-                
-            }
-            else
-            {
-                if (Heroes[1].mano.Contains(bloodfen3))
-                {
-
-                    if (jugs.jugarcartar(Heroes[1], bloodfen3) == 1)
-                    {
-                        
-                        Bloodfen3.Visibility = Visibility.Hidden;
-                        Bloodfen3j2.Visibility = Visibility.Visible;
-                        Manaj2.Value = Heroes[1].Mana;
-                        string v = Convert.ToString(Heroes[1].Mana);
-                        cantmana.Text = v;
-                    }
-                }
-                
-            }
-        }
-
         private void Bloodfen3j2_Click(object sender, RoutedEventArgs e)
         {
-                if (bloodfen3.Seleccionada == 0)
-                {
-                    bloodfen3.Seleccionada = 1;
-                    Bloodfen3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
-                    {
-                        if (i.NombreCarta != "Bloodfen3")
-                        { i.Seleccionada = 0; }
-
-                    }
-                    info.Visibility = Visibility.Visible;
-                    info.Text = " Carta: " + bloodfen3.NombreCarta + "\n" + "Vida: " + bloodfen3.Vida + "\n";
-                }
-                else
-                {
-                    bloodfen3.Seleccionada = 0;
-                    Bloodfen3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
-                }
-            
-        }
-
-        private void Boulderfist1_Click(object sender, RoutedEventArgs e)
-        {
-            if (jugando == 0)
+            if (bloodfen3.Seleccionada == 0)
             {
-                if (Heroes[0].mano.Contains(boulderfist1))
+                bloodfen3.Seleccionada = 1;
+                Bloodfen3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
                 {
-                    if (jugs.jugarcartar(Heroes[0], boulderfist1) == 1)
-                    {
-                        
-                        Boulderfist1.Visibility = Visibility.Hidden;
-                        Boulderfist1j1.Visibility = Visibility.Visible;
-                        Manaj1.Value = Heroes[0].Mana;
-                        string va = Convert.ToString(Heroes[0].Mana);
-                        cantmana.Text = va;
-                    }
-                }
-                
+                    if (i.NombreCarta != "Bloodfen3")
+                    { i.Seleccionada = 0; }
 
-                
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + bloodfen3.NombreCarta + "\n" + "Vida: " + bloodfen3.Vida + "\n";
             }
             else
             {
-                if (Heroes[1].mano.Contains(boulderfist1))
-                {
-
-                    if (jugs.jugarcartar(Heroes[1], boulderfist1) == 1)
-                    {
-                        
-                        Boulderfist1.Visibility = Visibility.Hidden;
-                        Boulderfist1j2.Visibility = Visibility.Visible;
-                        Manaj2.Value = Heroes[1].Mana;
-                        string v = Convert.ToString(Heroes[1].Mana);
-                        cantmana.Text = v;
-                    }
-                }
-                
+                bloodfen3.Seleccionada = 0;
+                Bloodfen3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
             }
+
         }
+
 
         private void Boulderfist1j2_Click(object sender, RoutedEventArgs e)
         {
-                if (boulderfist1.Seleccionada == 0)
-                {
-                    boulderfist1.Seleccionada = 1;
-                    Boulderfist1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
-                    {
-                        if (i.NombreCarta != "Boulderfist1")
-                        { i.Seleccionada = 0; }
-
-                    }
-                    info.Visibility = Visibility.Visible;
-                    info.Text = " Carta: " + boulderfist1.NombreCarta + "\n" + "Vida: " + boulderfist1.Vida + "\n";
-                }
-                else
-                {
-                    boulderfist1.Seleccionada = 0;
-                    Boulderfist1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
-                }
-            
-        }
-
-        private void Boulderfist2_Click(object sender, RoutedEventArgs e)
-        {
-            if (jugando == 0)
+            if (boulderfist1.Seleccionada == 0)
             {
-                if (Heroes[0].mano.Contains(boulderfist2))
+                boulderfist1.Seleccionada = 1;
+                Boulderfist1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
                 {
-                    if (jugs.jugarcartar(Heroes[0], boulderfist2) == 1)
-                    {
-                        
-                        Boulderfist2.Visibility = Visibility.Hidden;
-                        Boulderfist2j1.Visibility = Visibility.Visible;
-                        Manaj1.Value = Heroes[0].Mana;
-                        string va = Convert.ToString(Heroes[0].Mana);
-                        cantmana.Text = va;
-                    }
-                }
-                
+                    if (i.NombreCarta != "Boulderfist1")
+                    { i.Seleccionada = 0; }
 
-                
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + boulderfist1.NombreCarta + "\n" + "Vida: " + boulderfist1.Vida + "\n";
             }
             else
             {
-                if (Heroes[1].mano.Contains(boulderfist2))
-                {
-
-                    if (jugs.jugarcartar(Heroes[1], boulderfist2) == 1)
-                    {
-                        
-                        Boulderfist2.Visibility = Visibility.Hidden;
-                        Boulderfist2j2.Visibility = Visibility.Visible;
-                        Manaj2.Value = Heroes[1].Mana;
-                        string v = Convert.ToString(Heroes[1].Mana);
-                        cantmana.Text = v;
-                    }
-                }
-                
+                boulderfist1.Seleccionada = 0;
+                Boulderfist1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
             }
+
         }
 
         private void Boulderfist2j2_Click(object sender, RoutedEventArgs e)
         {
-           
-                if (boulderfist2.Seleccionada == 0)
-                {
-                    boulderfist2.Seleccionada = 1;
-                    Boulderfist2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
-                    {
-                        if (i.NombreCarta != "Boulderfist2")
-                        { i.Seleccionada = 0; }
 
-                    }
-                    info.Visibility = Visibility.Visible;
-                    info.Text = " Carta: " + boulderfist2.NombreCarta + "\n" + "Vida: " + boulderfist2.Vida + "\n";
-                }
-                else
-                {
-                    boulderfist2.Seleccionada = 0;
-                    Boulderfist2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
-                }
-            
-        }
-
-        private void Boulderfist3_Click(object sender, RoutedEventArgs e)
-        {
-            if (jugando == 0)
+            if (boulderfist2.Seleccionada == 0)
             {
-                if (Heroes[0].mano.Contains(boulderfist3))
+                boulderfist2.Seleccionada = 1;
+                Boulderfist2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
                 {
-                    if (jugs.jugarcartar(Heroes[0], boulderfist3) == 1)
-                    {
-                        
-                        Boulderfist3.Visibility = Visibility.Hidden;
-                        Boulderfist3j1.Visibility = Visibility.Visible;
-                        Manaj1.Value = Heroes[0].Mana;
-                        string va = Convert.ToString(Heroes[0].Mana);
-                        cantmana.Text = va;
-                    }
-                }
-                
+                    if (i.NombreCarta != "Boulderfist2")
+                    { i.Seleccionada = 0; }
 
-                
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + boulderfist2.NombreCarta + "\n" + "Vida: " + boulderfist2.Vida + "\n";
             }
             else
             {
-                if (Heroes[1].mano.Contains(boulderfist3))
-                {
-
-                    if (jugs.jugarcartar(Heroes[1], boulderfist3) == 1)
-                    {
-                        
-                        Boulderfist3.Visibility = Visibility.Hidden;
-                        Boulderfist3j2.Visibility = Visibility.Visible;
-                        Manaj2.Value = Heroes[1].Mana;
-                        string v = Convert.ToString(Heroes[1].Mana);
-                        cantmana.Text = v;
-                    }
-                }
-                
+                boulderfist2.Seleccionada = 0;
+                Boulderfist2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
             }
+
         }
+
 
         private void Boulderfist3j2_Click(object sender, RoutedEventArgs e)
         {
-         
-                if (boulderfist3.Seleccionada == 0)
-                {
-                    boulderfist3.Seleccionada = 1;
-                    Boulderfist3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
-                    {
-                        if (i.NombreCarta != "Boulderfist3")
-                        { i.Seleccionada = 0; }
 
-                    }
-                    info.Visibility = Visibility.Visible;
-                    info.Text = " Carta: " + boulderfist3.NombreCarta + "\n" + "Vida: " + boulderfist3.Vida + "\n";
-                }
-                else
-                {
-                    boulderfist3.Seleccionada = 0;
-                    Boulderfist3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
-                }
-            
-        }
-
-        private void Chillwind1_Click(object sender, RoutedEventArgs e)
-        {
-            if (jugando == 0)
+            if (boulderfist3.Seleccionada == 0)
             {
-                if (Heroes[0].mano.Contains(chillwind1))
+                boulderfist3.Seleccionada = 1;
+                Boulderfist3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
                 {
-                    if (jugs.jugarcartar(Heroes[0], chillwind1) == 1)
-                    {
-                        
-                        Chillwind1.Visibility = Visibility.Hidden;
-                        Chillwind1j1.Visibility = Visibility.Visible;
-                        Manaj1.Value = Heroes[0].Mana;
-                        string va = Convert.ToString(Heroes[0].Mana);
-                        cantmana.Text = va;
-                    }
+                    if (i.NombreCarta != "Boulderfist3")
+                    { i.Seleccionada = 0; }
+
                 }
-                
-                
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + boulderfist3.NombreCarta + "\n" + "Vida: " + boulderfist3.Vida + "\n";
             }
             else
             {
-                if (Heroes[1].mano.Contains(chillwind1))
-                {
-
-                    if (jugs.jugarcartar(Heroes[1], chillwind1) == 1)
-                    {
-                        
-                        Chillwind1.Visibility = Visibility.Hidden;
-                        Chillwind1j2.Visibility = Visibility.Visible;
-                        Manaj2.Value = Heroes[1].Mana;
-                        string v = Convert.ToString(Heroes[1].Mana);
-                        cantmana.Text = v;
-                    }
-                }
-                
+                boulderfist3.Seleccionada = 0;
+                Boulderfist3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
             }
+
         }
+
 
         private void Chillwind1j2_Click(object sender, RoutedEventArgs e)
-        { 
-                if (chillwind1.Seleccionada == 0)
-                {
-                    chillwind1.Seleccionada = 1;
-                    Chillwind1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
-                    {
-                        if (i.NombreCarta != "Chillwind1")
-                        { i.Seleccionada = 0; }
-
-                    }
-                    info.Visibility = Visibility.Visible;
-                    info.Text = " Carta: " + chillwind1.NombreCarta + "\n" + "Vida: " + chillwind1.Vida + "\n";
-                }
-                else
-                {
-                    chillwind1.Seleccionada = 0;
-                    Chillwind1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
-                }
-            
-        }
-
-        private void Chillwind2_Click(object sender, RoutedEventArgs e)
         {
-            if (jugando == 0)
+            if (chillwind1.Seleccionada == 0)
             {
-                if (Heroes[0].mano.Contains(chillwind2))
+                chillwind1.Seleccionada = 1;
+                Chillwind1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
                 {
-                    if (jugs.jugarcartar(Heroes[0], chillwind2) == 1)
-                    {
-                        
-                        Chillwind2.Visibility = Visibility.Hidden;
-                        Chillwind2j1.Visibility = Visibility.Visible;
-                        Manaj1.Value = Heroes[0].Mana;
-                        string va = Convert.ToString(Heroes[0].Mana);
-                        cantmana.Text = va;
-                    }
+                    if (i.NombreCarta != "Chillwind1")
+                    { i.Seleccionada = 0; }
+
                 }
-                
-                
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + chillwind1.NombreCarta + "\n" + "Vida: " + chillwind1.Vida + "\n";
             }
             else
             {
-                if (Heroes[1].mano.Contains(chillwind2))
-                {
-
-                    if (jugs.jugarcartar(Heroes[1], chillwind2) == 1)
-                    {
-                        
-                        Chillwind2.Visibility = Visibility.Hidden;
-                        Chillwind2j2.Visibility = Visibility.Visible;
-                        Manaj2.Value = Heroes[1].Mana;
-                        string v = Convert.ToString(Heroes[1].Mana);
-                        cantmana.Text = v;
-                    }
-                }
-                
+                chillwind1.Seleccionada = 0;
+                Chillwind1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
             }
+
         }
 
         private void Chillwind2j2_Click(object sender, RoutedEventArgs e)
         {
-                if (chillwind2.Seleccionada == 0)
-                {
-                    chillwind2.Seleccionada = 1;
-                    Chillwind2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
-                    {
-                        if (i.NombreCarta != "Chillwind2")
-                        { i.Seleccionada = 0; }
-
-                    }
-                    info.Visibility = Visibility.Visible;
-                    info.Text = " Carta: " + chillwind2.NombreCarta + "\n" + "Vida: " + chillwind2.Vida + "\n";
-                }
-                else
-                {
-                    chillwind2.Seleccionada = 0;
-                    Chillwind2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
-                }
-            
-        }
-
-        private void Chillwind3_Click(object sender, RoutedEventArgs e)
-        {
-            if (jugando == 0)
+            if (chillwind2.Seleccionada == 0)
             {
-                if (Heroes[0].mano.Contains(chillwind3))
+                chillwind2.Seleccionada = 1;
+                Chillwind2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
                 {
-                    if (jugs.jugarcartar(Heroes[0], chillwind3) == 1)
-                    {
-                        
-                        Chillwind3.Visibility = Visibility.Hidden;
-                        Chillwind3j1.Visibility = Visibility.Visible;
-                        Manaj1.Value = Heroes[0].Mana;
-                        string va = Convert.ToString(Heroes[0].Mana);
-                        cantmana.Text = va;
-                    }
-                }
-                
+                    if (i.NombreCarta != "Chillwind2")
+                    { i.Seleccionada = 0; }
 
-                
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + chillwind2.NombreCarta + "\n" + "Vida: " + chillwind2.Vida + "\n";
             }
             else
             {
-                if (Heroes[1].mano.Contains(chillwind3))
-                {
-
-                    if (jugs.jugarcartar(Heroes[1], chillwind3) == 1)
-                    {
-                        
-                        Chillwind3.Visibility = Visibility.Hidden;
-                        Chillwind3j2.Visibility = Visibility.Visible;
-                        Manaj2.Value = Heroes[1].Mana;
-                        string v = Convert.ToString(Heroes[1].Mana);
-                        cantmana.Text = v;
-                    }
-                }
-               
+                chillwind2.Seleccionada = 0;
+                Chillwind2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
             }
-        }
 
+        }
         private void Chillwind3j2_Click(object sender, RoutedEventArgs e)
-        { 
-                if (chillwind3.Seleccionada == 0)
-                {
-                    chillwind3.Seleccionada = 1;
-                    Chillwind3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
-                    {
-                        if (i.NombreCarta != "Chillwind3")
-                        { i.Seleccionada = 0; }
-
-                    }
-                    info.Visibility = Visibility.Visible;
-                    info.Text = " Carta: " + chillwind3.NombreCarta + "\n" + "Vida: " + chillwind3.Vida + "\n";
-                }
-                else
-                {
-                    chillwind3.Seleccionada = 0;
-                    Chillwind3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
-                }
-            
-        }
-
-        private void Corehound1_Click(object sender, RoutedEventArgs e)
         {
-            if (jugando == 0)
+            if (chillwind3.Seleccionada == 0)
             {
-                if (Heroes[0].mano.Contains(core1))
+                chillwind3.Seleccionada = 1;
+                Chillwind3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
                 {
-                    if (jugs.jugarcartar(Heroes[0], core1) == 1)
-                    {
-                        
+                    if (i.NombreCarta != "Chillwind3")
+                    { i.Seleccionada = 0; }
 
-                        Corehound1.Visibility = Visibility.Hidden;
-                        Corehound1j1.Visibility = Visibility.Visible;
-                        Manaj1.Value = Heroes[0].Mana;
-                        string va = Convert.ToString(Heroes[0].Mana);
-                        cantmana.Text = va;
-                    }
                 }
-                
-                
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + chillwind3.NombreCarta + "\n" + "Vida: " + chillwind3.Vida + "\n";
             }
             else
             {
-                if (Heroes[1].mano.Contains(core1))
-                {
-
-                    if (jugs.jugarcartar(Heroes[1], core1) == 1)
-                    {
-                        
-                        Corehound1.Visibility = Visibility.Hidden;
-                        Corehound1j2.Visibility = Visibility.Visible;
-                        Manaj2.Value = Heroes[1].Mana;
-                        string v = Convert.ToString(Heroes[1].Mana);
-                        cantmana.Text = v;
-                    }
-                }
-                
+                chillwind3.Seleccionada = 0;
+                Chillwind3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
             }
+
         }
 
         private void Corehound1j2_Click(object sender, RoutedEventArgs e)
         {
-                if (core1.Seleccionada == 0)
-                {
-                    core1.Seleccionada = 1;
-                    Corehound1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
-                    {
-                        if (i.NombreCarta != "Corehound1")
-                        { i.Seleccionada = 0; }
-
-                    }
-                    info.Visibility = Visibility.Visible;
-                    info.Text = " Carta: " + core1.NombreCarta + "\n" + "Vida: " + core1.Vida + "\n";
-                }
-                else
-                {
-                    core1.Seleccionada = 0;
-                    Corehound1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
-                }
-            
-        }
-
-        private void Corehound2_Click(object sender, RoutedEventArgs e)
-        {
-            if (jugando == 0)
+            if (core1.Seleccionada == 0)
             {
-
-                if (Heroes[0].mano.Contains(core2))
+                core1.Seleccionada = 1;
+                Corehound1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
                 {
-                    if (jugs.jugarcartar(Heroes[0], core2) == 1)
-                    {
-                        
-                        Corehound2.Visibility = Visibility.Hidden;
-                        Corehound2j1.Visibility = Visibility.Visible;
-                        Manaj1.Value = Heroes[0].Mana;
-                        string va = Convert.ToString(Heroes[0].Mana);
-                        cantmana.Text = va;
-                    }
-                }
-                
+                    if (i.NombreCarta != "Corehound1")
+                    { i.Seleccionada = 0; }
 
-                   
-                
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + core1.NombreCarta + "\n" + "Vida: " + core1.Vida + "\n";
             }
             else
             {
-                if (Heroes[1].mano.Contains(core2))
-                {
-
-                    if (jugs.jugarcartar(Heroes[1], core2) == 1)
-                    {
-                        
-                        Corehound2.Visibility = Visibility.Hidden;
-                        Corehound2j2.Visibility = Visibility.Visible;
-                        Manaj2.Value = Heroes[1].Mana;
-                        string v = Convert.ToString(Heroes[1].Mana);
-                        cantmana.Text = v;
-                    }
-                }
-                
+                core1.Seleccionada = 0;
+                Corehound1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
             }
+
         }
 
         private void Corehound2j2_Click(object sender, RoutedEventArgs e)
         {
-                if (core2.Seleccionada == 0)
-                {
-                    core2.Seleccionada = 1;
-                    Corehound2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
-                    {
-                        if (i.NombreCarta != "Corehound2")
-                        { i.Seleccionada = 0; }
-
-                    }
-                    info.Visibility = Visibility.Visible;
-                    info.Text = " Carta: " + core2.NombreCarta + "\n" + "Vida: " + core2.Vida + "\n";
-                }
-                else
-                {
-                    core2.Seleccionada = 0;
-                    Corehound2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
-                }
-            
-        }
-
-        private void Corehound3_Click(object sender, RoutedEventArgs e)
-        {
-            if (jugando == 0)
+            if (core2.Seleccionada == 0)
             {
-                if (Heroes[0].mano.Contains(core3))
+                core2.Seleccionada = 1;
+                Corehound2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
                 {
-                    if (jugs.jugarcartar(Heroes[0], core3) == 1)
-                    {
-                        
-                        Corehound3.Visibility = Visibility.Hidden;
-                        Corehound3j1.Visibility = Visibility.Visible;
-                        Manaj1.Value = Heroes[0].Mana;
-                        string va = Convert.ToString(Heroes[0].Mana);
-                        cantmana.Text = va;
-                    }
-                }
-                
+                    if (i.NombreCarta != "Corehound2")
+                    { i.Seleccionada = 0; }
 
-                
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + core2.NombreCarta + "\n" + "Vida: " + core2.Vida + "\n";
             }
             else
             {
-                if (Heroes[1].mano.Contains(core3))
-                {
-
-                    if (jugs.jugarcartar(Heroes[1], core3) == 1)
-                    {
-                        
-                        Corehound3.Visibility = Visibility.Hidden;
-                        Corehound3j2.Visibility = Visibility.Visible;
-                        Manaj2.Value = Heroes[1].Mana;
-                        string v = Convert.ToString(Heroes[1].Mana);
-                        cantmana.Text = v;
-                    }
-                }
-                
+                core2.Seleccionada = 0;
+                Corehound2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
             }
+
         }
+
 
         private void Corehound3j2_Click(object sender, RoutedEventArgs e)
         {
-                if (core3.Seleccionada == 0)
+            if (core3.Seleccionada == 0)
+            {
+                core3.Seleccionada = 1;
+                Corehound3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
                 {
-                    core3.Seleccionada = 1;
-                    Corehound3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
-                    {
-                        if (i.NombreCarta != "Corehound3")
-                        { i.Seleccionada = 0; }
+                    if (i.NombreCarta != "Corehound3")
+                    { i.Seleccionada = 0; }
 
-                    }
-                    info.Visibility = Visibility.Visible;
-                    info.Text = " Carta: " + core3.NombreCarta + "\n" + "Vida: " + core3.Vida + "\n";
                 }
-                else
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + core3.NombreCarta + "\n" + "Vida: " + core3.Vida + "\n";
+            }
+            else
+            {
+                core3.Seleccionada = 0;
+                Corehound3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+        private void Magma1j2_Click(object sender, RoutedEventArgs e)
+        {
+            if (magma1.Seleccionada == 0)
+            {
+                magma1.Seleccionada = 1;
+                Magma1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
                 {
-                    core3.Seleccionada = 0;
-                    Corehound3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    if (i.NombreCarta != "Magma1")
+                    { i.Seleccionada = 0; }
+
                 }
-            
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + magma1.NombreCarta + "\n" + "Vida: " + magma1.Vida + "\n";
+            }
+            else
+            {
+                magma1.Seleccionada = 0;
+                Magma1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+        private void Magma2j2_Click(object sender, RoutedEventArgs e)
+        {
+            if (magma2.Seleccionada == 0)
+            {
+                magma2.Seleccionada = 1;
+                Magma2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
+                {
+                    if (i.NombreCarta != "Magma2")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + magma2.NombreCarta + "\n" + "Vida: " + magma2.Vida + "\n";
+            }
+            else
+            {
+                magma2.Seleccionada = 0;
+                Magma2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
         }
 
+        private void Magma3j2_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (magma3.Seleccionada == 0)
+            {
+                magma3.Seleccionada = 1;
+                Magma3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
+                {
+                    if (i.NombreCarta != "Magma3")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + magma3.NombreCarta + "\n" + "Vida: " + magma3.Vida + "\n";
+            }
+            else
+            {
+                magma3.Seleccionada = 0;
+                Magma3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+
+        private void Murloc1j2_Click(object sender, RoutedEventArgs e)
+        {
+            if (murloc1.Seleccionada == 0)
+            {
+                murloc1.Seleccionada = 1;
+                Murloc1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
+                {
+                    if (i.NombreCarta != "Murloc1")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + murloc1.NombreCarta + "\n" + "Vida: " + murloc1.Vida + "\n";
+            }
+            else
+            {
+                murloc1.Seleccionada = 0;
+                Murloc1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+
+        private void Murloc2j2_Click(object sender, RoutedEventArgs e)
+        {
+            if (murloc2.Seleccionada == 0)
+            {
+                murloc2.Seleccionada = 1;
+                Murloc2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
+                {
+                    if (i.NombreCarta != "Murloc2")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + murloc2.NombreCarta + "\n" + "Vida: " + murloc2.Vida + "\n";
+            }
+            else
+            {
+                murloc2.Seleccionada = 0;
+                Murloc2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+        private void Murloc3j2_Click(object sender, RoutedEventArgs e)
+        {
+            if (murloc3.Seleccionada == 0)
+            {
+                murloc3.Seleccionada = 1;
+                Murloc3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
+                {
+                    if (i.NombreCarta != "Murloc3")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + murloc3.NombreCarta + "\n" + "Vida: " + murloc3.Vida + "\n";
+            }
+            else
+            {
+                murloc3.Seleccionada = 0;
+                Murloc3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+        private void Oasis1j2_Click(object sender, RoutedEventArgs e)
+        {
+            if (oasis1.Seleccionada == 0)
+            {
+                oasis1.Seleccionada = 1;
+                Oasis1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
+                {
+                    if (i.NombreCarta != "Oasis1")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + oasis1.NombreCarta + "\n" + "Vida: " + oasis1.Vida + "\n";
+            }
+            else
+            {
+                oasis1.Seleccionada = 0;
+                Oasis1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+            }
+
+        }
+        private void Oasis2j2_Click(object sender, RoutedEventArgs e)
+        {
+            if (oasis2.Seleccionada == 0)
+            {
+                oasis2.Seleccionada = 1;
+                Oasis2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
+                {
+                    if (i.NombreCarta != "Oasis2")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + oasis2.NombreCarta + "\n" + "Vida: " + oasis2.Vida + "\n";
+            }
+            else
+            {
+                oasis2.Seleccionada = 0;
+                Oasis2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+
+        private void Oasis3j2_Click(object sender, RoutedEventArgs e)
+        {
+            if (oasis3.Seleccionada == 0)
+            {
+                oasis3.Seleccionada = 1;
+                Oasis3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
+                {
+                    if (i.NombreCarta != "Oasis3")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + oasis3.NombreCarta + "\n" + "Vida: " + oasis3.Vida + "\n";
+            }
+            else
+            {
+                oasis3.Seleccionada = 0;
+                Oasis3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+        private void River1j2_Click(object sender, RoutedEventArgs e)
+        {
+            if (river1.Seleccionada == 0)
+            {
+                river1.Seleccionada = 1;
+                River1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
+                {
+                    if (i.NombreCarta != "River1")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + river1.NombreCarta + "\n" + "Vida: " + river1.Vida + "\n";
+            }
+            else
+            {
+                river1.Seleccionada = 0;
+                River1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+        private void River2j2_Click(object sender, RoutedEventArgs e)
+        {
+            if (river2.Seleccionada == 0)
+            {
+                river2.Seleccionada = 1;
+                River2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
+                {
+                    if (i.NombreCarta != "River2")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + river2.NombreCarta + "\n" + "Vida: " + river2.Vida + "\n";
+            }
+            else
+            {
+                river2.Seleccionada = 0;
+                River2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+        private void River3j2_Click(object sender, RoutedEventArgs e)
+        {
+            if (river3.Seleccionada == 0)
+            {
+                river3.Seleccionada = 1;
+                River3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
+                {
+                    if (i.NombreCarta != "River3")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + river3.NombreCarta + "\n" + "Vida: " + river3.Vida + "\n";
+            }
+            else
+            {
+                river3.Seleccionada = 0;
+                River3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+        private void War1j2_Click(object sender, RoutedEventArgs e)
+        {
+            if (war1.Seleccionada == 0)
+            {
+                war1.Seleccionada = 1;
+                War1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
+                {
+                    if (i.NombreCarta != "War1")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + war1.NombreCarta + "\n" + "Vida: " + war1.Vida + "\n";
+            }
+            else
+            {
+                war1.Seleccionada = 0;
+                War1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+
+        private void War2j2_Click(object sender, RoutedEventArgs e)
+        {
+            if (war2.Seleccionada == 0)
+            {
+                war2.Seleccionada = 1;
+                War2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
+                {
+                    if (i.NombreCarta != "War2")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + war2.NombreCarta + "\n" + "Vida: " + war2.Vida + "\n";
+            }
+            else
+            {
+                war2.Seleccionada = 0;
+                War2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
+
+        private void War3j2_Click(object sender, RoutedEventArgs e)
+        {
+            if (war3.Seleccionada == 0)
+            {
+                war3.Seleccionada = 1;
+                War3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[1].Tablero1)
+                {
+                    if (i.NombreCarta != "War3")
+                    { i.Seleccionada = 0; }
+
+                }
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + war3.NombreCarta + "\n" + "Vida: " + war3.Vida + "\n";
+            }
+            else
+            {
+                war3.Seleccionada = 0;
+                War3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
+        }
         private void Magma1_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
@@ -4708,7 +5377,6 @@ namespace WpfApp2
                     }
                 }
                 
-
                
             }
             else
@@ -4729,14 +5397,14 @@ namespace WpfApp2
                 
             }
         }
-
-        private void Magma1j2_Click(object sender, RoutedEventArgs e)
+        private void Magma1_Clickj1(object sender, RoutedEventArgs e)
         {
+            
                 if (magma1.Seleccionada == 0)
                 {
                     magma1.Seleccionada = 1;
-                    Magma1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
+                    Magma1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    foreach (Minions i in Heroes[0].Tablero1)
                     {
                         if (i.NombreCarta != "Magma1")
                         { i.Seleccionada = 0; }
@@ -4748,11 +5416,11 @@ namespace WpfApp2
                 else
                 {
                     magma1.Seleccionada = 0;
-                    Magma1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    Magma1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
                 }
             
-        }
 
+        }
         private void Magma2_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
@@ -4769,7 +5437,7 @@ namespace WpfApp2
                         cantmana.Text = va;
                     }
                 }
-                
+               
                 
             }
             else
@@ -4779,7 +5447,7 @@ namespace WpfApp2
 
                     if (jugs.jugarcartar(Heroes[1], magma2) == 1)
                     {
-                        
+
                         Magma2.Visibility = Visibility.Hidden;
                         Magma2j2.Visibility = Visibility.Visible;
                         Manaj2.Value = Heroes[1].Mana;
@@ -4787,17 +5455,16 @@ namespace WpfApp2
                         cantmana.Text = v;
                     }
                 }
-                
             }
         }
-
-        private void Magma2j2_Click(object sender, RoutedEventArgs e)
+        private void Magma2_Clickj1(object sender, RoutedEventArgs e)
         {
+             
                 if (magma2.Seleccionada == 0)
                 {
                     magma2.Seleccionada = 1;
-                    Magma2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
+                    Magma2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    foreach (Minions i in Heroes[0].Tablero1)
                     {
                         if (i.NombreCarta != "Magma2")
                         { i.Seleccionada = 0; }
@@ -4809,11 +5476,11 @@ namespace WpfApp2
                 else
                 {
                     magma2.Seleccionada = 0;
-                    Magma2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    Magma2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
                 }
             
-        }
 
+        }
         private void Magma3_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
@@ -4831,7 +5498,6 @@ namespace WpfApp2
                     }
                 }
                 
-
                 
             }
             else
@@ -4852,31 +5518,28 @@ namespace WpfApp2
                 
             }
         }
-
-        private void Magma3j2_Click(object sender, RoutedEventArgs e)
+        private void Magma3_Clickj1(object sender, RoutedEventArgs e)
         {
-
-                if (magma3.Seleccionada == 0)
+            if (magma3.Seleccionada == 0)
+            {
+                magma3.Seleccionada = 1;
+                Magma3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[0].Tablero1)
                 {
-                    magma3.Seleccionada = 1;
-                    Magma3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
-                    {
-                        if (i.NombreCarta != "Magma3")
-                        { i.Seleccionada = 0; }
+                    if (i.NombreCarta != "Magma3")
+                    { i.Seleccionada = 0; }
 
-                    }
-                    info.Visibility = Visibility.Visible;
-                    info.Text = " Carta: " + magma3.NombreCarta + "\n" + "Vida: " + magma3.Vida + "\n";
                 }
-                else
-                {
-                    magma3.Seleccionada = 0;
-                    Magma3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
-                }
-            
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + magma3.NombreCarta + "\n" + "Vida: " + magma3.Vida + "\n";
+            }
+            else
+            {
+                magma3.Seleccionada = 0;
+                Magma3j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
+
         }
-
         private void Murloc1_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
@@ -4894,6 +5557,7 @@ namespace WpfApp2
                     }
                 }
                 
+
                 
             }
             else
@@ -4911,33 +5575,32 @@ namespace WpfApp2
                         cantmana.Text = v;
                     }
                 }
-                
+               
             }
         }
+        private void Murloc1_Clickj1(object sender, RoutedEventArgs e)
 
-        private void Murloc1j2_Click(object sender, RoutedEventArgs e)
         {
-                if (murloc1.Seleccionada == 0)
-                {
-                    murloc1.Seleccionada = 1;
-                    Murloc1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
-                    {
-                        if (i.NombreCarta != "Murloc1")
-                        { i.Seleccionada = 0; }
 
-                    }
-                    info.Visibility = Visibility.Visible;
-                    info.Text = " Carta: " + murloc1.NombreCarta + "\n" + "Vida: " + murloc1.Vida + "\n";
-                }
-                else
+            if (murloc1.Seleccionada == 0)
+            {
+                murloc1.Seleccionada = 1;
+                Murloc1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                foreach (Minions i in Heroes[0].Tablero1)
                 {
-                    murloc1.Seleccionada = 0;
-                    Murloc1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    if (i.NombreCarta != "Murloc1")
+                    { i.Seleccionada = 0; }
+
                 }
-            
+                info.Visibility = Visibility.Visible;
+                info.Text = " Carta: " + murloc1.NombreCarta + "\n" + "Vida: " + murloc1.Vida + "\n";
+            }
+            else
+            {
+                murloc1.Seleccionada = 0;
+                Murloc1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
+            }
         }
-
         private void Murloc2_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
@@ -4976,14 +5639,14 @@ namespace WpfApp2
                 
             }
         }
-
-        private void Murloc2j2_Click(object sender, RoutedEventArgs e)
+        private void Murloc2_Clickj1(object sender, RoutedEventArgs e)
         {
+            
                 if (murloc2.Seleccionada == 0)
                 {
                     murloc2.Seleccionada = 1;
-                    Murloc2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
+                    Murloc2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    foreach (Minions i in Heroes[0].Tablero1)
                     {
                         if (i.NombreCarta != "Murloc2")
                         { i.Seleccionada = 0; }
@@ -4995,11 +5658,10 @@ namespace WpfApp2
                 else
                 {
                     murloc2.Seleccionada = 0;
-                    Murloc2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    Murloc2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
                 }
             
         }
-
         private void Murloc3_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
@@ -5017,6 +5679,7 @@ namespace WpfApp2
                     }
                 }
                 
+
                 
             }
             else
@@ -5034,17 +5697,17 @@ namespace WpfApp2
                         cantmana.Text = v;
                     }
                 }
-                
+               
             }
         }
-
-        private void Murloc3j2_Click(object sender, RoutedEventArgs e)
+        private void Murloc3_Clickj1(object sender, RoutedEventArgs e)
         {
+           
                 if (murloc3.Seleccionada == 0)
                 {
                     murloc3.Seleccionada = 1;
-                    Murloc3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
+                    Murloc3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    foreach (Minions i in Heroes[0].Tablero1)
                     {
                         if (i.NombreCarta != "Murloc3")
                         { i.Seleccionada = 0; }
@@ -5056,11 +5719,10 @@ namespace WpfApp2
                 else
                 {
                     murloc3.Seleccionada = 0;
-                    Murloc3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    Murloc3j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
                 }
             
         }
-
         private void Oasis1_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
@@ -5095,17 +5757,19 @@ namespace WpfApp2
                         cantmana.Text = v;
                     }
                 }
-            }
+                
+                }
+            
             
         }
-
-        private void Oasis1j2_Click(object sender, RoutedEventArgs e)
-        {
+        private void Oasis1_Clickj1(object sender, RoutedEventArgs e)
+        { 
+            
                 if (oasis1.Seleccionada == 0)
                 {
                     oasis1.Seleccionada = 1;
-                    Oasis1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
+                    Oasis1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    foreach (Minions i in Heroes[0].Tablero1)
                     {
                         if (i.NombreCarta != "Oasis1")
                         { i.Seleccionada = 0; }
@@ -5117,11 +5781,10 @@ namespace WpfApp2
                 else
                 {
                     oasis1.Seleccionada = 0;
-                    Oasis1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    Oasis1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
                 }
             
         }
-
         private void Oasis2_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
@@ -5160,14 +5823,14 @@ namespace WpfApp2
                
             }
         }
-
-        private void Oasis2j2_Click(object sender, RoutedEventArgs e)
-        { 
+        private void Oasis2_Clickj1(object sender, RoutedEventArgs e)
+        {
+           
                 if (oasis2.Seleccionada == 0)
                 {
                     oasis2.Seleccionada = 1;
-                    Oasis2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
+                    Oasis2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    foreach (Minions i in Heroes[0].Tablero1)
                     {
                         if (i.NombreCarta != "Oasis2")
                         { i.Seleccionada = 0; }
@@ -5179,11 +5842,11 @@ namespace WpfApp2
                 else
                 {
                     oasis2.Seleccionada = 0;
-                    Oasis2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    Oasis2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
                 }
             
-        }
 
+        }
         private void Oasis3_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
@@ -5222,30 +5885,31 @@ namespace WpfApp2
                 
             }
         }
-
-        private void Oasis3j2_Click(object sender, RoutedEventArgs e)
+        private void Oasis3_Clickj1(object sender, RoutedEventArgs e)
         {
+            
                 if (oasis3.Seleccionada == 0)
                 {
                     oasis3.Seleccionada = 1;
-                    Oasis3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
+                    Oasis3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    foreach (Minions i in Heroes[0].Tablero1)
                     {
                         if (i.NombreCarta != "Oasis3")
                         { i.Seleccionada = 0; }
 
                     }
+
                     info.Visibility = Visibility.Visible;
                     info.Text = " Carta: " + oasis3.NombreCarta + "\n" + "Vida: " + oasis3.Vida + "\n";
                 }
                 else
                 {
                     oasis3.Seleccionada = 0;
-                    Oasis3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    Oasis3j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
                 }
             
-        }
 
+        }
         private void River1_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
@@ -5262,8 +5926,7 @@ namespace WpfApp2
                         cantmana.Text = va;
                     }
                 }
-                
-
+               
                 
             }
             else
@@ -5281,17 +5944,17 @@ namespace WpfApp2
                         cantmana.Text = v;
                     }
                 }
-                
+               
             }
         }
-
-        private void River1j2_Click(object sender, RoutedEventArgs e)
+        private void River1_Clickj1(object sender, RoutedEventArgs e)
         {
+            
                 if (river1.Seleccionada == 0)
                 {
                     river1.Seleccionada = 1;
-                    River1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
+                    River1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    foreach (Minions i in Heroes[0].Tablero1)
                     {
                         if (i.NombreCarta != "River1")
                         { i.Seleccionada = 0; }
@@ -5303,11 +5966,11 @@ namespace WpfApp2
                 else
                 {
                     river1.Seleccionada = 0;
-                    River1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    River1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
                 }
             
-        }
 
+        }
         private void River2_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
@@ -5325,9 +5988,7 @@ namespace WpfApp2
                     }
                 }
 
-          
-
-                
+               
             }
             else
             {
@@ -5347,14 +6008,14 @@ namespace WpfApp2
                 
             }
         }
-
-        private void River2j2_Click(object sender, RoutedEventArgs e)
+        private void River2_Clickj1(object sender, RoutedEventArgs e)
         {
+           
                 if (river2.Seleccionada == 0)
                 {
                     river2.Seleccionada = 1;
-                    River2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
+                    River2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    foreach (Minions i in Heroes[0].Tablero1)
                     {
                         if (i.NombreCarta != "River2")
                         { i.Seleccionada = 0; }
@@ -5366,11 +6027,12 @@ namespace WpfApp2
                 else
                 {
                     river2.Seleccionada = 0;
-                    River2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    River2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
                 }
             
-        }
 
+
+        }
         private void River3_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
@@ -5405,16 +6067,16 @@ namespace WpfApp2
                         cantmana.Text = v;
                     }
                 }
-                           }
+               
+            }
         }
-
-        private void River3j2_Click(object sender, RoutedEventArgs e)
+        private void River3_Clickj1(object sender, RoutedEventArgs e)
         {
                 if (river3.Seleccionada == 0)
                 {
                     river3.Seleccionada = 1;
-                    River3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
+                    River3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    foreach (Minions i in Heroes[0].Tablero1)
                     {
                         if (i.NombreCarta != "River3")
                         { i.Seleccionada = 0; }
@@ -5423,14 +6085,10 @@ namespace WpfApp2
                     info.Visibility = Visibility.Visible;
                     info.Text = " Carta: " + river3.NombreCarta + "\n" + "Vida: " + river3.Vida + "\n";
                 }
-                else
-                {
-                    river3.Seleccionada = 0;
-                    River3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                else { river3.Seleccionada = 0;
+                    River3j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
                 }
-            
-        }
-
+       }
         private void War1_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
@@ -5448,7 +6106,6 @@ namespace WpfApp2
                     }
                 }
                 
-
                 
             }
             else
@@ -5466,16 +6123,17 @@ namespace WpfApp2
                         cantmana.Text = v;
                     }
                 }
-                           }
+                
+            }
         }
-
-        private void War1j2_Click(object sender, RoutedEventArgs e)
+        private void War1_Clickj1(object sender, RoutedEventArgs e)
         {
+          
                 if (war1.Seleccionada == 0)
                 {
                     war1.Seleccionada = 1;
-                    War1j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
+                    War1j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    foreach (Minions i in Heroes[0].Tablero1)
                     {
                         if (i.NombreCarta != "War1")
                         { i.Seleccionada = 0; }
@@ -5487,11 +6145,11 @@ namespace WpfApp2
                 else
                 {
                     war1.Seleccionada = 0;
-                    War1j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    War1j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
                 }
             
-        }
 
+        }
         private void War2_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
@@ -5526,17 +6184,18 @@ namespace WpfApp2
                         cantmana.Text = v;
                     }
                 }
-               
+                
+
             }
         }
-
-        private void War2j2_Click(object sender, RoutedEventArgs e)
-        { 
+        private void War2_Clickj1(object sender, RoutedEventArgs e)
+        {
+           
                 if (war2.Seleccionada == 0)
                 {
                     war2.Seleccionada = 1;
-                    War2j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
+                    War2j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    foreach (Minions i in Heroes[0].Tablero1)
                     {
                         if (i.NombreCarta != "War2")
                         { i.Seleccionada = 0; }
@@ -5548,11 +6207,10 @@ namespace WpfApp2
                 else
                 {
                     war2.Seleccionada = 0;
-                    War2j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    War2j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
                 }
             
         }
-
         private void War3_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
@@ -5570,7 +6228,6 @@ namespace WpfApp2
                     }
                 }
                 
-
                 
             }
             else
@@ -5592,14 +6249,14 @@ namespace WpfApp2
                 
             }
         }
-
-        private void War3j2_Click(object sender, RoutedEventArgs e)
+        private void War3_Clickj1(object sender, RoutedEventArgs e)
         {
+            
                 if (war3.Seleccionada == 0)
                 {
                     war3.Seleccionada = 1;
-                    War3j2.BorderBrush = new SolidColorBrush(Colors.Gold);
-                    foreach (Minions i in Heroes[1].Tablero1)
+                    War3j1.BorderBrush = new SolidColorBrush(Colors.Gold);
+                    foreach (Minions i in Heroes[0].Tablero1)
                     {
                         if (i.NombreCarta != "War3")
                         { i.Seleccionada = 0; }
@@ -5611,11 +6268,12 @@ namespace WpfApp2
                 else
                 {
                     war3.Seleccionada = 0;
-                    War3j2.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                    War3j1.BorderBrush = new SolidColorBrush(Colors.Transparent);
                 }
             
-        }
 
+
+        }
         private void Atacar_Click(object sender, RoutedEventArgs e)
         {
             int con = 0;
