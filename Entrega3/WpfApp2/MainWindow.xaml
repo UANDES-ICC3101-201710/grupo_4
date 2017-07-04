@@ -62,7 +62,7 @@
 
         <TextBlock x:Name="vidaheroejug" Visibility="Hidden" HorizontalAlignment="Left" Foreground="Gold" Margin="905,606,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="77" Width="101" FontFamily="Bernard MT Condensed" FontSize="14"/>
         <TextBlock x:Name="Vidaheroenojug" Visibility="Hidden" Foreground="Gold" HorizontalAlignment="Left" Margin="859,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="55" Width="149" FontFamily="Bernard MT Condensed" FontSize="14"/>
-        <ScrollViewer x:Name="BarraMano"  Visibility="Hidden" Margin="86,556,138,29" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+        <ScrollViewer x:Name="BarraMano"  Visibility="Hidden" Margin="142,556,157,29" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
             <StackPanel x:Name="Mano" Orientation="Horizontal" HorizontalAlignment="Left" Height="135" VerticalAlignment="Top" Width="3115" Visibility="Visible" RenderTransformOrigin="0.5,0.5" >
                 <Button x:Name="Wisp3" Visibility="Hidden" HorizontalAlignment="Left"  Margin="0,0,0,-20.5" VerticalAlignment="Top" Width="106" BorderBrush="{x:Null}" Height="155.5" Click="Wisp3_Click" >
                     <Button.Background>
@@ -220,8 +220,8 @@
 
             </StackPanel>
         </ScrollViewer>
-        <ScrollViewer x:Name="BarraTableroj1" Visibility="Hidden" Margin="126,358,157,246.85" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
-            <StackPanel x:Name="Tableroj1" Orientation="Horizontal" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="3105" Visibility="Hidden" RenderTransformOrigin="0.5,0.5" >
+        <ScrollViewer x:Name="BarraTableroj1" Visibility="Hidden" Margin="142,358,157,247" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+            <StackPanel x:Name="Tableroj1" Orientation="Horizontal" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="2173" Visibility="Visible" RenderTransformOrigin="0.5,0.5" >
                 <Button x:Name="Wisp3j1" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Wisp3_Click" >
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/wisp.png"/>
@@ -360,7 +360,7 @@
                         <ImageBrush ImageSource="Cartas/rivercroc.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="War1j1" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="War1_Click">
+                <Button x:Name="War1j1" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" Width="64" BorderBrush="{x:Null}" Click="War1_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/wargolem.png"/>
                     </Button.Background>
@@ -375,10 +375,40 @@
                         <ImageBrush ImageSource="Cartas/wargolem.png"/>
                     </Button.Background>
                 </Button>
+                <Button x:Name="Totem1" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Totem1.png"/>
+                    </Button.Background>
+
+                </Button>
+                <Button x:Name="Totem2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Totem2.png"/>
+                    </Button.Background>
+
+                </Button>
+                <Button x:Name="Totem3" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Totem3.png"/>
+                    </Button.Background>
+
+                </Button>
+                <Button x:Name="Totem4" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Totem4.png"/>
+                    </Button.Background>
+                    
+                </Button>
+                <Button x:Name="Palaj1" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Pala.png"/>
+                    </Button.Background>
+
+                </Button>
 
             </StackPanel>
         </ScrollViewer>
-        <ScrollViewer x:Name="BarraTableroj2" Visibility="Hidden" Margin="102,166,196,424" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+        <ScrollViewer x:Name="BarraTableroj2" Visibility="Hidden" Margin="142,166,156,424" Width="2173"  HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
             <StackPanel x:Name="Tableroj2" Orientation="Horizontal" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="3115" Visibility="Visible" RenderTransformOrigin="0.5,0.5" >
 
                 <Button x:Name="Wisp3j2" Visibility="Hidden" HorizontalAlignment="Left" Height="100" Width="63.5" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="Wisp3_Click">
@@ -528,10 +558,38 @@
                         <ImageBrush ImageSource="Cartas/wargolem.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="War3j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="War3_Click">
+                <Button x:Name="War3j2" Visibility="Visible" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="War3_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/wargolem.png"/>
                     </Button.Background>
+                </Button>
+                <Button x:Name="Totem1j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Totem1.png"/>
+                    </Button.Background>
+
+                </Button>
+                <Button x:Name="Totem2j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Totem2.png"/>
+                    </Button.Background>
+
+                </Button>
+                <Button x:Name="Totem3j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Totem3.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="Totem4j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Totem4.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="Palaj2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Pala.png"/>
+                    </Button.Background>
+
                 </Button>
 
             </StackPanel>

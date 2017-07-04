@@ -23,7 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <IntermediateOutputPath>C:\Users\Acer\AppData\Local\Temp\vsA559.tmp\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Assad\AppData\Local\Temp\vs2ECC.tmp\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,7 +33,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <IntermediateOutputPath>C:\Users\Acer\AppData\Local\Temp\vsA559.tmp\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Assad\AppData\Local\Temp\vs2ECC.tmp\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -205,6 +205,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="wisp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Totem1.png" />
+    <Resource Include="Totem2.png" />
+    <Resource Include="Totem3.png" />
+    <Resource Include="Totem4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pala.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
