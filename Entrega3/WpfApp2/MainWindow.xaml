@@ -375,31 +375,31 @@
                         <ImageBrush ImageSource="Cartas/wargolem.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="Totem1" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                <Button x:Name="Totem1" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Totem1j1_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Totem1.png"/>
                     </Button.Background>
 
                 </Button>
-                <Button x:Name="Totem2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                <Button x:Name="Totem2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Totem2j1_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Totem2.png"/>
                     </Button.Background>
 
                 </Button>
-                <Button x:Name="Totem3" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                <Button x:Name="Totem3" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Totem3j1_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Totem3.png"/>
                     </Button.Background>
 
                 </Button>
-                <Button x:Name="Totem4" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                <Button x:Name="Totem4" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Totem4j1_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Totem4.png"/>
                     </Button.Background>
                     
                 </Button>
-                <Button x:Name="Palaj1" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                <Button x:Name="Palaj1" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Palaj1_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Pala.png"/>
                     </Button.Background>
@@ -563,29 +563,29 @@
                         <ImageBrush ImageSource="Cartas/wargolem.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="Totem1j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                <Button x:Name="Totem1j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Totem1j2_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Totem1.png"/>
                     </Button.Background>
 
                 </Button>
-                <Button x:Name="Totem2j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                <Button x:Name="Totem2j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Totem2j2_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Totem2.png"/>
                     </Button.Background>
 
                 </Button>
-                <Button x:Name="Totem3j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                <Button x:Name="Totem3j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Totem3j2_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Totem3.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="Totem4j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                <Button x:Name="Totem4j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Totem4j2_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Totem4.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="Palaj2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}">
+                <Button x:Name="Palaj2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Palaj2_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Pala.png"/>
                     </Button.Background>
