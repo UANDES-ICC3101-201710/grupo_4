@@ -221,7 +221,7 @@
             </StackPanel>
         </ScrollViewer>
         <ScrollViewer x:Name="BarraTableroj1" Visibility="Hidden" Margin="142,358,157,247" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
-            <StackPanel x:Name="Tableroj1" Orientation="Horizontal" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="2173" Visibility="Visible" RenderTransformOrigin="0.5,0.5" >
+            <StackPanel  x:Name="Tableroj1" Orientation="Horizontal" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="2222.5" Visibility="Visible" RenderTransformOrigin="0.5,0.5" >
                 <Button x:Name="Wisp3j1" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Wisp3_Clickj1" >
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/wisp.png"/>
@@ -408,8 +408,8 @@
 
             </StackPanel>
         </ScrollViewer>
-        <ScrollViewer x:Name="BarraTableroj2" Visibility="Hidden" Margin="142,166,156,424" Width="2173"  HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
-            <StackPanel x:Name="Tableroj2" Orientation="Horizontal" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="3115" Visibility="Visible" RenderTransformOrigin="0.5,0.5" >
+        <ScrollViewer x:Name="BarraTableroj2" Visibility="Hidden" Margin="142,166,157,424"  HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+            <StackPanel x:Name="Tableroj2" Orientation="Horizontal" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="2222.5" Visibility="Visible" RenderTransformOrigin="0.5,0.5" >
 
                 <Button x:Name="Wisp3j2" Visibility="Hidden" HorizontalAlignment="Left" Height="100" Width="63.5" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="Wisp3j2_Click">
                     <Button.Background>
@@ -558,7 +558,7 @@
                         <ImageBrush ImageSource="Cartas/wargolem.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="War3j2" Visibility="Visible" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="War3j2_Click">
+                <Button x:Name="War3j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="War3j2_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/wargolem.png"/>
                     </Button.Background>
