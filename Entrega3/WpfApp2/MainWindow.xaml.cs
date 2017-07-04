@@ -2875,6 +2875,19 @@ namespace WpfApp2
 
         private void FinTurno1_Click(object sender, RoutedEventArgs e)
         {
+            foreach( Minions y in Heroes[0].Tablero1)
+            {
+                y.NDT = 0;
+            }
+
+
+            foreach (Minions y in Heroes[1].Tablero1)
+            {
+                y.NDT = 0;
+            }
+
+
+
             info.Visibility = Visibility.Hidden;
             jugs.Pasar(Heroes[0]);
             foreach (Minions i in Heroes[0].Tablero1)
@@ -3300,6 +3313,14 @@ namespace WpfApp2
 
         private void FinTurno2_Click(object sender, RoutedEventArgs e)
         {
+            foreach (Minions y in Heroes[1].Tablero1)
+            {
+                y.NDT = 0;
+            }
+            foreach (Minions y in Heroes[0].Tablero1)
+            {
+                y.NDT = 0;
+            }
             jugs.Pasar(Heroes[1]);
             info.Visibility = Visibility.Hidden;
             cantmana.Visibility = Visibility.Hidden;
@@ -7968,8 +7989,9 @@ namespace WpfApp2
             {
                 foreach (Minions i in Heroes[0].Tablero1)
                 {
-                    if (i.Seleccionada == 1)
+                    if (i.Seleccionada == 1 && i.NDT == 0)
                     {
+                        
                         Heroes[1].Vida -= i.Daño;
                         if (Heroes[1].Vida <= 0)
                         {
@@ -7999,7 +8021,7 @@ namespace WpfApp2
                             { chamangan.Visibility = Visibility.Visible; }
                             else if (Heroes[0].Nombre == "Warrior")
                             { warriorgan.Visibility = Visibility.Visible; }
-
+                            i.NDT = 1;
 
                         }
                         break;
@@ -8013,8 +8035,9 @@ namespace WpfApp2
             {
                 foreach (Minions i in Heroes[1].Tablero1)
                 {
-                    if (i.Seleccionada == 1)
+                    if (i.Seleccionada == 1 && i.NDT == 0)
                     {
+                        
                         Heroes[0].Vida -= i.Daño;
 
                         if (Heroes[0].Vida <= 0)
@@ -8046,7 +8069,7 @@ namespace WpfApp2
                             else if (Heroes[1].Nombre == "Warrior")
                             { warriorgan.Visibility = Visibility.Visible; }
                         }
-
+                        i.NDT = 1;
                         break;
                     }
                 }

@@ -23,7 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <IntermediateOutputPath>C:\Users\Assad\AppData\Local\Temp\vs694E.tmp\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Acer\AppData\Local\Temp\vsA559.tmp\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,7 +33,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <IntermediateOutputPath>C:\Users\Assad\AppData\Local\Temp\vs694E.tmp\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Acer\AppData\Local\Temp\vsA559.tmp\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
