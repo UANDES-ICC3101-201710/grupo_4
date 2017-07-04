@@ -7393,33 +7393,166 @@ namespace WpfApp2
 
             }
         }
+        public void MostrarCartasM1(List<Minions> Lista)
+        {
+            foreach (Minions i in Lista)
+            {
+                if (i.NombreCarta == "Wisp1")
+                {
+                    Wisp1.Visibility = Visibility.Hidden;
 
+                }
+                if (i.NombreCarta == "Wisp2")
+                {
+                    Wisp2.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "Wisp3")
+                {
+                    Wisp1.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "Murloc1")
+                {
+                    Murloc1.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "Murloc2")
+                {
+                    Murloc2.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "Murloc3")
+                {
+                    Murloc3.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "Oasis1")
+                {
+                    Oasis1.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "Oasis2")
+                {
+                    Oasis2.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "Oasis3")
+                {
+                    Oasis3.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "Corehound1")
+                {
+                    Corehound1.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "Corehound2")
+                {
+                    Corehound2.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "Corehound3")
+                {
+                    Corehound3.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "River1")
+                {
+                    River1.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "River2")
+                {
+                    River2.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "River3")
+                {
+                    River3.Visibility = Visibility.Hidden;
+                }
+
+                if (i.NombreCarta == "Bloodfen1")
+                {
+                    Bloodfen1.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "Bloodfen2")
+                {
+                    Bloodfen2.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "Bloodfen3")
+                {
+                    Bloodfen3.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "Magma1")
+                {
+                    Magma1.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "Magma2")
+                {
+                    Magma2.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "Magma3")
+                {
+                    Magma3.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "Chillwind1")
+                {
+                    Chillwind1.Visibility = Visibility.Hidden;
+
+                }
+                if (i.NombreCarta == "Chillwind2")
+                {
+                    Chillwind2.Visibility = Visibility.Hidden;
+
+                }
+                if (i.NombreCarta == "Chillwind3")
+                {
+                    Chillwind3.Visibility = Visibility.Hidden;
+
+                }
+                if (i.NombreCarta == "War1")
+                {
+                    War1.Visibility = Visibility.Hidden;
+
+                }
+                if (i.NombreCarta == "War2")
+                {
+                    War2.Visibility = Visibility.Hidden;
+
+                }
+                if (i.NombreCarta == "War3")
+                {
+                    War3.Visibility = Visibility.Hidden;
+
+                }
+                if (i.NombreCarta == "Boulderfist1")
+                {
+                    Boulderfist1.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "Boulderfist2")
+                {
+                    Boulderfist2.Visibility = Visibility.Hidden;
+                }
+                if (i.NombreCarta == "Boulderfist3")
+                {
+                    Boulderfist3.Visibility = Visibility.Hidden;
+                }
+            }
+        }
         private void HabilidadHeroe_Click(object sender, RoutedEventArgs e)
         {
             if (jugando == 0)
             {
-                if (Heroes[0].Nombre == "Paladin") { Heroes[0].Habilidad(Heroes[0]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); }
-                else if (Heroes[0].Nombre == "Druida") { Heroes[0].Habilidad(Heroes[0]);Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); }
-                else if (Heroes[0].Nombre == "Hunter") { Heroes[0].Habilidad(Heroes[0]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); }
-                else if (Heroes[0].Nombre == "Sacerdote") { Heroes[0].Habilidad(Heroes[0]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); }
-                else if (Heroes[0].Nombre == "Picaro") { Heroes[0].Habilidad(Heroes[0]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); }
-                else if (Heroes[0].Nombre == "Brujo") { Heroes[0].Habilidad(Heroes[0]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); }
-                else if (Heroes[0].Nombre == "Mago") { Heroes[0].Habilidad(Heroes[0]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); ; MostrarCartas(Heroes[0].Tablero1); }
-                else if (Heroes[0].Nombre == "Chaman") { Heroes[0].Habilidad(Heroes[0]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); }
-                else { Heroes[0].Habilidad(Heroes[0]); }
+                if (Heroes[0].Nombre == "Paladin") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); }
+                else if (Heroes[0].Nombre == "Druida") { Heroes[0].Habilidad(Heroes[1]);Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); }
+                else if (Heroes[0].Nombre == "Hunter") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); }
+                else if (Heroes[0].Nombre == "Sacerdote") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); }
+                else if (Heroes[0].Nombre == "Picaro") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); }
+                else if (Heroes[0].Nombre == "Brujo") { Heroes[0].HabilidadDruid(Heroes[1], MJugador1.mazo1); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); MostrarCartas(Heroes[0].Tablero1); Vidaheroenojug.Text = "Heroe: " + Heroes[0].Nombre + "\n" + "Vida: " + Convert.ToString(Heroes[0].Vida); MostrarCartasM1(Heroes[0].mano); }
+                else if (Heroes[0].Nombre == "Mago") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); ; MostrarCartas(Heroes[0].Tablero1); }
+                else if (Heroes[0].Nombre == "Chaman") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); }
+                else { Heroes[0].Habilidad(Heroes[1]); }
 
             }
             else
             {
-                if (Heroes[1].Nombre == "Paladin") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
-                else if (Heroes[1].Nombre == "Druida") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }                
-                else if (Heroes[1].Nombre == "Hunter") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
-                else if (Heroes[1].Nombre == "Sacerdote") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
-                else if (Heroes[1].Nombre == "Picaro") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
-                else if (Heroes[1].Nombre == "Brujo") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
-                else if (Heroes[1].Nombre == "Mago") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); ; MostrarCartas1(Heroes[1].Tablero1); }
-                else if (Heroes[1].Nombre == "Chaman") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
-                else { Heroes[1].Habilidad(Heroes[1]); }
+                if (Heroes[1].Nombre == "Paladin") { Heroes[0].Habilidad(Heroes[0]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
+                else if (Heroes[1].Nombre == "Druida") { Heroes[0].Habilidad(Heroes[0]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }                
+                else if (Heroes[1].Nombre == "Hunter") { Heroes[0].Habilidad(Heroes[0]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
+                else if (Heroes[1].Nombre == "Sacerdote") { Heroes[0].Habilidad(Heroes[0]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
+                else if (Heroes[1].Nombre == "Picaro") { Heroes[0].Habilidad(Heroes[0]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
+                else if (Heroes[1].Nombre == "Brujo") { Heroes[1].HabilidadDruid(Heroes[0], MJugador2.mazo1); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); MostrarCartas1(Heroes[1].Tablero1); Vidaheroenojug.Text = "Heroe: " + Heroes[1].Nombre + "\n" + "Vida: " + Convert.ToString(Heroes[1].Vida); MostrarCartasM1(Heroes[0].mano); }
+                else if (Heroes[1].Nombre == "Mago") { Heroes[0].Habilidad(Heroes[0]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); ; MostrarCartas1(Heroes[1].Tablero1); }
+                else if (Heroes[1].Nombre == "Chaman") { Heroes[0].Habilidad(Heroes[0]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
+                else { Heroes[1].Habilidad(Heroes[0]); }
             }
            
 
