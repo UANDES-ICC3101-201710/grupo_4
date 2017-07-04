@@ -58,7 +58,7 @@ namespace WpfApp2
             {
                 Vida -= 2;
                 Robar(Mazo, mano);
-
+                Mana -= 2;
             }
         }
 

@@ -62,8 +62,8 @@
 
         <TextBlock x:Name="vidaheroejug" Visibility="Hidden" HorizontalAlignment="Left" Foreground="Gold" Margin="905,606,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="77" Width="101" FontFamily="Bernard MT Condensed" FontSize="14"/>
         <TextBlock x:Name="Vidaheroenojug" Visibility="Hidden" Foreground="Gold" HorizontalAlignment="Left" Margin="859,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="55" Width="149" FontFamily="Bernard MT Condensed" FontSize="14"/>
-        <ScrollViewer x:Name="BarraMano"  Visibility="Hidden" Margin="142,556,157,29" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
-            <StackPanel x:Name="Mano" Orientation="Horizontal" HorizontalAlignment="Left" Height="135" VerticalAlignment="Top" Width="3115" Visibility="Visible" RenderTransformOrigin="0.5,0.5" >
+        <ScrollViewer x:Name="BarraMano"  Visibility="Hidden" Margin="142,556,157,29" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" >
+            <StackPanel x:Name="Mano" Orientation="Horizontal" HorizontalAlignment="Left" Height="135" VerticalAlignment="Top" Width="3180" Visibility="Visible" RenderTransformOrigin="0.5,0.5" >
                 <Button x:Name="Wisp3" Visibility="Hidden" HorizontalAlignment="Left"  Margin="0,0,0,-20.5" VerticalAlignment="Top" Width="106" BorderBrush="{x:Null}" Height="155.5" Click="Wisp3_Click" >
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/wisp.png"/>

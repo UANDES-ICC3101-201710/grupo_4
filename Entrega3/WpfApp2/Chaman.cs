@@ -19,8 +19,10 @@ namespace WpfApp2
             if (Mana >= 2)
             {
                 Random r = new Random();
-                int ra = r.Next(0, 5);
+                int ra = r.Next(0, 4);
                 Tablero1.Add(Miespeciales[ra]);
+                Mana -= 2;
+                Miespeciales.Remove(Miespeciales[ra]);
                 
             }
            
