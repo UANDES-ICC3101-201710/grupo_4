@@ -6012,16 +6012,16 @@ namespace WpfApp2
                 }
 
             }
-<<<<<<< Updated upstream
+
          
-=======
+
 
             if (Heroes[0].Tablero1.Count() != 0) { foreach (Minions x in Heroes[0].Tablero1) { if (x.Vida <= 0) { Heroes[0].Tablero1.Remove(x); } } }
             if (Heroes[1].Tablero1.Count() != 0)
             { foreach (Minions x in Heroes[1].Tablero1) { if (x.Vida <= 0) { Heroes[1].Tablero1.Remove(x); } } }
             //MessageBox.Show(Convert.ToString(Heroes[0].Tablero1.Count()));
             //MessageBox.Show(Convert.ToString(Heroes[1].Tablero1.Count()));
->>>>>>> Stashed changes
+
             if (Heroes[0].Tablero1.Count() != 0)
             {
                 foreach (Minions i in Heroes[0].Tablero1)
@@ -7108,7 +7108,6 @@ namespace WpfApp2
                     if (i.Seleccionada == 1)
                     {
                         Heroes[0].Vida -= i.Daño;
-<<<<<<< Updated upstream
                         if (Heroes[0].Vida <= 0)
                         {
                             ganador.Visibility = Visibility.Visible;
@@ -7138,9 +7137,7 @@ namespace WpfApp2
                             else if (Heroes[1].Nombre == "Warrior")
                             { warriorgan.Visibility = Visibility.Visible; }
                         }
-=======
 
->>>>>>> Stashed changes
                         break;
                     }
                 }

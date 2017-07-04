@@ -378,70 +378,72 @@
 
             </StackPanel>
         </ScrollViewer>
-        <ScrollViewer x:Name="BarraTableroj2" Visibility="Hidden" Margin="126,161,172,429" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
-            <StackPanel x:Name="Tableroj2" Orientation="Horizontal" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="3115" Visibility="Hidden" RenderTransformOrigin="0.5,0.5" >
-                <Button x:Name="Wisp3j2" Visibility="Hidden" HorizontalAlignment="Left"  Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Wisp3_Click" >
-                    <Button.Background>
-                        <ImageBrush ImageSource="Cartas/wisp.png"/>
-                    </Button.Background>
-                </Button>
-                <Button x:Name="Wisp2j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Wisp2_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="Cartas/wisp.png"/>
-                    </Button.Background>
-                </Button>
-                <Button x:Name="Wisp1j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Wisp1_Click" >
-                    <Button.Background>
-                        <ImageBrush ImageSource="Cartas/wisp.png"/>
-                    </Button.Background>
-                </Button>
-                <Button x:Name="Bloodfen1j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100"  BorderBrush="{x:Null}" Click="Bloodfen1_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="Cartas/bloodfen.png"/>
-                    </Button.Background>
+        <ScrollViewer x:Name="BarraTableroj2" Visibility="Hidden" Margin="102,166,196,424" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+            <StackPanel x:Name="Tableroj2" Orientation="Horizontal" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="3115" Visibility="Visible" RenderTransformOrigin="0.5,0.5" >
 
+                <Button x:Name="Wisp3j2" Visibility="Hidden" HorizontalAlignment="Left" Height="100" Width="63.5" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="Wisp3_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Cartas/wisp.png"/>
+                    </Button.Background>
                 </Button>
-                <Button x:Name="Bloodfen2j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Bloodfen2_Click">
+                <Button x:Name="Wisp2j2" Visibility="Hidden" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="63.5" BorderBrush="{x:Null}" Click="Wisp2_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Cartas/wisp.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="Wisp1j2" Visibility="Hidden" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="60" BorderBrush="{x:Null}" Click="Wisp1_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Cartas/wisp.png"/>
+                    </Button.Background>
+                </Button>
+
+                <Button x:Name="Bloodfen1j2" Visibility="Hidden" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="63.5" Click="Bloodfen1_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/bloodfen.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="Bloodfen3j2"  Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Bloodfen3_Click">
+                <Button x:Name="Bloodfen2j2" Visibility="Hidden" HorizontalAlignment="Left" Height="96.088" VerticalAlignment="Top" Width="63.5" Click="Bloodfen2_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/bloodfen.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="Boulderfist1j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Boulderfist1_Click">
+                <Button x:Name="Bloodfen3j2" Visibility="Hidden" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="63.5" Click="Bloodfen3_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Cartas/bloodfen.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="Boulderfist1j2" Visibility="Hidden" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="63.5" Click="Boulderfist1_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/boulderfist.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="Boulderfist2j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Boulderfist2_Click">
+
+                <Button x:Name="Boulderfist2j2" Visibility="Hidden" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="63.5" Click="Boulderfist2_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/boulderfist.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="Boulderfist3j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Boulderfist3_Click">
+                <Button x:Name="Boulderfist3j2" Visibility="Hidden" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="63.5" Click="Boulderfist3_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/boulderfist.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="Chillwind1j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Chillwind1_Click">
+                <Button x:Name="Chillwind1j2" Visibility="Hidden" HorizontalAlignment="Left" Height="100" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Click="Chillwind1_Click" BorderBrush="{x:Null}">
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/chillwind.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="Chillwind2j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Chillwind2_Click">
+                <Button x:Name="Chillwind2j2" Visibility="Hidden" HorizontalAlignment="Left" Height="100" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Click="Chillwind2_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/chillwind.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="Chillwind3j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Chillwind3_Click">
+                <Button x:Name="Chillwind3j2" Visibility="Hidden" HorizontalAlignment="Left" Height="100" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Click="Chillwind3_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/chillwind.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="Corehound1j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Corehound1_Click">
+                <Button x:Name="Corehound1j2" Visibility="Hidden" HorizontalAlignment="Left" Height="100" Margin=" 0,0,0,0" VerticalAlignment="Top" Width="63.5" Click="Corehound1_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/corehound.png"/>
                     </Button.Background>
@@ -485,14 +487,13 @@
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/murloc.png"/>
                     </Button.Background>
-
                 </Button>
                 <Button x:Name="Oasis1j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" Foreground="{x:Null}" Click="Oasis1_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/oasissnap.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="Oasis2j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Oasis2_Click">
+                <Button x:Name="Oasis2j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="Oasis2_Click" >
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/oasissnap.png"/>
                     </Button.Background>
@@ -506,7 +507,6 @@
                     <Button.Background>
                         <ImageBrush ImageSource="Cartas/rivercroc.png"/>
                     </Button.Background>
-
                 </Button>
                 <Button x:Name="River2j2" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="63.5" Height="100" BorderBrush="{x:Null}" Click="River2_Click">
                     <Button.Background>
