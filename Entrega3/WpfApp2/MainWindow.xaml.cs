@@ -7975,7 +7975,7 @@ namespace WpfApp2
             Tablero.Visibility = Visibility.Visible;
             FinTurno1.Visibility = Visibility.Visible;
             JugadorUno.Visibility = Visibility.Visible;
-
+            Instruccion1.Visibility = Visibility.Hidden;
             Atacar.Visibility = Visibility.Visible;
             HabilidadHeroe.Visibility = Visibility.Visible;
             Rendirse.Visibility = Visibility.Visible;
