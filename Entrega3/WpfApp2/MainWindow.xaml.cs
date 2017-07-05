@@ -2944,7 +2944,7 @@ namespace WpfApp2
                 }
                 if (i.NombreCarta == "Wisp3")
                 {
-                    Wisp1.Visibility = Visibility.Hidden;
+                    Wisp3.Visibility = Visibility.Hidden;
                 }
                 if (i.NombreCarta == "Murloc1")
                 {
@@ -6802,6 +6802,33 @@ namespace WpfApp2
                         Boulderfist3j1.Visibility = Visibility.Visible;
                     }
                     else { Boulderfist3j1.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Totem1")
+                    {
+                        Totem1.Visibility = Visibility.Visible;
+                    }
+                    else { Totem1.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Totem2")
+                    {
+                        Totem2.Visibility = Visibility.Visible;
+                    }
+                    else { Totem2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Totem3")
+                    {
+                        Totem3.Visibility = Visibility.Visible;
+                    }
+                    else { Totem3.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Totem4")
+                    {
+                        Totem4.Visibility = Visibility.Visible;
+                    }
+                    else { Totem4.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Paladin")
+                    {
+                        Palaj1.Visibility = Visibility.Visible;
+                    }
+                    else { Palaj1.Visibility = Visibility.Hidden; }
+
+
                 }
             }
             else {
@@ -6835,8 +6862,11 @@ namespace WpfApp2
                 Corehound1j1.Visibility = Visibility.Hidden;
                 Corehound2j1.Visibility = Visibility.Hidden;
                 Corehound3j1.Visibility = Visibility.Hidden;
-
-
+                Totem1.Visibility = Visibility.Hidden;
+                Totem2.Visibility = Visibility.Hidden;
+                Totem3.Visibility = Visibility.Hidden;
+                Totem4.Visibility = Visibility.Hidden;
+                Palaj1.Visibility = Visibility.Hidden;
 
             }
 
@@ -7067,6 +7097,31 @@ namespace WpfApp2
                         Boulderfist3j2.Visibility = Visibility.Visible;
                     }
                     else { Boulderfist3j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Totem1")
+                    {
+                        Totem1j2.Visibility = Visibility.Visible;
+                    }
+                    else { Totem1.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Totem2")
+                    {
+                        Totem2j2.Visibility = Visibility.Visible;
+                    }
+                    else { Totem2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Totem3")
+                    {
+                        Totem3j2.Visibility = Visibility.Visible;
+                    }
+                    else { Totem3.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Totem4")
+                    {
+                        Totem4j2.Visibility = Visibility.Visible;
+                    }
+                    else { Totem4j2.Visibility = Visibility.Hidden; }
+                    if (i.NombreCarta == "Paladin")
+                    {
+                        Palaj2.Visibility = Visibility.Visible;
+                    }
+                    else { Palaj2.Visibility = Visibility.Hidden; }
                 }
             }
             else {
@@ -7100,6 +7155,12 @@ namespace WpfApp2
                 Corehound1j2.Visibility = Visibility.Hidden;
                 Corehound2j2.Visibility = Visibility.Hidden;
                 Corehound3j2.Visibility = Visibility.Hidden;
+                Totem1j2.Visibility = Visibility.Hidden;
+                Totem2j2.Visibility = Visibility.Hidden;
+                Totem3j2.Visibility = Visibility.Hidden;
+                Totem4j2.Visibility = Visibility.Hidden;
+                Palaj2.Visibility = Visibility.Hidden;
+
 
             }
         }
@@ -7794,7 +7855,7 @@ namespace WpfApp2
                 }
                 
                 else if (Heroes[0].Nombre == "Druida") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); }
-                else if (Heroes[0].Nombre == "Hunter") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); }
+                else if (Heroes[0].Nombre == "Hunter") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); Vidaheroenojug.Text = "Heroe: " + Heroes[1].Nombre + "\n" + "Vida: " + Convert.ToString(Heroes[1].Vida);  }
                 else if (Heroes[0].Nombre == "Sacerdote") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); }
                 else if (Heroes[0].Nombre == "Picaro") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); }
                 else if (Heroes[0].Nombre == "Brujo") { Heroes[0].HabilidadDruid(Heroes[1], MJugador1.mazo1); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); MostrarCartas(Heroes[0].Tablero1); vidaheroejug.Text = "Heroe: " + Heroes[0].Nombre + "\n" + "Vida: " + Convert.ToString(Heroes[0].Vida); MostrarCartasM1(Heroes[0].mano); }
@@ -7836,7 +7897,7 @@ namespace WpfApp2
 
                 }
                 else if (Heroes[1].Nombre == "Druida") { Heroes[1].Habilidad(Heroes[0]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
-                else if (Heroes[1].Nombre == "Hunter") { Heroes[1].Habilidad(Heroes[0]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
+                else if (Heroes[1].Nombre == "Hunter") { Heroes[1].Habilidad(Heroes[0]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); Vidaheroenojug.Text = "Heroe: " + Heroes[0].Nombre + "\n" + "Vida: " + Convert.ToString(Heroes[0].Vida); }
                 else if (Heroes[1].Nombre == "Sacerdote") { Heroes[1].Habilidad(Heroes[0]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
                 else if (Heroes[1].Nombre == "Picaro") { Heroes[1].Habilidad(Heroes[0]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
                 else if (Heroes[1].Nombre == "Brujo") { Heroes[1].HabilidadDruid(Heroes[0], MJugador2.mazo1); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); MostrarCartas(Heroes[0].Tablero1); vidaheroejug.Text = "Heroe: " + Heroes[1].Nombre + "\n" + "Vida: " + Convert.ToString(Heroes[1].Vida); MostrarCartasM1(Heroes[0].mano); }
@@ -7844,20 +7905,20 @@ namespace WpfApp2
                 else if (Heroes[1].Nombre == "Chaman") { Heroes[1].Habilidad(Heroes[0]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana);
                     foreach (Minions i in Heroes[1].Tablero1)
                     {
-                        if (i.NombreCarta == "Totem11")
+                        if (i.NombreCarta == "Totem1")
                         {
                             Totem1j2.Visibility = Visibility.Visible;
                         }
                         
-                        if (i.NombreCarta == "Totem20")
+                        if (i.NombreCarta == "Totem2")
                         {
                             Totem2j2.Visibility = Visibility.Visible;
                         }
-                        if (i.NombreCarta == "Totem30")
+                        if (i.NombreCarta == "Totem3")
                         {
                             Totem3j2.Visibility = Visibility.Visible;
                         }
-                        if (i.NombreCarta == "Totem40")
+                        if (i.NombreCarta == "Totem4")
                         {
                             Totem4j2.Visibility = Visibility.Visible;
                         }
@@ -7887,6 +7948,7 @@ namespace WpfApp2
             Ma2G.Close();
             He1G.Close();
             He2G.Close();
+            MessageBox.Show("Guardaste");
         }      
 
         private void Cargar_Click(object sender, RoutedEventArgs e)
@@ -7906,7 +7968,6 @@ namespace WpfApp2
             Ma2C.Close();
             He1C.Close();
             He2C.Close();
-
             jugando = 0;
 
             Tablero.Visibility = Visibility.Visible;
