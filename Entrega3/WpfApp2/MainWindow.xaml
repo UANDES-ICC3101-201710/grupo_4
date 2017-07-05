@@ -604,6 +604,7 @@
         <Image x:Name="warriorgan" Visibility ="Hidden" Margin="403.5,191.5,445,313.9" Source="warriorgan.png" Stretch="Fill"/>
         <Image x:Name="brujogan" Visibility ="Hidden" Margin="403.5,191.5,445,313.9" Source="brujogan.png" Stretch="Fill"/>
         <Image x:Name="picarogan" Visibility ="Hidden" Margin="403.5,191.5,445,313.9" Source="picarogan.png" Stretch="Fill"/>
+        <TextBlock x:Name="Instruccion1" HorizontalAlignment="Left" Foreground="White" Height="48" Margin="370,438,0,0" TextWrapping="Wrap" Text="Escribe tu nombre y presiona 'Enter'" VerticalAlignment="Top" Width="187"/>
 
 
 

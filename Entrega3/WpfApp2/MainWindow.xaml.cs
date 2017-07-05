@@ -2869,6 +2869,7 @@ namespace WpfApp2
                 JugadorUno.Visibility = Visibility.Visible;
                 JugadorDos.Visibility = Visibility.Hidden;
                 EligeHeroes.Visibility = Visibility.Visible;
+                Instruccion1.Visibility = Visibility.Hidden;
             }
         }
 
@@ -7950,6 +7951,7 @@ namespace WpfApp2
             He2G.Close();
             MessageBox.Show("Guardaste");
         }      
+
 
         private void Cargar_Click(object sender, RoutedEventArgs e)
         {
