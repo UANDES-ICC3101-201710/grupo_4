@@ -30,18 +30,24 @@ namespace WpfApp2
         {
             if (Mana >= 2)
             {
-                foreach (Minions i in H.Tablero1)
+                if (H.Tablero1.Count() != 0)
                 {
-                    if (i.Seleccionada == 1)
+                    foreach (Minions i in H.Tablero1)
                     {
-                        i.Vida -= 1;
-                        if (i.Vida <= 0)
+                        if (i.Seleccionada == 1)
                         {
-                            H.Tablero1.Remove(i); 
+                            i.Vida -= 1;
+                            if (i.Vida <= 0)
+                            {
+                                H.Tablero1.Remove(i);
+                                break;
+                            }
+                          
+                            
                         }
                     }
+                    Mana -= 2;
                 }
-                Mana -= 2;
             }
         }
     }

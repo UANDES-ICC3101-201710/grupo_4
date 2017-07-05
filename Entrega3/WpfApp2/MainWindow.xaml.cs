@@ -7798,7 +7798,7 @@ namespace WpfApp2
                 else if (Heroes[0].Nombre == "Sacerdote") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); }
                 else if (Heroes[0].Nombre == "Picaro") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); }
                 else if (Heroes[0].Nombre == "Brujo") { Heroes[0].HabilidadDruid(Heroes[1], MJugador1.mazo1); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); MostrarCartas(Heroes[0].Tablero1); vidaheroejug.Text = "Heroe: " + Heroes[0].Nombre + "\n" + "Vida: " + Convert.ToString(Heroes[0].Vida); MostrarCartasM1(Heroes[0].mano); }
-                else if (Heroes[0].Nombre == "Mago") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); ; MostrarCartas(Heroes[0].Tablero1); }
+                else if (Heroes[0].Nombre == "Mago") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana); ; MostrarCartas1(Heroes[1].Tablero1); }
                 else if (Heroes[0].Nombre == "Chaman") { Heroes[0].Habilidad(Heroes[1]); Manaj1.Value = Heroes[0].Mana; cantmana.Text = Convert.ToString(Heroes[0].Mana);
                     foreach (Minions i in Heroes[0].Tablero1)
                     {
@@ -7839,7 +7839,7 @@ namespace WpfApp2
                 else if (Heroes[1].Nombre == "Hunter") { Heroes[1].Habilidad(Heroes[0]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
                 else if (Heroes[1].Nombre == "Sacerdote") { Heroes[1].Habilidad(Heroes[0]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
                 else if (Heroes[1].Nombre == "Picaro") { Heroes[1].Habilidad(Heroes[0]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); }
-                else if (Heroes[1].Nombre == "Brujo") { Heroes[1].HabilidadDruid(Heroes[0], MJugador2.mazo1); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); MostrarCartas1(Heroes[1].Tablero1); vidaheroejug.Text = "Heroe: " + Heroes[1].Nombre + "\n" + "Vida: " + Convert.ToString(Heroes[1].Vida); MostrarCartasM1(Heroes[0].mano); }
+                else if (Heroes[1].Nombre == "Brujo") { Heroes[1].HabilidadDruid(Heroes[0], MJugador2.mazo1); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); MostrarCartas(Heroes[0].Tablero1); vidaheroejug.Text = "Heroe: " + Heroes[1].Nombre + "\n" + "Vida: " + Convert.ToString(Heroes[1].Vida); MostrarCartasM1(Heroes[0].mano); }
                 else if (Heroes[1].Nombre == "Mago") { Heroes[1].Habilidad(Heroes[0]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana); ; MostrarCartas1(Heroes[1].Tablero1); }
                 else if (Heroes[1].Nombre == "Chaman") { Heroes[1].Habilidad(Heroes[0]); Manaj1.Value = Heroes[1].Mana; cantmana.Text = Convert.ToString(Heroes[1].Mana);
                     foreach (Minions i in Heroes[1].Tablero1)

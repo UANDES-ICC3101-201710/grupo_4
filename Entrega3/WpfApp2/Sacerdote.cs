@@ -23,9 +23,11 @@ namespace WpfApp2
                     if (i.Seleccionada == 1)
                     {
                         i.Vida += 1;
+                        Mana -= 2;
+                        break;
                     }
                 }
-                Mana -= 2;
+                
             }
         }
               
